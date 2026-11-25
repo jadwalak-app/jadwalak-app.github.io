@@ -116,12 +116,13 @@ body{padding-bottom:78px}
 /* typed date */
 input.dt{text-align:center;letter-spacing:3px;font-size:22px!important}
 input.dt.bad{border-color:#ff6b8b!important;box-shadow:0 0 0 3px rgba(255,107,139,.25)!important}
+.unh{font-size:12px;color:#9a98b8;margin:-2px 2px 6px;line-height:1.6}.unh.bad{color:#ff8fa8}
 
 .rate{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:60;display:none;align-items:center;justify-content:center;padding:18px}.rate.on{display:flex}.rate .bx{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:20px;max-width:380px;width:100%;text-align:center}.rate .bx button{margin:4px;padding:11px 14px}
 .set{position:fixed;inset:0;background:var(--bg);z-index:55;overflow:auto;display:none;padding:18px}.set.on{display:block}.set .in{max-width:520px;margin:0 auto}.set input{width:100%;margin:6px 0;border:1px solid var(--bd);border-radius:12px;padding:12px;background:#0a0b18;color:var(--tx);font-family:inherit}
 .view{display:none;max-width:760px;margin:0 auto;padding:6px 14px 100px}.view.on{display:block}.rg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.rg button{padding:10px 2px;font-size:13px}.rg button.w{background:#3b2a6b}
 </style></head><body>
-<div class="auth" id="auth"><div class="box"><div id="authbox"><h1 style="text-align:center">جدولك</h1><p class="note" style="text-align:center">خطة المذاكرة بتاعتك للثانوية</p><p class="note" style="text-align:center">حساب محلي على جهازك. بياناتك محفوظة في المتصفح بس.</p><div class="chips" id="authseg"><button data-m="login" class="on">دخول</button><button data-m="signup">حساب جديد</button></div><input type="text" id="un" placeholder="اسم المستخدم" autocomplete="username"><input type="password" id="pw" placeholder="كلمة السر" autocomplete="current-password"><div id="err" style="color:#f87171;min-height:22px"></div><button id="authgo" style="width:100%">دخول</button></div>
+<div class="auth" id="auth"><div class="box"><div id="authbox"><h1 style="text-align:center">جدولك</h1><p class="note" style="text-align:center">خطة المذاكرة بتاعتك للثانوية</p><p class="note" style="text-align:center">حساب محلي على جهازك. بياناتك محفوظة في المتصفح بس.</p><div class="chips" id="authseg"><button data-m="login" class="on">دخول</button><button data-m="signup">حساب جديد</button></div><input type="text" id="un" placeholder="اسم المستخدم" autocomplete="username" autocapitalize="none" spellcheck="false"><div id="unh" class="unh">زي حساب انستجرام: من غير مسافات. مسموح حروف وأرقام و _ و - و .</div><input type="password" id="pw" placeholder="كلمة السر" autocomplete="current-password"><div id="err" style="color:#f87171;min-height:22px"></div><button id="authgo" style="width:100%">دخول</button></div>
 <div id="prof" style="display:none"></div>
 <div id="onb" style="display:none"><h2>أهلاً! اضبط خطتك</h2><b>يوم الراحة بتاعك إيه؟</b><div class="chips" id="days7" style="flex-wrap:wrap"></div><b>اليوم ده يبقى إيه؟</b><div class="chips" id="omode"></div><b>وصلت لفين في المنهج؟</b><div class="chips" id="pmode" style="flex-wrap:wrap"></div><div id="pextra"></div><b>ميعاد أول امتحان (تقدر تغيره)</b><input type="text" class="dt" id="exd" inputmode="numeric" maxlength="10" placeholder="2027-05-15" dir="ltr"><p class="note">الوزارة لسه معلنتش اليوم بالظبط (مايو). الافتراضي 15 مايو 2027.</p><button id="onbgo" style="width:100%">ابدأ الخطة</button></div></div></div>
 <div class="top"><div><b id="who"></b></div><div style="margin-inline-start:auto;display:flex;gap:6px"><button class="g" id="setb">⚙︎</button><button class="g" id="lo">خروج</button></div></div>
@@ -189,6 +190,9 @@ a(T1Z,2,["Unit 3","Revision 1","Unit 4","A Glimpse of Revelation: Unit 2 (تاب
 a(T1Z,3,["Unit 5","Unit 6","Revision 2","A Glimpse of Revelation: Unit 3 (تابع) (قراءة بس)"]);
 a(T2Z,0,["Unit 7","Unit 8","Unit 9","Revision 3","Unit 10","Unit 11","Unit 12","Revision 4","A Glimpse of Revelation: Unit 5 + Unit 6 (قراءة بس)"]);})();
 
+const FQ={"hanafi": {"t1": [{"k": "fq", "t": "من أول كتاب الطهارة إلى نهاية المسح على الجبائر وهو قوله: (لما ذكرنا)", "p": "", "seg": 1}, {"k": "fq", "t": "ومن أول فصل في الاستنجاء إلى نهايته وهو قوله (برءوس أصابعها)", "p": "", "seg": 1}, {"k": "fq", "t": "من أول كتاب الصلاة إلى نهاية فقرة الفتح على الإمام وهو قوله (وقد بيناه)", "p": "", "seg": 2}, {"k": "fq", "t": "ومن أول باب سجود السهو إلى فقرة الشك في عدد الركعات وهو قوله (أول ما سها استقبل)", "p": "", "seg": 2}, {"k": "fq", "t": "من أول باب صلاة الجمعة إلى نهاية باب الشهيد والمباحث المتعلقة به وهو قوله: (ولم يغسل)", "p": "", "seg": 3}], "t2": [{"k": "fq", "t": "من أول كتاب الزكاة إلى نهاية باب مصارف الزكاة وهو قوله (لإطلاق النصوص)", "p": "", "seg": 0}, {"k": "fq", "t": "من أول كتاب الصوم إلى فقرة ما يكره للصائم وهو قوله (يجوز لها المضغ أولى)", "p": "", "seg": 0}, {"k": "fq", "t": "من أول كتاب الحج إلى نهاية طواف الوداع وهو قوله: (في طواف الصدر)", "p": "", "seg": 0}, {"k": "fq", "t": "من أول فصل في العمرة إلى نهاية فصل في الاحتكار وهو قوله \"إلى يومنا\"", "p": "", "seg": 0}, {"k": "fq", "t": "ومن أول كتاب الأضحية إلى نهاية الكتاب", "p": "", "seg": 0}]}, "maliki": {"t1": [{"k": "fq", "t": "من أول باب الطهارة إلى نهاية فصل في فرائض الوضوء وهو قوله: (أي بعد إتمامه فلا يضر)", "p": "", "seg": 1}, {"k": "fq", "t": "من سنن الوضوء إلى نهاية فصل في المسح على الجبيرة وهو قوله (وبنى إن طال نسياناً)", "p": "", "seg": 2}, {"k": "fq", "t": "ومن أول باب الصلاة فصل في الأذان إلى نهاية مبطلاتها \"مبطلات الصلاة\"، وهو قوله: \"وأولى لترك فضيلة كقنوت\"", "p": "", "seg": 2}, {"k": "fq", "t": "من أول فصل (صلاة الجماعة) إلى نهاية ما يفعله المسبوق إذا وجد الإمام في ركوع أو سجود أو جلوس وهو قوله (فتلغى جزما)", "p": "", "seg": 3}, {"k": "fq", "t": "ومن أول فصل في بيان شروط الجمعة وآدابها ومكروهاتها وموانعها وما يتعلق بذلك إلى نهاية صلاة الجنازة، وهو قوله: \"أعلم بحقيقة الحال\"", "p": "", "seg": 3}], "t2": [{"k": "fq", "t": "من أول (باب في الزكاة وشروط وجوبها) إلى نهاية فصل في زكاة الفطر وحكمها وعلى من تكون؟ ولمن تصرف؟ ووقت إخراجها وهو قوله: (وهو اليوم كله)", "p": "", "seg": 0}, {"k": "fq", "t": "من أول \"باب في صوم رمضان\" إلى نهايته وهو قوله: \"وهذا لفظ حديث روى عن النبي صلى الله عليه وسلم\"", "p": "", "seg": 0}, {"k": "fq", "t": "ومن أول \"باب في الحج والعمرة\" إلى نهاية مندوبات الطواف وهو قوله: \"للغروب على ما سيأتي\"", "p": "", "seg": 0}, {"k": "fq", "t": "من أول \"الركن الثالث من أركان الحج\" وهو الحضور بعرفة ليلة النحر إلى نهاية باب العقيقة وهو قوله: \"والله تعالى أعلم\"", "p": "", "seg": 0}, {"k": "fq", "t": "ومن أول باب اليمين إلى نهاية وقت وجوب الكفارة وهو قوله: \"فأولى إن ترك طائعًا\"", "p": "", "seg": 0}]}, "shafii": {"t1": [{"k": "fq", "t": "من أول كتاب الطهارة إلى نهاية حكم الماء الجاري وهو قوله (بين الجاري والراكد)", "p": "", "seg": 1}, {"k": "fq", "t": "ومن أول فصل في السواك إلى نهاية فروض الوضوء وهو قوله: \"أو بعد الفراغ لم يؤثر\"", "p": "", "seg": 1}, {"k": "fq", "t": "من أول فصل في الاستنجاء إلى نهاية: حكم من اجتمع عليه أغسال، وهو قوله: \"وحسن الأدب معهم\"", "p": "", "seg": 1}, {"k": "fq", "t": "فصل: في المسح على الخفين إلى آخر الفصل وهو قوله: \"ويفارقه عند عروض المبطل\"", "p": "", "seg": 2}, {"k": "fq", "t": "التيمم وما يتعلق به من أحكام كاملاً أي إلى قوله: \"وخرج بالفرض النفل فلا يفعل\"", "p": "", "seg": 2}, {"k": "fq", "t": "من أول: فصل في إزالة النجاسة كاملاً إلى قوله: (فيما عدا ذلك)", "p": "", "seg": 2}, {"k": "fq", "t": "ومن أول كتاب الصلاة إلى نهاية فقرة أحكام سجدة الشكر وهو قوله (من غير سبب حرم)", "p": "", "seg": 3}, {"k": "fq", "t": "ومن أول فصل في شروط الصلاة إلى نهاية الركن الثالث من أركان الصلاة وهو قوله (باختلاف النية أشد)", "p": "", "seg": 3}], "t2": [{"k": "fq", "t": "من أول الركن الرابع من أركان الصلاة إلى نهاية سنن الصلاة بعد الدخول فيها وتسمى الأبعاض وهو قوله (خلافاً لبعض المتأخرين)", "p": "", "seg": 0}, {"k": "fq", "t": "من أول فصل مبطلات الصلاة إلى نهاية درس الستر أمام المصلى، وهو قوله: \"أي لا يجعلها تلقاء وجهه\"", "p": "", "seg": 0}, {"k": "fq", "t": "ومن أول فصل في سجود السهو في الصلاة فرضًا كانت أو نفلًا، إلى قوله: \"هو آخر الأمرين من فعله ﷺ\"", "p": "", "seg": 0}, {"k": "fq", "t": "صلاة الجماعة كاملة إلى نهاية شروط الاقتداء وهو قوله: \"لكنه في الفعلي بلا عذر حرام\"", "p": "", "seg": 0}, {"k": "fq", "t": "صلاة الجمعة وما يتعلق بها من أحكام كاملة، صلاة العيدين وما يتعلق بها من أحكام كاملة", "p": "", "seg": 0}, {"k": "fq", "t": "من أول فصل في صلاة الجنازة إلى نهاية سنن صلاة الجنازة وهو قوله (مالم يخف تغيره)", "p": "", "seg": 0}, {"k": "fq", "t": "ومن أول كتاب الزكاة إلى شروط وجوب زكاة الفطر وهو قوله (والعيب والغلت)", "p": "", "seg": 0}]}, "hanbali": {"t1": [{"k": "fq", "t": "أول: كتاب الطهارة إلى نهاية باب الغسل وهو قوله: \"والغسل أفضل\"", "p": "", "seg": 1}, {"k": "fq", "t": "من أول: كتاب الصلاة إلى نهاية باب سجود السهو وهو قوله: \"حكم المستقل في نفسه\"", "p": "", "seg": 2}, {"k": "fq", "t": "من أول: باب صلاة الجماعة إلى نهاية سنن الخطبتين وهو قوله: \"ويعيدها ظهرا\"", "p": "", "seg": 3}], "t2": [{"k": "fq", "t": "فصل في صفة صلاة الجمعة وبعض أحكامها إلى نهاية باب: صلاة الاستسقاء وهو قوله: \"قاله في المبدع\"", "p": "", "seg": 0}, {"k": "fq", "t": "من أول: كتاب الزكاة إلى نهاية باب: ما يفسد الصوم ويوجب الكفارة وهو قوله: \"ولم يتبين له الخطأ\"", "p": "", "seg": 0}, {"k": "fq", "t": "من أول: كتاب المناسك إلى نهاية أركان العمرة، وهو قوله: \"وهزم الأحزاب وحده\"", "p": "", "seg": 0}]}};
+const FQN={hanafi:"حنفي",maliki:"مالكي",shafii:"شافعي",hanbali:"حنبلي"};
+
 function mix(arr){ // round robin proportional
  const g={};arr.forEach(x=>(g[x.k]=g[x.k]||[]).push(x));
  const ks=Object.keys(g),out=[];const tot=arr.length;
@@ -203,13 +207,14 @@ const add_=(d,n)=>new Date(d.getTime()+n*864e5);
 
 /* step-by-step setup wizard: one question per screen */
 var WZ={i:0,d:{},mode:"full",busy:false};
-function wzList(){var d=WZ.d,l=["year","sys"];
+function wzList(){var d=WZ.d,l=["year","sys"];if(d.year==1&&d.sys=="az")l.push("madh");
  if(d.year==2&&d.sys=="bac"){l.push("track");if(d.track)l.push("elective")}
  if(WZ.mode!="profile")l.push("dayoff","offmode","progress","exam");
  return l}
 var WZQ={
  year:{t:"أنت في سنة كام؟",s:"هنظبط الجدول على منهج سنتك.",o:function(){return[[1,"أولى ثانوي"],[2,"تانية ثانوي"],[3,"تالتة ثانوي"]]},get:function(){return WZ.d.year},set:function(v){WZ.d.year=v;if(!SYSOPT[v].includes(WZ.d.sys))WZ.d.sys="";WZ.d.track=WZ.d.elective=""}},
  sys:{t:"بتدرس بأنهي نظام؟",s:"كل نظام له منهج ومواعيد مختلفة.",o:function(){return SYSOPT[WZ.d.year].map(function(k){return[k,SYS[k]]})},get:function(){return WZ.d.sys},set:function(v){WZ.d.sys=v;WZ.d.track=WZ.d.elective=""}},
+ madh:{t:"مذهبك الفقهي إيه؟",s:"الفقه في الأزهر بيتدرّس حسب المذهب، وهنحمّل لك المقرر بتاعه.",o:function(){return[["hanafi","حنفي"],["maliki","مالكي"],["shafii","شافعي"],["hanbali","حنبلي"]]},get:function(){return WZ.d.madh},set:function(v){WZ.d.madh=v}},
  track:{t:"مسارك إيه؟",s:"المسار بيتحدد من تانية بكالوريا.",o:function(){return Object.entries(TRK)},get:function(){return WZ.d.track},set:function(v){WZ.d.track=v;WZ.d.elective=""}},
  elective:{t:"مادتك الاختيارية؟",s:"كل مادة اختيارية ليها جدول لوحدها.",o:function(){return ELEC[WZ.d.track]||null},get:function(){return WZ.d.elective},set:function(v){WZ.d.elective=v}},
  dayoff:{t:"يوم الراحة بتاعك إيه؟",s:"اليوم ده مش هيتحط فيه دروس جديدة.",o:function(){return DN.map(function(n,i){return[i,n]})},get:function(){return WZ.d.dayoff},set:function(v){WZ.d.dayoff=v}},
@@ -218,8 +223,8 @@ var WZQ={
  exam:{t:"امتحانك الأول إمتى؟",s:"الوزارة لسه معلنتش اليوم بالظبط. الافتراضي 15 مايو 2027 وتقدر تغيّره.",custom:1}
 };
 function wzEl(){var e=document.getElementById("wz");if(!e){e=document.createElement("div");e.id="wz";e.innerHTML='<div class="wz-orb o1"></div><div class="wz-orb o2"></div><div class="wz-orb o3"></div><div class="wz-top"><button id="wzback" aria-label="رجوع">&#8594;</button><div class="wz-bar"><i id="wzfill"></i></div><span id="wzcount"></span></div><div class="wz-stage"><div class="wzc" id="wzc"></div></div>';document.body.appendChild(e);document.getElementById("wzback").onclick=wzBack}return e}
-function wzStart(mode){WZ.mode=mode;WZ.i=mode=="onb"?0:0;var u=U||{};WZ.d={year:u.year||0,sys:u.sys||"",track:u.track||"",elective:u.elective||"",dayoff:u.dayoff==null?6:u.dayoff,offmode:u.offmode||"empty",exam:u.exam||"2027-05-15"};
- if(mode=="onb"){WZ.mode="full";WZ.i=4}
+function wzStart(mode){WZ.mode=mode;WZ.i=mode=="onb"?0:0;var u=U||{};WZ.d={madh:u.madh||"",year:u.year||0,sys:u.sys||"",track:u.track||"",elective:u.elective||"",dayoff:u.dayoff==null?6:u.dayoff,offmode:u.offmode||"empty",exam:u.exam||"2027-05-15"};
+ if(mode=="onb"){WZ.mode="full";WZ.i=wzList().length-4}
  pmSel="sync";wzEl();document.getElementById("auth").classList.remove("on");document.getElementById("wz").classList.add("on");wzRender(false)}
 function wzClose(){var e=document.getElementById("wz");if(e)e.classList.remove("on");var o=document.getElementById("onb");["pmode","pextra","exd"].forEach(function(id){var x=document.getElementById(id);if(x&&o)o.appendChild(x)})}
 function wzBack(){if(WZ.busy||WZ.i==0)return;WZ.i--;wzRender(true)}
@@ -241,7 +246,7 @@ function wzRender(anim){var l=wzList(),id=l[WZ.i],q=WZQ[id],c=document.getElemen
   c.className="wzc in";setTimeout(function(){WZ.busy=false;c.className="wzc"},520)};
  if(anim){c.className="wzc out";setTimeout(draw,300)}else draw()}
 function wzNext(){if(WZ.busy)return;var l=wzList();if(WZ.i<l.length-1){WZ.i++;wzRender(true)}else wzFinish()}
-function wzFinish(){var d=WZ.d;U.year=d.year;U.sys=d.sys;U.track=d.track||"";U.elective=d.elective||"";
+function wzFinish(){var d=WZ.d;U.year=d.year;U.sys=d.sys;U.track=d.track||"";U.elective=d.elective||"";U.madh=(d.year==1&&d.sys=="az")?(d.madh||""):"";
  if(WZ.mode=="profile"){saveU();wzClose();if(U.dayoff==null)wzStart("onb");else enter();return}
  U.dayoff=d.dayoff;U.offmode=d.offmode;U.exam=d.exam||"2027-05-15";U.start=iso(PLAN0);saveU();applyProgress();wzClose();enter()}
 function showProfile(){wzStart(U&&U.dayoff!=null?"profile":"full")}
@@ -278,14 +283,14 @@ const J=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d}catch(e){retur
 function todayD(){const t=new Date();return D(t.getFullYear(),t.getMonth()+1,t.getDate())}
 function dow(d){return (d.getUTCDay()+1)%7} // 0=Sat..6=Fri
 let T1END=D(2027,1,21),T2START=D(2027,2,6),PLAN0=D(2026,9,12);
-const SUBJ={nh:["نحو","#d97706"],sf:["صرف","#0284c7"],bl:["بلاغة","#db2777"],ad:["أدب","#a855f7"],qr:["قرآن","#10b981"],tf:["تفسير","#14b8a6"],hd:["حديث","#6366f1"],tw:["توحيد","#f59e0b"],lg:["منطق","#64748b"],ic:["ثقافة إسلامية","#84cc16"],py:["فيزياء","#f97316"],mm:["رياضيات","#eab308"],mt:["رياضيات","#eab308"],sc:["علوم","#14b8a6"],ph:["فلسفة","#6366f1"],ar:["عربي","#d97706"],en:["إنجليزي","#0284c7"],hi:["تاريخ","#db2777"],pg:["برمجة","#059669"],x:["قصة","#64748b"]};
+const SUBJ={nh:["نحو","#d97706"],sf:["صرف","#0284c7"],fq:["فقه","#22c55e"],bl:["بلاغة","#db2777"],ad:["أدب","#a855f7"],qr:["قرآن","#10b981"],tf:["تفسير","#14b8a6"],hd:["حديث","#6366f1"],tw:["توحيد","#f59e0b"],lg:["منطق","#64748b"],ic:["ثقافة إسلامية","#84cc16"],py:["فيزياء","#f97316"],mm:["رياضيات","#eab308"],mt:["رياضيات","#eab308"],sc:["علوم","#14b8a6"],ph:["فلسفة","#6366f1"],ar:["عربي","#d97706"],en:["إنجليزي","#0284c7"],hi:["تاريخ","#db2777"],pg:["برمجة","#059669"],x:["قصة","#64748b"]};
 const MEX2=[{n:"أكتوبر",s:D(2026,10,17),e:D(2026,10,22),sc:"من أول الأسبوع 1 لنهاية الأسبوع 5"},{n:"نوفمبر",s:D(2026,11,28),e:D(2026,12,3),sc:"لحد نهاية الأسبوع 11"}];
 const CP2=[{end:D(2026,10,16),n:{ar:3,en:2,hi:4,pg:4}},{end:D(2026,11,27),n:{ar:6,en:8,hi:5,pg:7}},{end:T1END,n:{ar:9,en:10,hi:12,pg:14}}];
 let MEX=MEX2,CP=CP2,KS=["ar","en","hi","pg"],T1=T1B,T2=T2B,PK="2b";
 const DEFKS=["ar","en","hi","pg"];
 function useProfile(){const y1=U&&U.year==1&&(U.sys=="am"||U.sys=="bac"),med=U&&U.year==2&&U.sys=="bac"&&U.track=="med"&&(U.elective=="py"||U.elective=="mm");
  T1END=D(2027,1,21);
- if(U&&U.year==1&&U.sys=="az"){PK="az1";T1=T1Z;T2=T2Z;KS=["qr","tf","hd","tw","lg","ic","nh","sf","bl","ad","en","mt","sc","hi"];MEX=[];T1END=D(2026,12,30);const c=cpFor(T1Z);CP=[{end:D(2026,10,31),n:c[0]},{end:D(2026,11,30),n:c[1]},{end:T1END,n:c[2]}]}
+ if(U&&U.year==1&&U.sys=="az"){PK="az1";const FM=FQ[U.madh];T1=FM?T1Z.concat(FM.t1):T1Z;T2=FM?T2Z.concat(FM.t2):T2Z;KS=["qr","tf","hd","tw","lg","ic","nh","sf","bl","ad","en","mt","sc","hi"].concat(FM?["fq"]:[]);MEX=[];T1END=D(2026,12,30);const c=cpFor(T1);CP=[{end:D(2026,10,31),n:c[0]},{end:D(2026,11,30),n:c[1]},{end:T1END,n:c[2]}]}
  else if(y1){MEX=MEX2;PK="1a";T1=T1A;T2=T2A;KS=["ar","en","hi","mt","sc","ph"];const c=cpFor(T1A);CP=[{end:CP2[0].end,n:c[0]},{end:CP2[1].end,n:c[1]},{end:CP2[2].end,n:c[2]}]}
  else if(med){MEX=MEX2;const E=U.elective;PK="2m";KS=["ar","en","hi",E];T1=T1B.filter(x=>x.k!="pg").concat(T1M[E].map(x=>({k:E,t:x[0],p:x[1]})));T2=T2B.filter(x=>x.k!="pg").concat(T2M[E].map(x=>({k:E,t:(E=="py"?"ج2 ":"")+x[0],p:x[1]})));
   const nn=E=="py"?[4,12,T1M.py.length]:[8,26,T1M.mm.length];CP=CP2.map((c,i)=>{const n={...c.n};delete n.pg;n[E]=nn[i];return {end:c.end,n}})}
@@ -298,9 +303,10 @@ const users=()=>J("bac_users",{});
 function saveU(){if(U){W("bac_data_"+U.id,U)}}
 let authMode="login";
 function authUI(){document.querySelectorAll("#authseg button").forEach(b=>b.classList.toggle("on",b.dataset.m==authMode));$("authgo").textContent=authMode=="login"?"دخول":"إنشاء حساب";$("err").textContent=""}
+const UNH="اسم المستخدم بدون مسافات، 3 حروف على الأقل. مسموح حروف وأرقام و _ و - و .";
 async function authGo(){
  const n=$("un").value.trim().toLowerCase(),p=$("pw").value;const us=users();
- if(n.length<3||!/^[a-z0-9_\u0600-\u06FF.]+$/i.test(n)){$("err").textContent="اسم المستخدم 3 حروف على الأقل (حروف/أرقام بدون مسافات)";return}
+ if(n.length<3||!/^[a-z0-9_.\-\u0600-\u06FF]+$/i.test(n)){$("err").textContent=UNH;return}
  if(p.length<6){$("err").textContent="كلمة السر 6 أحرف على الأقل";return}
  if(authMode=="signup"){
   if(us[n]){$("err").textContent="الاسم ده مستخدم على الجهاز ده";return}
@@ -386,7 +392,7 @@ function rHome(){
  const f=U.focus[tdi]||0;$("tf").textContent="تركيز النهاردة: "+f+" دقيقة"}
 /* schedule */
 function rSched(){let html="";const {td,tdi}=ST;
- if(PK=="az1")html+=`<div class="card"><h3>البكالوريا الأزهرية · أولى ثانوي</h3><div class="pgn">ترتيب الدروس من التوزيع الرسمي الشهري (سبتمبر-أكتوبر، نوفمبر، ديسمبر). مفيش امتحانات شهرية. امتحانات الترم الأول من 31 ديسمبر لـ11 يناير، والترم التاني من 6 فبراير. المواد اللي لسه محمّلتش: الفقه (حسب مذهبك)، الفلسفة والمنطق (المقرر الحديث)، اللغة الفرنسية والبرمجة (مش داخلين المجموع). في الحديث: الأحاديث 11 لـ17 مش متوزعة في الجدول الرسمي. جزء الترم التاني من الرياضيات لسه محمّلش. البيانات من مصدر واحد (ملف الأزهر الرسمي) وبتتراجع.</div></div>`;
+ if(PK=="az1")html+=`<div class="card"><h3>البكالوريا الأزهرية · أولى ثانوي</h3><div class="pgn">ترتيب الدروس من التوزيع الرسمي الشهري (سبتمبر-أكتوبر، نوفمبر، ديسمبر). مفيش امتحانات شهرية. امتحانات الترم الأول من 31 ديسمبر لـ11 يناير، والترم التاني من 6 فبراير. ${U.madh?"الفقه على المذهب "+FQN[U.madh]+": من ملف الأزهر الرسمي (مصدر واحد)، والنطاق بالفصول مش بأرقام دروس."+(U.madh=="hanbali"?" صفحة الحنبلي مكتوب عليها طبعة 2017/2018 ولسه ماتأكدناش منها. ":" "):"الفقه لسه محمّلش (اختار مذهبك من تغيير النظام). "}المواد اللي لسه محمّلتش: الفلسفة والمنطق (المقرر الحديث)، اللغة الفرنسية والبرمجة (مش داخلين المجموع). في الحديث: الأحاديث 11 لـ17 مش متوزعة في الجدول الرسمي. جزء الترم التاني من الرياضيات لسه محمّلش. البيانات من مصدر واحد (ملف الأزهر الرسمي) وبتتراجع.</div></div>`;
 if(MEX.length)html+=`<div class="card"><h3>الامتحانات الشهرية</h3>${MEX.map((m,i)=>{const past=td>m.e;const c=CP[i].n;return `<div class="todo"><div style="flex:1"><b>شهر ${m.n}</b> · ${fmt(m.s>m.e?m.e:add_(m.s,1))} إلى ${fmt(m.e)}${past?" (عدّى)":" · فاضل "+Math.max(0,Math.round((add_(m.s,1)-td)/864e5))+" يوم"}<div class="pgn">بيغطي ${m.sc}. المفروض تكون خلّصت لحد دلوقتي: ${KS.map(k=>SUBJ[k][0]+" "+(c[k]||0)).join("، ")} درس. الأسبوع بتاعه (${fmt(m.s)}) فاضي من الجديد ومخصص للمراجعة.</div></div></div>`}).join("")}<div class="note">المواعيد دي من جدول مديرية القاهرة (مقترح) وبتختلف شوية بين المحافظات. أكتوبر 18-22 اتأكد، نوفمبر 29 نوفمبر لـ3 ديسمبر. مفيش مواعيد امتحانات شهرية للترم التاني اتعلنت لسه.</div></div>`;
  for(let i=0;i<P.days.length;i+=7){const wk=P.days.slice(i,i+7),f=wk[0].date,l=wk[wk.length-1].date,n=i/7+1;
   const kind=wk.some(x=>x.kind=="rev")?"rev":wk.some(x=>x.kind=="mexam")?"mid":wk.some(x=>x.kind=="gap")?"mid":"";const lab=kind=="rev"?"مراجعة نهائية":wk.some(x=>x.kind=="mexam")?"امتحان شهر + مراجعة":kind=="mid"?"مراجعة منتصف السنة":"أسبوع دراسة";
@@ -549,5 +555,7 @@ if("serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWork
 fm();authUI();
 (function(){const id=localStorage.getItem("bac_session");if(id){U=J("bac_data_"+id,null)}
  if(U&&!U.year){showProfile()}else if(U&&U.dayoff!=null){enter()}else if(U){$("auth").classList.add("on");showOnboard()}else{$("auth").classList.add("on")}})();
+
+$("un").addEventListener("input",()=>{const v=$("un").value,bad=/\s/.test(v)||(v&&!/^[a-z0-9_.\-\u0600-\u06FF]+$/i.test(v));$("unh").classList.toggle("bad",!!bad);if(bad)$("err").textContent=UNH;else if($("err").textContent==UNH)$("err").textContent=""});
 
 </script></body></html>
