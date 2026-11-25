@@ -148,6 +148,39 @@ input.dt.bad{border-color:#ff6b8b!important;box-shadow:0 0 0 3px rgba(255,107,13
 .rate{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:60;display:none;align-items:center;justify-content:center;padding:18px}.rate.on{display:flex}.rate .bx{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:20px;max-width:380px;width:100%;text-align:center}.rate .bx button{margin:4px;padding:11px 14px}
 .set{position:fixed;inset:0;background:var(--bg);z-index:55;overflow:auto;display:none;padding:18px}.set.on{display:block}.set .in{max-width:520px;margin:0 auto}.set input{width:100%;margin:6px 0;border:1px solid var(--bd);border-radius:12px;padding:12px;background:#0a0b18;color:var(--tx);font-family:inherit}
 .view{display:none;max-width:760px;margin:0 auto;padding:6px 14px 100px}.view.on{display:block}.rg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.rg button{padding:10px 2px;font-size:13px}.rg button.w{background:#3b2a6b}
+/* ===== interior glass + 3D (preview layer) ===== */
+html{background:#05060d}
+body{background:#05060d!important;padding-bottom:104px!important}
+#bgfx{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+#bgfx i{position:absolute;border-radius:50%;filter:blur(60px);will-change:transform}
+#bgfx .a{width:380px;height:380px;background:#6d28d9;top:-120px;right:-110px;opacity:.7}
+#bgfx .b{width:340px;height:340px;background:#2433d6;top:48vh;left:-140px;opacity:.5}
+#bgfx .c{width:260px;height:260px;background:#a21caf;bottom:-80px;right:-60px;opacity:.32}
+.card,.wk{background:linear-gradient(150deg,rgba(255,255,255,.12),rgba(255,255,255,.04) 55%,rgba(139,61,255,.08))!important;border:1px solid rgba(255,255,255,.14)!important;border-radius:26px!important;position:relative;overflow:hidden;
+ box-shadow:0 18px 44px rgba(0,0,0,.5),0 2px 0 rgba(255,255,255,.04),inset 0 1px 0 rgba(255,255,255,.26),inset 0 -18px 34px rgba(139,61,255,.05)!important;transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateZ(0);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+#v-home .card,#v-stats .card,#v-az .card{backdrop-filter:blur(16px) saturate(170%);-webkit-backdrop-filter:blur(16px) saturate(170%)}
+.card::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(260px 200px at var(--mx,50%) var(--my,-20%),rgba(255,255,255,.2),transparent 70%);opacity:var(--ho,0);transition:opacity .3s}
+.card.pr{transition:transform .08s linear}
+.tilt{transform-style:flat!important}
+.st{transform:none!important;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(139,61,255,.14))!important;border:1px solid rgba(255,255,255,.14)!important;border-radius:20px!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 18px rgba(0,0,0,.28)}
+.fresh .card,.fresh .wk{animation:cin .7s cubic-bezier(.2,.8,.2,1) both}
+.fresh .card:nth-child(2),.fresh .wk:nth-child(2){animation-delay:.07s}.fresh .card:nth-child(3),.fresh .wk:nth-child(3){animation-delay:.14s}.fresh .card:nth-child(4),.fresh .wk:nth-child(4){animation-delay:.21s}.fresh .card:nth-child(n+5),.fresh .wk:nth-child(n+5){animation-delay:.26s}
+@keyframes cin{from{opacity:0;transform:perspective(900px) translateY(46px) rotateX(-18deg) scale(.94);filter:blur(8px)}to{opacity:1;transform:perspective(900px);filter:none}}
+.nav{left:14px!important;right:14px!important;bottom:calc(12px + env(safe-area-inset-bottom))!important;border:1px solid rgba(255,255,255,.18)!important;border-radius:32px!important;padding:7px 6px!important;
+ background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,.06))!important;backdrop-filter:blur(22px) saturate(180%)!important;-webkit-backdrop-filter:blur(22px) saturate(180%)!important;
+ box-shadow:0 22px 50px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.3)!important}
+.nav button{transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,color .3s!important;border-radius:24px!important}
+.nav button.on{background:linear-gradient(150deg,rgba(166,107,255,.85),rgba(98,50,230,.8))!important;color:#fff!important;transform:translateY(-6px) scale(1.07);box-shadow:0 12px 24px rgba(139,61,255,.55),inset 0 1px 0 rgba(255,255,255,.4)}
+button:not(.nav button){transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .2s!important}
+button:active{transform:scale(.95)!important}
+.it input[type=checkbox]{-webkit-appearance:none;appearance:none;width:26px;height:26px;flex:none;margin:1px 0 0;border-radius:9px;border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.07);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);transition:transform .2s cubic-bezier(.3,1.6,.5,1),background .25s;position:relative}
+.it input[type=checkbox]:active{transform:scale(.8)}
+.it input[type=checkbox]:checked{background:linear-gradient(150deg,#a66bff,#6232e6);border-color:rgba(255,255,255,.5)}
+.it input[type=checkbox]:checked::after{content:"";position:absolute;left:8px;top:3px;width:6px;height:12px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.card .bar{height:10px!important;border-radius:10px!important;background:rgba(255,255,255,.09)!important;overflow:hidden}
+.card .bar i{box-shadow:0 0 14px rgba(139,61,255,.8)}
+@media (prefers-reduced-motion:reduce){.fresh .card,.fresh .wk{animation:none}#bgfx i{display:none}}
+
 </style></head><body>
 <div class="auth" id="auth"><div class="box"><div id="authbox"><h1 style="text-align:center">جدولك</h1><p class="note" style="text-align:center">خطة المذاكرة بتاعتك للثانوية</p><p class="note" style="text-align:center">حساب محلي على جهازك. بياناتك محفوظة في المتصفح بس.</p><div class="chips" id="authseg"><button data-m="login" class="on">دخول</button><button data-m="signup">حساب جديد</button></div><input type="text" id="un" placeholder="اسم المستخدم" autocomplete="username" autocapitalize="none" spellcheck="false"><div id="unh" class="unh">من غير مسافات. مسموح حروف وأرقام و <b class="sy">_</b> <b class="sy">-</b> <b class="sy">.</b></div><input type="password" id="pw" placeholder="كلمة السر" autocomplete="current-password"><div id="err" style="color:#f87171;min-height:22px"></div><button id="authgo" style="width:100%">دخول</button><section class="about"><h2>إزاي جدولك بيساعدك؟</h2><p>جدولك بيحوّل منهج سنتك لخطة مذاكرة واضحة: أسابيع، وكل أسبوع مقسوم لأيام من السبت للجمعة، لحد ميعاد امتحانك. بتختار سنتك ونظامك (ثانوي عام أو بكالوريا أو أزهر)، وبتشوف دروس كل يوم، وبتعلّم اللي خلصته، وبتراجع اللي اتراكم عليك من غير ما تتلخبط.</p><h3>تنظيم المواد والمراجعة</h3><p>كل مادة ليها دروسها في الجدول، وفيه أيام مراجعة قبل الامتحانات الشهرية، ويوم راحة بتحدده انت.</p><h3>مهامك اليومية</h3><p>صفحة النهاردة بتجمع دروس اليوم والمتأخر، ومعاها مؤقت تركيز وأذكار الصباح والمساء. البيانات من مصادر منشورة مش رسمية من الوزارة، فراجع الجدول مع مدرستك.</p><h3>جداول جاهزة</h3><ul><li><a href="/first-secondary/">جدول مذاكرة أولى ثانوي (عام وبكالوريا)</a></li><li><a href="/first-secondary-azhar/">جدول مذاكرة أولى ثانوي أزهري (البكالوريا الأزهرية)</a></li><li><a href="/second-bac-engineering/">جدول مذاكرة تانية بكالوريا: مسار الهندسة وعلوم الحاسب (برمجة)</a></li><li><a href="/second-bac-medicine-physics/">جدول مذاكرة تانية بكالوريا: الطب وعلوم الحياة (فيزياء)</a></li><li><a href="/second-bac-medicine-maths/">جدول مذاكرة تانية بكالوريا: الطب وعلوم الحياة (رياضيات)</a></li><li><a href="/second-general-science/">جدول مذاكرة تانية ثانوي عام: القسم العلمي</a></li><li><a href="/second-general-literary/">جدول مذاكرة تانية ثانوي عام: القسم الأدبي</a></li><li><a href="/third-general-science/">جدول مذاكرة تالتة ثانوي عام: علمي علوم</a></li><li><a href="/third-general-math/">جدول مذاكرة تالتة ثانوي عام: علمي رياضة</a></li><li><a href="/third-general-literary/">جدول مذاكرة تالتة ثانوي عام: أدبي</a></li><li><a href="/second-azhar-science/">جدول مذاكرة تانية ثانوي أزهري: القسم العلمي</a></li><li><a href="/second-azhar-literary/">جدول مذاكرة تانية ثانوي أزهري: القسم الأدبي</a></li><li><a href="/third-azhar-science/">جدول مذاكرة تالتة ثانوي أزهري: القسم العلمي</a></li><li><a href="/third-azhar-literary/">جدول مذاكرة تالتة ثانوي أزهري: القسم الأدبي</a></li><li><a href="/second-bac-engineering-chemistry/">جدول مذاكرة تانية بكالوريا: الهندسة وعلوم الحاسب (كيمياء)</a></li><li><a href="/second-bac-business-accounting/">جدول مذاكرة تانية بكالوريا: مسار الأعمال (محاسبة)</a></li><li><a href="/second-bac-business-admin/">جدول مذاكرة تانية بكالوريا: مسار الأعمال (إدارة أعمال)</a></li><li><a href="/second-bac-arts-psychology/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (علم النفس)</a></li><li><a href="/second-bac-arts-french/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (فرنسي)</a></li><li><a href="/second-bac-arts-german/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (ألماني)</a></li><li><a href="/second-bac-arts-spanish/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (إسباني)</a></li><li><a href="/second-bac-arts-italian/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (إيطالي)</a></li><li><a href="/second-bac-arts-chinese/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (صيني)</a></li></ul></section></div>
 <div id="prof" style="display:none"></div>
@@ -412,12 +445,12 @@ function rHome(){
  const wkDays=P.days.slice(Math.max(0,ST.wi)*7,Math.max(0,ST.wi)*7+7);
  const line=wkDays.map(x=>{const its=x.items;const dn=its.length&&its.every(i=>U.done[i.id]);return `<div class="${x.off?"off":""} ${dn?"ok":""} ${iso(x.date)==tdi?"td":""}">${DN[dow(x.date)].slice(0,3)}<br>${x.off?"راحة":dn?"✓":its.filter(i=>U.done[i.id]).length+"/"+its.length}</div>`}).join("");
  const x=P.by[tdi];let todayH=!x?'<div class="note">مفيش مهام النهاردة (خارج فترة الخطة).</div>':x.off?'<div class="note">النهاردة يوم راحتك. استمتع، من غير دروس.</div>':x.items.map(i=>itemRow(i,x)).join("")||'<div class="note">مفيش مهام</div>';
- const dn=ST.done,pc=ST.total?Math.round(dn/ST.total*100):0;
+ const dn=wkDays.reduce((s,x)=>s+x.items.filter(i=>U.done[i.id]).length,0),wt=wkDays.reduce((s,x)=>s+x.items.length,0),pc=wt?Math.round(dn/wt*100):0,opc=ST.total?Math.round(ST.done/ST.total*100):0;
  $("core").textContent=pc+"%";
  $("hm").innerHTML=`<div class="card tilt"><div class="row" style="justify-content:space-between"><b>${wk}</b><span class="flame">🔥 ${ST.sk} يوم</span></div>
  <div class="wkline">${line}</div>
- <div class="grid" style="margin-top:10px"><div class="st"><b>${dn}</b><span>خلّصت</span></div><div class="st"><b>${ST.late.length}</b><span>متراكمة</span></div><div class="st"><b>${ST.total-dn}</b><span>فاضلة</span></div></div>
- <div class="bar"><i style="width:${pc}%"></i></div><div class="note">${dn} من ${ST.total} مهمة (${pc}%) · خلّصت لحد دلوقتي ${dn} مهمة</div></div>
+ <div class="grid" style="margin-top:10px"><div class="st"><b>${dn}</b><span>خلّصت</span></div><div class="st"><b>${ST.late.length}</b><span>متراكمة</span></div><div class="st"><b>${wt-dn}</b><span>فاضلة</span></div></div>
+ <div class="bar"><i style="width:${pc}%"></i></div><div class="note">الأسبوع ده: ${dn} من ${wt} مهمة (${pc}%) · إنجازك الكلي ${opc}% (${ST.done} من ${ST.total})</div></div>
  <div class="card"><h3>مهام النهاردة</h3><div id="tdl">${todayH}</div></div>`;
  bind($("hm"));
  const f=U.focus[tdi]||0;$("tf").textContent="تركيز النهاردة: "+f+" دقيقة"}
@@ -582,5 +615,28 @@ const close=()=>{sh.classList.remove("on");cur=null;renderAll&&renderAll()};
 sh.querySelector(".nbk").onclick=close;$("nx").onclick=close;
 $("ntx").addEventListener("input",()=>{if(!cur)return;clearTimeout(tm);tm=setTimeout(()=>{U.notes=U.notes||{};const v=$("ntx").value;if(v.trim())U.notes[cur]=v;else delete U.notes[cur];saveU();$("nsv").textContent="اتحفظت"},400)});
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest(".nt");if(!b)return;e.preventDefault();cur=b.dataset.n;const it=ITEMS[cur];$("nt").textContent=it?it.t:"ملاحظات";$("ntx").value=(U.notes||{})[cur]||"";$("nsv").textContent="";sh.classList.add("on")})})();
+
+/* interior glass + 3D interactions: transform/opacity only, rAF-throttled */
+(function(){
+var bg=document.createElement("div");bg.id="bgfx";bg.innerHTML='<i class="a"></i><i class="b"></i><i class="c"></i>';document.body.insertBefore(bg,document.body.firstChild);
+var A=bg.querySelector(".a"),B=bg.querySelector(".b"),C=bg.querySelector(".c"),ty=0,raf=0,sy=0,ox=0,oy=0;
+function paint(){raf=0;var y=window.scrollY;A.style.transform="translate3d("+(ox*30)+"px,"+(-y*.12+oy*30)+"px,0)";B.style.transform="translate3d("+(-ox*40)+"px,"+(-y*.2)+"px,0)";C.style.transform="translate3d("+(ox*20)+"px,"+(-y*.07)+"px,0)"}
+function sched(){if(!raf)raf=requestAnimationFrame(paint)}
+addEventListener("scroll",sched,{passive:true});paint();
+/* press / hover tilt with specular light */
+var cur=null;
+function tilt(c,e,k){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+ c.style.setProperty("--ry",((x-.5)*k)+"deg");c.style.setProperty("--rx",((.5-y)*k)+"deg");c.style.setProperty("--mx",(x*100)+"%");c.style.setProperty("--my",(y*100)+"%");c.style.setProperty("--ho",1)}
+function rest(c){c.classList.remove("pr");c.style.setProperty("--rx","0deg");c.style.setProperty("--ry","0deg");c.style.setProperty("--ho",0)}
+document.addEventListener("pointerdown",function(e){var c=e.target.closest&&e.target.closest(".card");if(!c)return;cur=c;c.classList.add("pr");tilt(c,e,e.pointerType=="touch"?10:12)},{passive:true});
+document.addEventListener("pointermove",function(e){if(e.pointerType=="mouse"){var c=e.target.closest&&e.target.closest(".card");if(cur&&cur!=c)rest(cur);cur=c;if(c)tilt(c,e,10);return}if(cur&&e.buttons)tilt(cur,e,10)},{passive:true});
+["pointerup","pointercancel","pointerleave"].forEach(function(t){document.addEventListener(t,function(){if(cur){rest(cur);cur=null}},{passive:true})});
+/* gyro parallax of the background (phones, only if allowed without prompting) */
+addEventListener("deviceorientation",function(e){if(e.gamma==null)return;ox=Math.max(-1,Math.min(1,e.gamma/30));oy=Math.max(-1,Math.min(1,(e.beta-45)/30));sched()},{passive:true});
+/* entrance animation only when a screen opens, not on every re-render */
+var ft=0;function fresh(){document.body.classList.remove("fresh");void document.body.offsetWidth;document.body.classList.add("fresh");clearTimeout(ft);ft=setTimeout(function(){document.body.classList.remove("fresh")},1100)}
+var _go=go;go=function(v){_go(v);fresh()};
+fresh();
+})();
 
 </script></body></html>
