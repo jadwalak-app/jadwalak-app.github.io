@@ -113,6 +113,9 @@ body{padding-bottom:78px}
 .wz-note{color:#9a98b8;font-size:12px;margin:2px 0 8px}
 .wz-next{width:100%;margin-top:18px;padding:17px;border-radius:22px;font-size:17px;font-weight:600;font-family:inherit;color:#fff;border:1px solid rgba(255,255,255,.3);background:linear-gradient(150deg,#a66bff,#6232e6);box-shadow:0 14px 36px rgba(139,61,255,.55),inset 0 1px 0 rgba(255,255,255,.45)}
 .wz-next:active{transform:scale(.98)}
+/* typed date */
+input.dt{text-align:center;letter-spacing:3px;font-size:22px!important}
+input.dt.bad{border-color:#ff6b8b!important;box-shadow:0 0 0 3px rgba(255,107,139,.25)!important}
 
 .rate{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:60;display:none;align-items:center;justify-content:center;padding:18px}.rate.on{display:flex}.rate .bx{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:20px;max-width:380px;width:100%;text-align:center}.rate .bx button{margin:4px;padding:11px 14px}
 .set{position:fixed;inset:0;background:var(--bg);z-index:55;overflow:auto;display:none;padding:18px}.set.on{display:block}.set .in{max-width:520px;margin:0 auto}.set input{width:100%;margin:6px 0;border:1px solid var(--bd);border-radius:12px;padding:12px;background:#0a0b18;color:var(--tx);font-family:inherit}
@@ -120,7 +123,7 @@ body{padding-bottom:78px}
 </style></head><body>
 <div class="auth" id="auth"><div class="box"><div id="authbox"><h1 style="text-align:center">جدولك</h1><p class="note" style="text-align:center">خطة المذاكرة بتاعتك للثانوية</p><p class="note" style="text-align:center">حساب محلي على جهازك. بياناتك محفوظة في المتصفح بس.</p><div class="chips" id="authseg"><button data-m="login" class="on">دخول</button><button data-m="signup">حساب جديد</button></div><input type="text" id="un" placeholder="اسم المستخدم" autocomplete="username"><input type="password" id="pw" placeholder="كلمة السر" autocomplete="current-password"><div id="err" style="color:#f87171;min-height:22px"></div><button id="authgo" style="width:100%">دخول</button></div>
 <div id="prof" style="display:none"></div>
-<div id="onb" style="display:none"><h2>أهلاً! اضبط خطتك</h2><b>يوم الراحة بتاعك إيه؟</b><div class="chips" id="days7" style="flex-wrap:wrap"></div><b>اليوم ده يبقى إيه؟</b><div class="chips" id="omode"></div><b>وصلت لفين في المنهج؟</b><div class="chips" id="pmode" style="flex-wrap:wrap"></div><div id="pextra"></div><b>ميعاد أول امتحان (تقدر تغيره)</b><input type="date" id="exd"><p class="note">الوزارة لسه معلنتش اليوم بالظبط (مايو). الافتراضي 15 مايو 2027.</p><button id="onbgo" style="width:100%">ابدأ الخطة</button></div></div></div>
+<div id="onb" style="display:none"><h2>أهلاً! اضبط خطتك</h2><b>يوم الراحة بتاعك إيه؟</b><div class="chips" id="days7" style="flex-wrap:wrap"></div><b>اليوم ده يبقى إيه؟</b><div class="chips" id="omode"></div><b>وصلت لفين في المنهج؟</b><div class="chips" id="pmode" style="flex-wrap:wrap"></div><div id="pextra"></div><b>ميعاد أول امتحان (تقدر تغيره)</b><input type="text" class="dt" id="exd" inputmode="numeric" maxlength="10" placeholder="2027-05-15" dir="ltr"><p class="note">الوزارة لسه معلنتش اليوم بالظبط (مايو). الافتراضي 15 مايو 2027.</p><button id="onbgo" style="width:100%">ابدأ الخطة</button></div></div></div>
 <div class="top"><div><b id="who"></b></div><div style="margin-inline-start:auto;display:flex;gap:6px"><button class="g" id="setb">⚙︎</button><button class="g" id="lo">خروج</button></div></div>
 <div class="view on" id="v-home"><div class="stage" id="stage"><div class="scene" id="scene"><div class="ring"></div><div class="ring" style="transform:rotateX(70deg)"></div><div class="ring" style="transform:rotateY(70deg)"></div><div class="core" id="core"></div></div></div><div id="hm"></div>
 <div class="card"><h3>بومودورو</h3><div style="font-size:38px;text-align:center" id="tm">25:00</div><div class="row" style="justify-content:center"><button id="tb">ابدأ</button><button class="g" id="tr">إعادة</button><button class="g" id="tf">استراحة</button></div></div></div>
@@ -130,7 +133,7 @@ body{padding-bottom:78px}
 <div class="view" id="v-cards"><div id="cl"></div></div>
 <div class="view" id="v-az"><div id="azt"></div><div id="azl"></div><div id="azs"></div></div>
 <div class="rate" id="rate"><div class="bx"><div class="note">خلّصت:</div><h3 id="rt"></h3><b>كان صعب ولا سهل؟</b><div><button data-lv="hard" class="w" style="background:#3b2a6b">صعب</button><button data-lv="mid">متوسط</button><button data-lv="easy" class="g">سهل</button></div><button class="g" data-lv="skip">تخطي</button></div></div>
-<div class="set" id="set"><div class="in"><h2>الإعدادات</h2><b>ميعاد الامتحان</b><input type="date" id="sex"><button id="sexg">حفظ</button><p><b>يوم الراحة</b></p><div class="chips" id="sdays" style="flex-wrap:wrap"></div><b>يوم الراحة يبقى</b><div class="chips" id="somode"></div><b>نقل بياناتك</b><div class="row"><button class="g" id="sexp">تصدير بياناتي</button><button class="g" id="simp">استيراد</button></div><input type="file" id="sfile" accept=".json,application/json" style="display:none"><div class="note" id="sdn">التصدير بينزّل ملف فيه حسابك وتقدمك. الاستيراد بيرجّعهم على جهاز أو عنوان تاني.</div><b>ظبط تقدمك</b><div class="row"><input type="number" id="swk" min="0" max="40" placeholder="خلّصت لحد أسبوع رقم" style="flex:1"><button id="swkg">طبّق</button></div><div class="note" id="swkn">بيعتبر كل دروس الأسابيع لحد الرقم ده خلصانة.</div><button class="g" id="sprof" style="width:100%;margin-bottom:8px">غيّر السنة / النظام / المسار</button><button class="g" id="sclose" style="width:100%">إغلاق</button></div></div>
+<div class="set" id="set"><div class="in"><h2>الإعدادات</h2><b>ميعاد الامتحان</b><input type="text" class="dt" id="sex" inputmode="numeric" maxlength="10" placeholder="2027-05-15" dir="ltr"><button id="sexg">حفظ</button><p><b>يوم الراحة</b></p><div class="chips" id="sdays" style="flex-wrap:wrap"></div><b>يوم الراحة يبقى</b><div class="chips" id="somode"></div><b>نقل بياناتك</b><div class="row"><button class="g" id="sexp">تصدير بياناتي</button><button class="g" id="simp">استيراد</button></div><input type="file" id="sfile" accept=".json,application/json" style="display:none"><div class="note" id="sdn">التصدير بينزّل ملف فيه حسابك وتقدمك. الاستيراد بيرجّعهم على جهاز أو عنوان تاني.</div><b>ظبط تقدمك</b><div class="row"><input type="number" id="swk" min="0" max="40" placeholder="خلّصت لحد أسبوع رقم" style="flex:1"><button id="swkg">طبّق</button></div><div class="note" id="swkn">بيعتبر كل دروس الأسابيع لحد الرقم ده خلصانة.</div><button class="g" id="sprof" style="width:100%;margin-bottom:8px">غيّر السنة / النظام / المسار</button><button class="g" id="sclose" style="width:100%">إغلاق</button></div></div>
 <nav class="nav"><button data-v="home" class="on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10H3z"/></svg>الرئيسية</button><button data-v="sched"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>الجدول</button><button data-v="back"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>متراكم <span id="bdg" style="display:none;background:#8B3DFF;color:#fff;border-radius:9px;padding:0 6px;font-size:10px"></span></button><button data-v="cards"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 3h14v14"/></svg>كروت</button><button data-v="stats"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>إحصاء</button><button data-v="az"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 016 6c0 4-6 12-6 12S6 13 6 9a6 6 0 016-6z"/></svg>أذكار</button></nav>
 <script>
 const S={ar:["عربي","ar"],en:["إنجليزي","en"],hi:["تاريخ","hi"],pg:["برمجة","prog"]};
@@ -234,7 +237,7 @@ function wzRender(anim){var l=wzList(),id=l[WZ.i],q=WZQ[id],c=document.getElemen
   if(id=="progress"){useProfile();var pm=document.getElementById("pmode"),px=document.getElementById("pextra");document.getElementById("wzpm").appendChild(pm);document.getElementById("wzpx").appendChild(px);drawPm()}
   if(id=="exam"){var ex=document.getElementById("exd");document.getElementById("wzex").appendChild(ex);ex.value=WZ.d.exam}
   c.querySelectorAll(".wz-opt").forEach(function(b){b.onclick=function(){if(WZ.busy)return;var v=b.dataset.v;q.set(isNaN(+v)?v:+v);c.querySelectorAll(".wz-opt").forEach(function(x){x.classList.toggle("on",x==b)});if(window.sfx)sfx("tick");setTimeout(wzNext,230)}});
-  var ok=document.getElementById("wzok");if(ok)ok.onclick=function(){if(WZ.busy)return;if(id=="elective"){var t=document.getElementById("wzel");if(t){if(!t.value.trim())return;WZ.d.elective=t.value.trim()}}if(id=="exam")WZ.d.exam=document.getElementById("exd").value||"2027-05-15";wzNext()};
+  var ok=document.getElementById("wzok");if(ok)ok.onclick=function(){if(WZ.busy)return;if(id=="elective"){var t=document.getElementById("wzel");if(t){if(!t.value.trim())return;WZ.d.elective=t.value.trim()}}if(id=="exam"){var ev=document.getElementById("exd");if(ev.value&&!dtValid(ev.value)){ev.classList.add("bad");return}WZ.d.exam=ev.value||"2027-05-15"}wzNext()};
   c.className="wzc in";setTimeout(function(){WZ.busy=false;c.className="wzc"},520)};
  if(anim){c.className="wzc out";setTimeout(draw,300)}else draw()}
 function wzNext(){if(WZ.busy)return;var l=wzList();if(WZ.i<l.length-1){WZ.i++;wzRender(true)}else wzFinish()}
@@ -243,6 +246,30 @@ function wzFinish(){var d=WZ.d;U.year=d.year;U.sys=d.sys;U.track=d.track||"";U.e
  U.dayoff=d.dayoff;U.offmode=d.offmode;U.exam=d.exam||"2027-05-15";U.start=iso(PLAN0);saveU();applyProgress();wzClose();enter()}
 function showProfile(){wzStart(U&&U.dayoff!=null?"profile":"full")}
 function showOnboard(){wzStart("onb")}
+
+/* sounds + confetti (original, synthesized with Web Audio) */
+var FX={ctx:null};
+function fxMuted(){try{return localStorage.getItem("jd_mute")=="1"}catch(e){return false}}
+function fxCtx(){if(FX.ctx)return FX.ctx;try{FX.ctx=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}return FX.ctx}
+function fxNote(c,t,f,d,v,type){var o=c.createOscillator(),g=c.createGain();o.type=type||"sine";o.frequency.value=f;g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(v,t+0.015);g.gain.exponentialRampToValueAtTime(0.0001,t+d);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+d+0.05)}
+window.sfx=function(n){if(fxMuted())return;var c=fxCtx();if(!c)return;try{if(c.state=="suspended")c.resume();var t=c.currentTime;
+ if(n=="tick")fxNote(c,t,880,.07,.05,"triangle");
+ else if(n=="tap")fxNote(c,t,660,.09,.07,"sine");
+ else if(n=="done"){[523.25,659.25,783.99,1046.5].forEach(function(f,i){fxNote(c,t+i*.075,f,.35,.1,"sine");fxNote(c,t+i*.075,f*2,.2,.025,"sine")})}
+ else if(n=="dhikr"){[392,587.33,783.99].forEach(function(f,i){fxNote(c,t+i*.12,f,.7,.09,"sine")})}
+}catch(e){}};
+function confetti(n){if(fxMuted()&&0)return;var cv=document.createElement("canvas");cv.style.cssText="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:200";var W=cv.width=innerWidth,H=cv.height=innerHeight;document.body.appendChild(cv);var x=cv.getContext("2d");
+ var cols=["#8B3DFF","#b98cff","#5b7bff","#38d9c0","#ffd166","#ff7ab6","#fff"];var ps=[];n=n||90;
+ for(var i=0;i<n;i++){var a=-Math.PI/2+(Math.random()-.5)*1.5,s=7+Math.random()*10;ps.push({x:W/2,y:H*.62,vx:Math.cos(a)*s,vy:Math.sin(a)*s,r:3+Math.random()*4,c:cols[i%cols.length],rot:Math.random()*6,vr:(Math.random()-.5)*.4,sh:Math.random()<.5})}
+ var f=0;(function loop(){x.clearRect(0,0,W,H);f++;ps.forEach(function(p){p.vy+=.28;p.vx*=.992;p.x+=p.vx;p.y+=p.vy;p.rot+=p.vr;x.save();x.translate(p.x,p.y);x.rotate(p.rot);x.globalAlpha=Math.max(0,1-f/110);x.fillStyle=p.c;if(p.sh){x.beginPath();x.arc(0,0,p.r,0,7);x.fill()}else x.fillRect(-p.r,-p.r/2,p.r*2.2,p.r);x.restore()});
+  if(f<115)requestAnimationFrame(loop);else cv.remove()})()}
+function celebrate(kind){sfx(kind=="dhikr"?"dhikr":"done");confetti(kind=="dhikr"?120:80)}
+/* typed date input YYYY-MM-DD (no native picker) */
+function dtValid(v){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(v||"");if(!m)return false;var y=+m[1],mo=+m[2],d=+m[3];if(y<2026||y>2032)return false;var t=new Date(y,mo-1,d);return t.getFullYear()==y&&t.getMonth()==mo-1&&t.getDate()==d}
+function dtInit(el){if(el._dt)return;el._dt=1;el.addEventListener("input",function(){var d=el.value.replace(/[٠-٩]/g,function(c){return "٠١٢٣٤٥٦٧٨٩".indexOf(c)}).replace(/\D/g,"").slice(0,8),o=d.slice(0,4);if(d.length>4)o+="-"+d.slice(4,6);if(d.length>6)o+="-"+d.slice(6,8);el.value=o;el.classList.toggle("bad",o.length==10&&!dtValid(o))})}
+document.querySelectorAll("input.dt").forEach(dtInit);
+/* mute toggle in settings */
+(function(){var sp=document.getElementById("sprof");if(!sp)return;var b=document.createElement("button");b.className="g";b.id="smute";b.style.cssText="width:100%;margin-bottom:8px";var up=function(){b.textContent=fxMuted()?"🔇 الأصوات مقفولة (اضغط للتشغيل)":"🔊 الأصوات شغالة (اضغط للكتم)"};up();b.onclick=function(){localStorage.setItem("jd_mute",fxMuted()?"0":"1");up();if(!fxMuted())sfx("done")};sp.parentNode.insertBefore(b,sp)})();
 
 const $=id=>document.getElementById(id);
 const iso=d=>d.toISOString().slice(0,10);
@@ -289,7 +316,7 @@ let offSel=6,omSel="empty";
 function drawOm(id){$(id).innerHTML=[["empty","فاضي تمامًا"],["one","مهمة صغيرة واحدة"],["rev","يوم مراجعة"]].map(([v,t])=>`<button data-om="${v}" class="${v==(id=="omode"?omSel:(U.offmode||"empty"))?"on":""}">${t}</button>`).join("");document.querySelectorAll("#"+id+" button").forEach(b=>b.onclick=()=>{if(id=="omode"){omSel=b.dataset.om;drawOm(id)}else{U.offmode=b.dataset.om;saveU();renderAll();drawOm(id)}})}
 function showOnboard_old(){useProfile();pmSel="sync";drawPm();$("authbox").style.display="none";$("onb").style.display="block";offSel=6;omSel="empty";drawDays();drawOm("omode");$("exd").value=U.exam}
 function drawDays(){$("days7").innerHTML=DN.map((d,i)=>`<button data-d="${i}" class="${i==offSel?"on":""}">${d}</button>`).join("");document.querySelectorAll("#days7 button").forEach(b=>b.onclick=()=>{offSel=+b.dataset.d;drawDays()})}
-function onbGo(){U.dayoff=offSel;U.offmode=omSel;U.exam=$("exd").value||"2027-05-15";U.start=iso(PLAN0);saveU();applyProgress();enter()}
+function onbGo(){if($("exd").value&&!dtValid($("exd").value)){$("exd").classList.add("bad");return}U.dayoff=offSel;U.offmode=omSel;U.exam=$("exd").value||"2027-05-15";U.start=iso(PLAN0);saveU();applyProgress();enter()}
 function enter(){$("auth").classList.remove("on");$("who").textContent=U.name;go(localStorage.getItem("bac_view")||"home");renderAll()}
 function logout(){saveU();localStorage.removeItem("bac_session");U=null;$("auth").classList.add("on");$("authbox").style.display="block";$("onb").style.display="none";$("un").value="";$("pw").value=""}
 /* ---------- plan ---------- */
@@ -335,7 +362,7 @@ const esc=s=>String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g
 function uncomplete(id){delete U.done[id];delete U.rate[id];U.cards=U.cards.filter(c=>c.src!=id)}
 function complete(id){const it=ITEMS[id];if(!it){U.done[id]=ST.tdi;saveU();renderAll();return}pendingRate=id;$("rt").textContent=it.t;$("rate").classList.add("on")}
 let pendingRate=null;
-function rateGo(lv){const id=pendingRate;if(!id)return;pendingRate=null;$("rate").classList.remove("on");U.done[id]=ST.tdi;U.rate[id]=lv;const it=ITEMS[id];
+function rateGo(lv){const id=pendingRate;if(!id)return;pendingRate=null;$("rate").classList.remove("on");U.done[id]=ST.tdi;U.rate[id]=lv;celebrate("lesson");const it=ITEMS[id];
  if(lv!="skip"&&!it.auto){const ivl={hard:1,mid:3,easy:7}[lv];U.cards=U.cards.filter(c=>c.src!=id);U.cards.push({id:"c"+Date.now()+Math.random().toString(36).slice(2,5),src:id,k:it.k,front:"لخّص من ذاكرتك: "+it.t,back:"راجع الدرس في الكتاب "+(it.p||"")+" وتأكد إنك افتكرت الأفكار الأساسية والمصطلحات.",ease:lv=="hard"?2.0:lv=="easy"?2.8:2.5,ivl,reps:0,due:iso(add_(ST.td,ivl))})}
  saveU();renderAll()}
 function bind(root){root.querySelectorAll(".it input[data-id]").forEach(c=>c.onchange=()=>{if(c.checked){c.checked=false;complete(c.dataset.id)}else{uncomplete(c.dataset.id);saveU();renderAll()}})}
@@ -425,7 +452,7 @@ function rAz(){const day=U.adhkar[ST.tdi]=U.adhkar[ST.tdi]||{};
  $("azt").innerHTML=Object.entries(AZ).map(([k,v])=>`<button data-t="${k}" class="${k==azTab?"on":""}">${v.t}</button>`).join("");
  document.querySelectorAll("#azt button").forEach(b=>b.onclick=()=>{azTab=b.dataset.t;rAz()});
  $("azl").innerHTML=AZ[azTab].items.map(i=>{const c=day[i.k]||0,dn=c>=i.n;return `<div class="zk ${dn?"done":""}"><div class="pgn">${i.h} · المطلوب ${i.n}</div><div class="tx">${i.x}</div><button class="tp" data-z="${i.k}" data-n="${i.n}">${dn?"تم ✓ (اضغط للمتابعة)":"سبّح · "+c+" / "+i.n}</button></div>`}).join("");
- document.querySelectorAll("[data-z]").forEach(b=>b.onclick=()=>{const d=U.adhkar[ST.tdi];d[b.dataset.z]=(d[b.dataset.z]||0)+1;try{navigator.vibrate&&navigator.vibrate(d[b.dataset.z]==+b.dataset.n?[20,40,20]:8)}catch(e){}
+ document.querySelectorAll("[data-z]").forEach(b=>b.onclick=()=>{const d=U.adhkar[ST.tdi];d[b.dataset.z]=(d[b.dataset.z]||0)+1;sfx(d[b.dataset.z]==+b.dataset.n?"dhikr":"tick");if(d[b.dataset.z]==+b.dataset.n)confetti(60);try{navigator.vibrate&&navigator.vibrate(d[b.dataset.z]==+b.dataset.n?[20,40,20]:8)}catch(e){}
   const all=Object.values(AZ).slice(0,2).every(g=>g.items.every(i=>(d[i.k]||0)>=i.n));if(all)U.azdone[ST.tdi]=1;saveU();rAz();rStats()});
  let az=0,d=ST.td;if(!U.azdone[iso(d)])d=add_(d,-1);while(U.azdone[iso(d)]){az++;d=add_(d,-1)}
  $("azs").textContent=`أيام متتالية أكملت فيها أذكار الصباح والمساء: ${az}`;}
@@ -505,7 +532,7 @@ document.querySelectorAll("#authseg button").forEach(b=>b.onclick=()=>{authMode=
 $("authgo").onclick=authGo;$("pw").onkeydown=e=>{if(e.key=="Enter")authGo()};$("onbgo").onclick=onbGo;
 document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>go(b.dataset.v));
 $("lo").onclick=logout;$("setb").onclick=openSet;$("sclose").onclick=()=>{$("set").classList.remove("on")};
-$("sexg").onclick=()=>{U.exam=$("sex").value||U.exam;saveU();renderAll();$("set").classList.remove("on")};
+$("sexg").onclick=()=>{if($("sex").value&&!dtValid($("sex").value)){$("sex").classList.add("bad");return}U.exam=$("sex").value||U.exam;saveU();renderAll();$("set").classList.remove("on")};
 $("ball").onclick=()=>{lastMoves=JSON.stringify(U.moves);moveTo(ST.late.map(r=>r.it.id))};
 $("bun").onclick=()=>{U.moves=JSON.parse(lastMoves||"{}");lastMoves=null;saveU();renderAll()};
 /* 3D */
