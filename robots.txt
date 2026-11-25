@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jadwalak-app.github.io/sitemap.xml
