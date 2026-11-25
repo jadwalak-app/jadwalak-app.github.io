@@ -684,4 +684,82 @@ var _go=go;go=function(v){_go(v);fresh()};
 fresh();
 })();
 
+</script><script>
+/* جدولك: حسابات بالإيميل (Firebase Auth مجاني) + رابط تأكيد + نسيت كلمة المرور + ربط الحسابات القديمة */
+(function(){
+var FBV="https://www.gstatic.com/firebasejs/11.0.2/";
+var CFG={apiKey:"AIzaSyBMfYl8gNpkfiqJPuXOeAvrc4w6T5jAslU",authDomain:"jadwalak-rooms.firebaseapp.com",projectId:"jadwalak-rooms"};
+var A=null,M=null,au=null,mode="login",vmail="",cool=0,coolT=0;
+function load(){if(A)return Promise.resolve();
+ return Promise.all([import(FBV+"firebase-app.js"),import(FBV+"firebase-auth.js")]).then(function(m){M=m[1];var app=m[0].initializeApp(CFG);au=M.getAuth(app);au.languageCode="ar";A=1})}
+var ERR={"auth/email-already-in-use":"الإيميل ده مسجل قبل كده. جرّب تسجيل الدخول.","auth/invalid-email":"الإيميل مش مكتوب صح.","auth/weak-password":"كلمة المرور لازم 6 أحرف على الأقل.","auth/invalid-credential":"الإيميل أو كلمة المرور غلط.","auth/wrong-password":"الإيميل أو كلمة المرور غلط.","auth/user-not-found":"الإيميل أو كلمة المرور غلط.","auth/too-many-requests":"محاولات كتير. استنى شوية وجرّب تاني.","auth/network-request-failed":"مفيش نت. جرّب تاني.","auth/missing-password":"اكتب كلمة المرور."};
+function em(e){return ERR[e&&e.code]||"حصل خطأ. جرّب تاني."}
+function $$(i){return document.getElementById(i)}
+function box(){return $$("ax")}
+function hideOld(){["authseg","un","unh","pw","err","authgo","fpl","fpb"].forEach(function(i){var e=$$(i);if(e)e.style.display="none"})}
+function field(id,ph,type,ac){return '<input '+(type=="email"?'inputmode="email" dir="ltr" type="text"':'type="'+type+'"')+' id="'+id+'" placeholder="'+ph+'" autocomplete="'+ac+'" autocapitalize="none" spellcheck="false">'}
+function msg(t,ok){var e=$$("axe");if(e){e.textContent=t;e.style.color=ok?"#4ade80":"#f87171"}}
+function seg(){return '<div class="chips"><button type="button" data-a="login" class="'+(mode=="login"?"on":"")+'">دخول</button><button type="button" data-a="signup" class="'+(mode=="signup"?"on":"")+'">حساب جديد</button></div>'}
+function draw(){
+ var b=box(),h="";
+ if(mode=="login"||mode=="signup"){
+  h=seg()+(mode=="signup"?field("axn","الاسم","text","name"):"")+field("axm","الإيميل","email","email")+field("axp","كلمة المرور","password",mode=="signup"?"new-password":"current-password")+'<div id="axe" style="min-height:22px;margin:4px 0"></div><button type="button" id="axgo" style="width:100%">'+(mode=="login"?"دخول":"إنشاء حساب")+'</button>';
+  if(mode=="login")h+='<a href="#" id="axf" style="display:block;text-align:center;margin-top:12px;color:#f87171;font-size:14px;text-decoration:none">نسيت كلمة المرور؟</a>';
+  h+='<a href="#" id="axo" style="display:block;text-align:center;margin-top:12px;color:#c9a7ff;font-size:13px">عندي حساب قديم (اسم مستخدم) على الجهاز</a>';
+ }else if(mode=="forgot"){
+  h='<h3 style="margin:6px 0">نسيت كلمة المرور؟</h3><p class="note">اكتب الإيميل بتاعك وهنبعتلك رابط تختار منه كلمة مرور جديدة.</p>'+field("axm","الإيميل","email","email")+'<div id="axe" style="min-height:22px;margin:4px 0"></div><button type="button" id="axgo" style="width:100%">ابعت الرابط</button><a href="#" id="axb" style="display:block;text-align:center;margin-top:12px;color:#c9a7ff">رجوع</a>';
+ }else if(mode=="verify"){
+  h='<h3 style="margin:6px 0">أكّد الإيميل</h3><p class="note">بعتنالك رابط تأكيد على <b dir="ltr">'+esc(vmail)+'</b>. افتح الإيميل (وبص في Spam لو مش ظاهر) واضغط الرابط، وبعدين ارجع هنا واضغط "أكدت".</p><div id="axe" style="min-height:22px;margin:4px 0"></div><button type="button" id="axgo" style="width:100%">أكدت</button><button type="button" id="axr" class="g" style="width:100%;margin-top:8px">ابعت الرابط تاني</button><a href="#" id="axb" style="display:block;text-align:center;margin-top:12px;color:#c9a7ff">رجوع</a>';
+ }else if(mode=="old"){
+  h='<h3 style="margin:6px 0">ربط حساب قديم</h3><p class="note">اكتب اسم المستخدم وكلمة السر القديمة، وإيميل وكلمة مرور جديدين. تقدمك هيتنقل للحساب الجديد.</p>'+field("axu","اسم المستخدم القديم","text","username")+field("axq","كلمة السر القديمة","password","current-password")+field("axm","الإيميل الجديد","email","email")+field("axp","كلمة المرور الجديدة","password","new-password")+'<div id="axe" style="min-height:22px;margin:4px 0"></div><button type="button" id="axgo" style="width:100%">اربط الحساب</button><a href="#" id="axb" style="display:block;text-align:center;margin-top:12px;color:#c9a7ff">رجوع</a>';
+ }
+ b.innerHTML=h;bind();
+}
+function bind(){
+ var b=box();b.querySelectorAll("[data-a]").forEach(function(x){x.onclick=function(){mode=x.dataset.a;draw()}});
+ var f=$$("axf");if(f)f.onclick=function(e){e.preventDefault();mode="forgot";draw();var m=$$("axm");if(m)m.focus()};
+ var o=$$("axo");if(o)o.onclick=function(e){e.preventDefault();mode="old";draw()};
+ var bk=$$("axb");if(bk)bk.onclick=function(e){e.preventDefault();mode="login";draw()};
+ var g=$$("axgo");if(g)g.onclick=go;var r=$$("axr");if(r)r.onclick=resend;
+}
+function val(i){var e=$$(i);return e?e.value.trim():""}
+var busy=false;
+function go(){
+ if(busy)return;var m=val("axm").toLowerCase(),p=($$("axp")||{}).value||"";
+ if(mode!="old"&&mode!="verify"&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){msg("اكتب إيميل صح.");return}
+ busy=true;msg("لحظة…",true);
+ load().then(function(){
+  if(mode=="signup"){var n=val("axn");if(n.length<2){throw {code:"x",m:"اكتب اسمك."}}if(p.length<6)throw {code:"auth/weak-password"};
+   return M.createUserWithEmailAndPassword(au,m,p).then(function(c){return M.updateProfile(c.user,{displayName:n}).then(function(){return M.sendEmailVerification(c.user)}).then(function(){vmail=m;mode="verify";startCool();draw()})})}
+  if(mode=="login"){return M.signInWithEmailAndPassword(au,m,p).then(function(c){return fin(c.user)})}
+  if(mode=="forgot"){return M.sendPasswordResetEmail(au,m).then(function(){msg("لو الإيميل ده مسجل، بعتنالك رابط. بص في Spam كمان.",true)},function(e){if(e.code=="auth/user-not-found"){msg("لو الإيميل ده مسجل، بعتنالك رابط. بص في Spam كمان.",true)}else throw e})}
+  if(mode=="verify"){return au.currentUser.reload().then(function(){if(au.currentUser.emailVerified)return fin(au.currentUser);msg("لسه الإيميل متأكدش. اضغط الرابط اللي في الإيميل الأول.")})}
+  if(mode=="old"){var n=val("axu").toLowerCase(),op=($$("axq")||{}).value||"",us=users(),r=us[n];
+   if(p.length<6)throw {code:"auth/weak-password"};
+   if(!r)throw {code:"x",m:"الاسم القديم ده مش موجود على الجهاز ده."};
+   return hashPw(op,r.salt).then(function(h){if(h!==r.h)throw {code:"x",m:"كلمة السر القديمة غلط."};
+    return M.createUserWithEmailAndPassword(au,m,p)}).then(function(c){try{localStorage.setItem("jd_mig_"+c.user.uid,JSON.stringify({id:r.id,name:n}))}catch(e){}
+     return M.updateProfile(c.user,{displayName:n}).then(function(){return M.sendEmailVerification(c.user)}).then(function(){vmail=m;mode="verify";startCool();draw()})})}
+ }).catch(function(e){msg(e&&e.m?e.m:em(e))}).then(function(){busy=false;if(mode!="verify"&&$$("axe")&&$$("axe").textContent=="لحظة…")msg("")});
+}
+function startCool(){cool=60;clearInterval(coolT);coolT=setInterval(function(){cool--;var r=$$("axr");if(r){r.textContent=cool>0?"ابعت الرابط تاني ("+cool+")":"ابعت الرابط تاني";r.disabled=cool>0}if(cool<=0)clearInterval(coolT)},1000)}
+function resend(){if(cool>0||!au||!au.currentUser)return;M.sendEmailVerification(au.currentUser).then(function(){msg("بعتنا الرابط تاني.",true);startCool()}).catch(function(e){msg(em(e))})}
+function fin(u){
+ if(!u.emailVerified){vmail=u.email;mode="verify";draw();msg("لازم تأكد الإيميل الأول. ضغط الرابط اللي بعتناه؟",false);startCool();return}
+ var id="f"+u.uid,d=J("bac_data_"+id,null);
+ if(!d){var mg=null;try{mg=JSON.parse(localStorage.getItem("jd_mig_"+u.uid)||"null")}catch(e){}
+  var old=mg&&J("bac_data_"+mg.id,null);
+  if(old){d=JSON.parse(JSON.stringify(old));d.id=id}
+  else d={id:id,dayoff:null,exam:"2027-05-15",start:null,done:{},moves:{},rev:{},focus:{},adhkar:{},azdone:{},created:iso(todayD())};
+  d.name=u.displayName||u.email.split("@")[0];d.email=u.email;W("bac_data_"+id,d);try{localStorage.removeItem("jd_mig_"+u.uid)}catch(e){}}
+ U=d;localStorage.setItem("bac_session",id);if(U.year)enter();else showProfile()
+}
+function init(){var abx=$$("authbox");if(!abx||$$("ax"))return;
+ var d=document.createElement("div");d.id="ax";var anchor=$$("authseg");abx.insertBefore(d,anchor);hideOld();document.querySelectorAll("#authbox p.note").forEach(function(p){if(p.textContent.indexOf("حساب محلي")>-1)p.textContent="سجّل بإيميلك وارجع لحسابك في أي وقت. تقدمك في المذاكرة بيتحفظ على جهازك."});draw()}
+var oLogout=null;
+function wrapLogout(){if(oLogout||typeof logout!="function")return;oLogout=logout;window.logout=function(){oLogout();try{if(au)M.signOut(au)}catch(e){}mode="login";if(box()){hideOld();draw()}}}
+function boot(){init();wrapLogout()}
+if(document.readyState!="loading")boot();else document.addEventListener("DOMContentLoaded",boot);
+})();
+
 </script></body></html>
