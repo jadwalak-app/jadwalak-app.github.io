@@ -73,6 +73,46 @@ body{padding-bottom:78px}
 .todo .acts{display:flex;gap:6px}.todo .acts button{padding:4px 10px;font-size:12px}
 .top .who{margin-inline-start:auto;font-size:12px;color:var(--mut);text-align:left}.top .who button{padding:3px 10px;font-size:11px;margin-top:3px}
 .sr-only{position:absolute;left:-9999px}
+/* ===== setup wizard (glass) ===== */
+#wz{position:fixed;inset:0;z-index:70;display:none;flex-direction:column;background:#05060d;overflow:hidden}
+#wz.on{display:flex}
+.wz-orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75;pointer-events:none}
+.wz-orb.o1{width:340px;height:340px;background:#7c2dff;top:-90px;right:-80px;animation:wzf1 14s ease-in-out infinite alternate}
+.wz-orb.o2{width:300px;height:300px;background:#2a3cff;bottom:-60px;left:-90px;opacity:.55;animation:wzf2 17s ease-in-out infinite alternate}
+.wz-orb.o3{width:200px;height:200px;background:#c026d3;top:42%;left:30%;opacity:.28;animation:wzf3 19s ease-in-out infinite alternate}
+@keyframes wzf1{to{transform:translate(-60px,90px) scale(1.15)}}
+@keyframes wzf2{to{transform:translate(80px,-70px) scale(1.2)}}
+@keyframes wzf3{to{transform:translate(-90px,-50px) scale(.8)}}
+.wz-top{position:relative;display:flex;align-items:center;gap:12px;padding:calc(env(safe-area-inset-top,0px) + 16px) 18px 6px;max-width:460px;width:100%;margin:0 auto}
+#wzback{width:42px;height:42px;border-radius:50%;padding:0;font-size:18px;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(16px);box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+.wz-bar{flex:1;height:7px;border-radius:7px;background:rgba(255,255,255,.1);overflow:hidden;direction:rtl}
+.wz-bar i{display:block;height:100%;width:0;border-radius:7px;background:linear-gradient(90deg,#a66bff,#6d3bff);box-shadow:0 0 12px #8B3DFF;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+#wzcount{font-size:12px;color:#b8b3d8;min-width:30px;text-align:center;direction:ltr}
+.wz-stage{position:relative;flex:1;display:grid;align-items:center;padding:12px 16px 28px;overflow:auto}
+.wzc{max-width:430px;width:100%;margin:0 auto;padding:30px 22px 24px;border-radius:34px;color:#f3f1ff;
+ background:linear-gradient(150deg,rgba(255,255,255,.15),rgba(255,255,255,.05) 55%,rgba(139,61,255,.1));
+ backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);
+ border:1px solid rgba(255,255,255,.17);box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.04),inset 0 1px 0 rgba(255,255,255,.3),inset 0 -20px 40px rgba(139,61,255,.06)}
+.wzc h2{margin:0 0 8px;font-size:25px;line-height:1.4}
+.wzc>p{margin:0 0 20px;color:#bcb7dc;font-size:14px;line-height:1.8}
+.wzc.in{animation:wzin .52s cubic-bezier(.2,.8,.2,1) both}
+.wzc.out{animation:wzout .3s cubic-bezier(.5,0,.8,.4) both}
+@keyframes wzin{from{opacity:0;filter:blur(18px);transform:translateY(18px) scale(.965)}to{opacity:1;filter:blur(0);transform:none}}
+@keyframes wzout{to{opacity:0;filter:blur(18px);transform:translateY(-14px) scale(.965)}}
+.wz-opts{display:flex;flex-direction:column;gap:11px}.wz-opts.grid{display:grid;grid-template-columns:1fr 1fr}
+.wz-opt,#wz #pmode button{position:relative;padding:17px 14px;border-radius:22px;font-size:17px;font-family:inherit;color:#f3f1ff;text-align:center;cursor:pointer;
+ background:linear-gradient(160deg,rgba(255,255,255,.13),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.15);box-shadow:inset 0 1px 0 rgba(255,255,255,.22);
+ transition:transform .18s,background .25s,box-shadow .25s,border-color .25s;animation:wzop .5s cubic-bezier(.2,.8,.2,1) both;white-space:normal}
+@keyframes wzop{from{opacity:0;transform:translateY(12px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.wz-opt:active,#wz #pmode button:active{transform:scale(.97)}
+.wz-opt.on,#wz #pmode button.on{background:linear-gradient(150deg,rgba(166,107,255,.9),rgba(98,50,230,.85));border-color:rgba(255,255,255,.4);box-shadow:0 10px 30px rgba(139,61,255,.55),inset 0 1px 0 rgba(255,255,255,.45)}
+#wz #pmode{display:flex;flex-direction:column;gap:11px;overflow:visible;padding:0}
+#wz #pextra select,#wz input[type=text],#wz input[type=date],#wz input[type=number]{width:100%;margin:8px 0;padding:15px;border-radius:18px;font-size:16px;font-family:inherit;color:#f3f1ff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);color-scheme:dark;outline:none}
+#wz input:focus,#wz select:focus{border-color:#a66bff;box-shadow:0 0 0 3px rgba(139,61,255,.3)}
+#wz #pextra .note{color:#bcb7dc;font-size:13px;margin-top:8px}
+.wz-note{color:#9a98b8;font-size:12px;margin:2px 0 8px}
+.wz-next{width:100%;margin-top:18px;padding:17px;border-radius:22px;font-size:17px;font-weight:600;font-family:inherit;color:#fff;border:1px solid rgba(255,255,255,.3);background:linear-gradient(150deg,#a66bff,#6232e6);box-shadow:0 14px 36px rgba(139,61,255,.55),inset 0 1px 0 rgba(255,255,255,.45)}
+.wz-next:active{transform:scale(.98)}
 
 .rate{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:60;display:none;align-items:center;justify-content:center;padding:18px}.rate.on{display:flex}.rate .bx{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:20px;max-width:380px;width:100%;text-align:center}.rate .bx button{margin:4px;padding:11px 14px}
 .set{position:fixed;inset:0;background:var(--bg);z-index:55;overflow:auto;display:none;padding:18px}.set.on{display:block}.set .in{max-width:520px;margin:0 auto}.set input{width:100%;margin:6px 0;border:1px solid var(--bd);border-radius:12px;padding:12px;background:#0a0b18;color:var(--tx);font-family:inherit}
@@ -158,6 +198,52 @@ const fmt=d=>d.getDate()+" "+MO[d.getMonth()];
 const D=(y,m,d)=>new Date(Date.UTC(y,m-1,d,12));
 const add_=(d,n)=>new Date(d.getTime()+n*864e5);
 
+/* step-by-step setup wizard: one question per screen */
+var WZ={i:0,d:{},mode:"full",busy:false};
+function wzList(){var d=WZ.d,l=["year","sys"];
+ if(d.year==2&&d.sys=="bac"){l.push("track");if(d.track)l.push("elective")}
+ if(WZ.mode!="profile")l.push("dayoff","offmode","progress","exam");
+ return l}
+var WZQ={
+ year:{t:"أنت في سنة كام؟",s:"هنظبط الجدول على منهج سنتك.",o:function(){return[[1,"أولى ثانوي"],[2,"تانية ثانوي"],[3,"تالتة ثانوي"]]},get:function(){return WZ.d.year},set:function(v){WZ.d.year=v;if(!SYSOPT[v].includes(WZ.d.sys))WZ.d.sys="";WZ.d.track=WZ.d.elective=""}},
+ sys:{t:"بتدرس بأنهي نظام؟",s:"كل نظام له منهج ومواعيد مختلفة.",o:function(){return SYSOPT[WZ.d.year].map(function(k){return[k,SYS[k]]})},get:function(){return WZ.d.sys},set:function(v){WZ.d.sys=v;WZ.d.track=WZ.d.elective=""}},
+ track:{t:"مسارك إيه؟",s:"المسار بيتحدد من تانية بكالوريا.",o:function(){return Object.entries(TRK)},get:function(){return WZ.d.track},set:function(v){WZ.d.track=v;WZ.d.elective=""}},
+ elective:{t:"مادتك الاختيارية؟",s:"كل مادة اختيارية ليها جدول لوحدها.",o:function(){return ELEC[WZ.d.track]||null},get:function(){return WZ.d.elective},set:function(v){WZ.d.elective=v}},
+ dayoff:{t:"يوم الراحة بتاعك إيه؟",s:"اليوم ده مش هيتحط فيه دروس جديدة.",o:function(){return DN.map(function(n,i){return[i,n]})},get:function(){return WZ.d.dayoff},set:function(v){WZ.d.dayoff=v}},
+ offmode:{t:"اليوم ده يبقى إيه؟",s:"تقدر تغيّر ده بعدين من الإعدادات.",o:function(){return[["empty","فاضي تمامًا"],["one","مهمة صغيرة واحدة"],["rev","يوم مراجعة"]]},get:function(){return WZ.d.offmode},set:function(v){WZ.d.offmode=v}},
+ progress:{t:"وصلت لفين في المنهج؟",s:"كل اللي قبل النقطة دي هيتعلّم كأنه خلصان.",custom:1},
+ exam:{t:"امتحانك الأول إمتى؟",s:"الوزارة لسه معلنتش اليوم بالظبط. الافتراضي 15 مايو 2027 وتقدر تغيّره.",custom:1}
+};
+function wzEl(){var e=document.getElementById("wz");if(!e){e=document.createElement("div");e.id="wz";e.innerHTML='<div class="wz-orb o1"></div><div class="wz-orb o2"></div><div class="wz-orb o3"></div><div class="wz-top"><button id="wzback" aria-label="رجوع">&#8594;</button><div class="wz-bar"><i id="wzfill"></i></div><span id="wzcount"></span></div><div class="wz-stage"><div class="wzc" id="wzc"></div></div>';document.body.appendChild(e);document.getElementById("wzback").onclick=wzBack}return e}
+function wzStart(mode){WZ.mode=mode;WZ.i=mode=="onb"?0:0;var u=U||{};WZ.d={year:u.year||0,sys:u.sys||"",track:u.track||"",elective:u.elective||"",dayoff:u.dayoff==null?6:u.dayoff,offmode:u.offmode||"empty",exam:u.exam||"2027-05-15"};
+ if(mode=="onb"){WZ.mode="full";WZ.i=4}
+ pmSel="sync";wzEl();document.getElementById("auth").classList.remove("on");document.getElementById("wz").classList.add("on");wzRender(false)}
+function wzClose(){var e=document.getElementById("wz");if(e)e.classList.remove("on");var o=document.getElementById("onb");["pmode","pextra","exd"].forEach(function(id){var x=document.getElementById(id);if(x&&o)o.appendChild(x)})}
+function wzBack(){if(WZ.busy||WZ.i==0)return;WZ.i--;wzRender(true)}
+function wzRender(anim){var l=wzList(),id=l[WZ.i],q=WZQ[id],c=document.getElementById("wzc");WZ.busy=true;
+ var draw=function(){
+  var u=U;if(id=="progress"){U.year=WZ.d.year;U.sys=WZ.d.sys;U.track=WZ.d.track;U.elective=WZ.d.elective}
+  document.getElementById("wzfill").style.width=((WZ.i+1)/l.length*100)+"%";document.getElementById("wzcount").textContent=(WZ.i+1)+"/"+l.length;
+  document.getElementById("wzback").style.visibility=WZ.i==0?"hidden":"visible";
+  var h='<h2>'+q.t+'</h2><p>'+q.s+'</p>';
+  if(!q.custom){var o=q.o();if(!o){h+='<input type="text" id="wzel" placeholder="اكتب المادة الاختيارية" value="'+esc(WZ.d.elective||"")+'"><p class="wz-note">المنهج بتاع المسار ده لسه محمّلش، هتشوف رسالة بكده بعد الخطوة الجاية.</p><button class="wz-next" id="wzok">كمّل</button>'}
+   else{h+='<div class="wz-opts '+(o.length>4?"grid":"")+'">'+o.map(function(p,n){return'<button class="wz-opt'+(String(p[0])==String(q.get())?" on":"")+'" data-v="'+p[0]+'" style="animation-delay:'+(n*45)+'ms">'+p[1]+'</button>'}).join("")+'</div>'}}
+  else if(id=="progress"){h+='<div class="wz-opts" id="wzpm"></div><div id="wzpx"></div><button class="wz-next" id="wzok">كمّل</button>'}
+  else{h+='<div id="wzex"></div><button class="wz-next" id="wzok">ابدأ الخطة</button>'}
+  c.innerHTML=h;
+  if(id=="progress"){useProfile();var pm=document.getElementById("pmode"),px=document.getElementById("pextra");document.getElementById("wzpm").appendChild(pm);document.getElementById("wzpx").appendChild(px);drawPm()}
+  if(id=="exam"){var ex=document.getElementById("exd");document.getElementById("wzex").appendChild(ex);ex.value=WZ.d.exam}
+  c.querySelectorAll(".wz-opt").forEach(function(b){b.onclick=function(){if(WZ.busy)return;var v=b.dataset.v;q.set(isNaN(+v)?v:+v);c.querySelectorAll(".wz-opt").forEach(function(x){x.classList.toggle("on",x==b)});if(window.sfx)sfx("tick");setTimeout(wzNext,230)}});
+  var ok=document.getElementById("wzok");if(ok)ok.onclick=function(){if(WZ.busy)return;if(id=="elective"){var t=document.getElementById("wzel");if(t){if(!t.value.trim())return;WZ.d.elective=t.value.trim()}}if(id=="exam")WZ.d.exam=document.getElementById("exd").value||"2027-05-15";wzNext()};
+  c.className="wzc in";setTimeout(function(){WZ.busy=false;c.className="wzc"},520)};
+ if(anim){c.className="wzc out";setTimeout(draw,300)}else draw()}
+function wzNext(){if(WZ.busy)return;var l=wzList();if(WZ.i<l.length-1){WZ.i++;wzRender(true)}else wzFinish()}
+function wzFinish(){var d=WZ.d;U.year=d.year;U.sys=d.sys;U.track=d.track||"";U.elective=d.elective||"";
+ if(WZ.mode=="profile"){saveU();wzClose();if(U.dayoff==null)wzStart("onb");else enter();return}
+ U.dayoff=d.dayoff;U.offmode=d.offmode;U.exam=d.exam||"2027-05-15";U.start=iso(PLAN0);saveU();applyProgress();wzClose();enter()}
+function showProfile(){wzStart(U&&U.dayoff!=null?"profile":"full")}
+function showOnboard(){wzStart("onb")}
+
 const $=id=>document.getElementById(id);
 const iso=d=>d.toISOString().slice(0,10);
 const pd=s=>new Date(s+"T12:00:00Z");
@@ -201,7 +287,7 @@ async function authGo(){
  }}
 let offSel=6,omSel="empty";
 function drawOm(id){$(id).innerHTML=[["empty","فاضي تمامًا"],["one","مهمة صغيرة واحدة"],["rev","يوم مراجعة"]].map(([v,t])=>`<button data-om="${v}" class="${v==(id=="omode"?omSel:(U.offmode||"empty"))?"on":""}">${t}</button>`).join("");document.querySelectorAll("#"+id+" button").forEach(b=>b.onclick=()=>{if(id=="omode"){omSel=b.dataset.om;drawOm(id)}else{U.offmode=b.dataset.om;saveU();renderAll();drawOm(id)}})}
-function showOnboard(){useProfile();pmSel="sync";drawPm();$("authbox").style.display="none";$("onb").style.display="block";offSel=6;omSel="empty";drawDays();drawOm("omode");$("exd").value=U.exam}
+function showOnboard_old(){useProfile();pmSel="sync";drawPm();$("authbox").style.display="none";$("onb").style.display="block";offSel=6;omSel="empty";drawDays();drawOm("omode");$("exd").value=U.exam}
 function drawDays(){$("days7").innerHTML=DN.map((d,i)=>`<button data-d="${i}" class="${i==offSel?"on":""}">${d}</button>`).join("");document.querySelectorAll("#days7 button").forEach(b=>b.onclick=()=>{offSel=+b.dataset.d;drawDays()})}
 function onbGo(){U.dayoff=offSel;U.offmode=omSel;U.exam=$("exd").value||"2027-05-15";U.start=iso(PLAN0);saveU();applyProgress();enter()}
 function enter(){$("auth").classList.remove("on");$("who").textContent=U.name;go(localStorage.getItem("bac_view")||"home");renderAll()}
@@ -372,7 +458,7 @@ const SYSOPT={1:["am","bac","az"],2:["am","az","bac"],3:["am","az"]};
 function ready(){return U&&(U.year==1&&(U.sys=="am"||U.sys=="bac"||U.sys=="az")||U.year==2&&U.sys=="bac"&&U.track=="med"&&(U.elective=="py"||U.elective=="mm")||U.year==2&&U.sys=="bac"&&U.track=="eng"&&U.elective=="pg")}
 function ready_old(){return U&&U.year==2&&U.sys=="bac"&&U.track=="eng"&&U.elective=="pg"}
 let pf={};
-function showProfile(){pf={year:U.year||0,sys:U.sys||"",track:U.track||"",elective:U.elective||""};$("authbox").style.display="none";$("onb").style.display="none";$("prof").style.display="block";$("auth").classList.add("on");drawProf()}
+function showProfile_old(){pf={year:U.year||0,sys:U.sys||"",track:U.track||"",elective:U.elective||""};$("authbox").style.display="none";$("onb").style.display="none";$("prof").style.display="block";$("auth").classList.add("on");drawProf()}
 function drawProf(){let h="<h2>أنت سنة كام؟</h2><div class='chips' style='flex-wrap:wrap'>"+[1,2,3].map(y=>`<button data-y="${y}" class="${pf.year==y?"on":""}">${YR[y]}</button>`).join("")+"</div>";
  if(pf.year){h+="<b>نظام الدراسة؟</b><div class='chips' style='flex-wrap:wrap'>"+SYSOPT[pf.year].map(k=>`<button data-s="${k}" class="${pf.sys==k?"on":""}">${SYS[k]}</button>`).join("")+"</div>";
   if(pf.year==3)h+="<p class='note'>مفيش بكالوريا في تالتة ثانوي السنة دي.</p>"}
