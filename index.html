@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="جدولك أداة مجانية بالعربي لطلاب الثانوية في مصر: بيقسم المنهج على أسابيع وأيام لحد الامتحان، ويرتب موادك ومراجعتك ومهامك اليومية.">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "جدولك", "url": "https://jadwalak-app.github.io/", "inLanguage": "ar", "applicationCategory": "EducationalApplication", "operatingSystem": "Any", "description": "أداة مجانية بالعربي لطلاب الثانوية المصرية (الثانوي العام والبكالوريا والأزهر) لتنظيم جدول المذاكرة والمراجعة والمهام اليومية.", "audience": {"@type": "EducationalAudience", "educationalRole": "student", "audienceType": "طلاب المرحلة الثانوية في مصر"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EGP"}}</script><meta name="theme-color" content="#06070F"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg" type="image/svg+xml">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 
 :root{--bg:#06070F;--card:#0e0f1f;--card2:#15162b;--tx:#f3f1ff;--mut:#9a98b8;--pri:#8B3DFF;--pri2:rgba(139,61,255,.16);--ok:#34d399;--bd:#23244a}
@@ -254,6 +254,110 @@ input[type=text],input[type=password],input[type=date],input[type=number],select
 .result{margin:12px 0;padding:14px;border-radius:18px;text-align:center;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08)}.result b{font-size:19px;display:block;margin-bottom:6px}
 .result.spyw{background:rgba(209,31,58,.22)}.result.grpw{background:rgba(52,199,120,.2)}
 .gcard{padding:10px 0}.gcard button{margin-top:10px;width:100%}
+</style><style id="gl2">/* ===== GLASS v2: smoked-glass dashboard (after reel) ===== */
+:root{--bg:#0b0905;--pri:#E6FF5C;--pri2:rgba(230,255,92,.14);--tx:#f3efe6;--mut:#b6ad9c;--bd:rgba(255,255,255,.12);--lime:#E6FF5C;--lime2:#C6F432;--ink:#14170a;--gp:rgba(255,255,255,.07);--gb:rgba(255,255,255,.13)}
+html,body{background:#0b0905!important}
+body{font-family:Outfit,"IBM Plex Sans Arabic",system-ui,sans-serif!important;color:var(--tx)}
+#bgfx .a{background:#9a5a22!important;opacity:.55!important}
+#bgfx .b{background:#4a5a12!important;opacity:.42!important}
+#bgfx .c{background:#c0703a!important;opacity:.26!important}
+#bgfx::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,9,5,.1),rgba(11,9,5,.55))}
+/* panels */
+.card,.wk,.zk,.auth .box,.set .in{background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.04))!important;border:1px solid var(--gb)!important;border-radius:22px!important;
+ backdrop-filter:blur(28px) saturate(150%);-webkit-backdrop-filter:blur(28px) saturate(150%);
+ box-shadow:0 22px 50px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.16)!important}
+.card::after{background:radial-gradient(260px 200px at var(--mx,50%) var(--my,-20%),rgba(255,244,214,.14),transparent 70%)!important}
+#v-home .card,#v-stats .card,#v-az .card{backdrop-filter:blur(28px) saturate(150%)!important;-webkit-backdrop-filter:blur(28px) saturate(150%)!important}
+.st{background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.03))!important;border:1px solid var(--gb)!important;border-radius:18px!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.14)!important}
+.st b{color:var(--tx)!important}
+.hero h1 em{color:var(--lime)}
+.day.today{background:rgba(230,255,92,.07);box-shadow:inset 3px 0 0 var(--lime)}
+.wkline .td{outline-color:var(--lime)!important}
+/* floating topbar */
+.top{position:sticky;top:10px;z-index:15;width:calc(100% - 28px);max-width:732px;margin:10px auto 6px;padding:9px 12px 9px 14px;border-radius:24px;
+ background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.05));border:1px solid var(--gb);backdrop-filter:blur(26px) saturate(150%);-webkit-backdrop-filter:blur(26px) saturate(150%);box-shadow:0 14px 34px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.16)}
+.top .crumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut);margin-inline-start:6px}
+.top .crumb b{color:var(--tx);font-weight:600}.top .crumb i{font-style:normal;opacity:.5}
+.top #who{font-size:14px}
+/* buttons: lime primary, glass secondary, all pills */
+button{background:linear-gradient(180deg,var(--lime),var(--lime2))!important;color:var(--ink)!important;border:1px solid rgba(255,255,255,.35)!important;border-radius:999px!important;font-weight:600;text-shadow:none!important;
+ box-shadow:0 8px 20px rgba(198,244,50,.18),inset 0 1px 0 rgba(255,255,255,.55)!important}
+button.g,.seg button,.chips button,.tabs button{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04))!important;color:var(--tx)!important;border:1px solid var(--gb)!important;font-weight:500;box-shadow:inset 0 1px 0 rgba(255,255,255,.14)!important}
+button.g.on,.seg button.on,.chips button.on,.days7 button.on{background:linear-gradient(180deg,var(--lime),var(--lime2))!important;color:var(--ink)!important;border-color:rgba(255,255,255,.4)!important;box-shadow:0 6px 16px rgba(198,244,50,.2),inset 0 1px 0 rgba(255,255,255,.5)!important}
+button.w{background:linear-gradient(160deg,rgba(255,150,100,.3),rgba(120,50,30,.3))!important;color:#ffd2bd!important}
+.days7 button,.rg button{border-radius:16px!important}
+/* nav + slide pill */
+.nav{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.05))!important;border:1px solid var(--gb)!important;border-radius:30px!important;backdrop-filter:blur(30px) saturate(150%)!important;-webkit-backdrop-filter:blur(30px) saturate(150%)!important;box-shadow:0 22px 50px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.18)!important}
+.nav button,.nav button.on{background:none!important;border:0!important;box-shadow:none!important;transform:none!important;color:var(--mut)!important;position:relative;z-index:1;border-radius:22px!important;font-weight:500;transition:color .25s!important}
+.nav button.on{color:var(--ink)!important;font-weight:700}
+.gl-pill{position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,var(--lime),var(--lime2));box-shadow:inset 0 1px 0 rgba(255,255,255,.6);clip-path:inset(0 0 0 0 round 22px)}
+.gl-pilled button,.gl-pilled button.on{background:none!important;border:0!important;box-shadow:none!important;position:relative;z-index:1;color:var(--tx)!important}
+.gl-pilled button.on{color:var(--ink)!important}
+.gl-pilled{position:relative;border-radius:999px}
+#authseg{background:rgba(255,255,255,.07);border:1px solid var(--gb);padding:4px;gap:0;border-radius:999px;overflow:hidden}
+#authseg .gl-pill{border-radius:999px}
+.badge,#bdg{background:var(--lime)!important;color:var(--ink)!important;border:0!important;box-shadow:none!important;font-weight:700}
+/* inputs */
+input[type=text],input[type=password],input[type=date],input[type=number],select,textarea{border-radius:16px!important;border:1px solid var(--gb)!important;background:rgba(255,255,255,.06)!important}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--lime)!important;box-shadow:0 0 0 3px rgba(230,255,92,.2)!important}
+.it input[type=checkbox]:checked{background:linear-gradient(180deg,var(--lime),var(--lime2))!important;border-color:rgba(255,255,255,.5)!important}
+.it input[type=checkbox]:checked::after{border-color:var(--ink)!important}
+input{accent-color:var(--lime)}
+/* progress, chart, tags */
+.bar i,.sub-bar .b i{background-image:linear-gradient(180deg,rgba(255,255,255,.4),rgba(255,255,255,0) 55%),linear-gradient(90deg,#d9c36a,var(--lime))!important;box-shadow:0 0 12px rgba(230,255,92,.35),inset 0 1px 0 rgba(255,255,255,.5)!important}
+.chart i{background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.18))!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)!important}
+.chart i.cur{background:linear-gradient(180deg,var(--lime),var(--lime2))!important;box-shadow:0 0 12px rgba(230,255,92,.4)!important}
+.tag{background:rgba(255,255,255,.09)!important;color:var(--tx)!important;border:1px solid var(--gb)!important;box-shadow:none!important}
+.tag.now{background:rgba(52,211,153,.18)!important;color:#8ff0c4!important}.tag.rev{background:rgba(255,120,120,.16)!important;color:#ffb3b3!important}.tag.mid{background:rgba(255,200,110,.16)!important;color:#ffd896!important}
+.timer,#tm{color:var(--tx)!important;text-shadow:none!important}
+.err{color:#ff9a9a}
+/* hero orb: smoked glass sphere with lime rim */
+.stage::before{background:radial-gradient(circle,rgba(230,255,92,.28),rgba(190,140,60,.14) 45%,transparent 70%)!important}
+.core{background:radial-gradient(circle at 50% 118%,rgba(230,255,92,.6),rgba(230,255,92,0) 52%),radial-gradient(circle at 50% 55%,rgba(120,100,50,.35),rgba(40,32,16,.88) 72%,rgba(14,11,5,.95) 100%)!important;
+ box-shadow:inset 0 -16px 28px rgba(230,255,92,.28),inset 0 12px 20px rgba(255,255,255,.18),0 0 0 1px rgba(255,255,255,.08)!important;text-shadow:0 2px 12px rgba(0,0,0,.6),0 0 18px rgba(230,255,92,.4)!important}
+.ring{background:conic-gradient(from 0deg,rgba(255,255,255,0) 0deg,rgba(230,255,92,.15) 80deg,rgba(255,255,255,.9) 175deg,rgba(230,255,92,.5) 215deg,rgba(255,255,255,0) 290deg,rgba(255,255,255,0) 360deg)!important}
+/* setup wizard + sheets */
+.wz-orb.o1{background:#9a5a22!important}.wz-orb.o2{background:#4a5a12!important}.wz-orb.o3{background:#c0703a!important}
+#wz{background:#0b0905!important}
+.wzc{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04))!important;border-radius:30px!important}
+.wz-opt.on,#wz #pmode button.on{background:linear-gradient(180deg,var(--lime),var(--lime2))!important;color:var(--ink)!important;border-color:rgba(255,255,255,.5)!important;box-shadow:0 10px 26px rgba(198,244,50,.25),inset 0 1px 0 rgba(255,255,255,.6)!important}
+.wz-opt,#wz #pmode button{border-radius:22px!important;color:var(--tx)!important;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04))!important}
+.wz-next{background:linear-gradient(180deg,var(--lime),var(--lime2))!important;color:var(--ink)!important;border-radius:999px!important}
+.wz-bar i{background:linear-gradient(90deg,#d9c36a,var(--lime))!important;box-shadow:0 0 12px rgba(230,255,92,.5)!important}
+#wz input:focus,#wz select:focus,#ntx:focus{border-color:var(--lime)!important;box-shadow:0 0 0 3px rgba(230,255,92,.2)!important}
+.auth,.set{background:radial-gradient(340px 340px at 90% -5%,rgba(154,90,34,.55),transparent 70%),radial-gradient(320px 320px at -10% 55%,rgba(74,90,18,.45),transparent 70%),#0b0905!important}
+.rcode{background:rgba(230,255,92,.1)!important}.rcode span{color:var(--mut)!important}.mrow .rk{background:rgba(230,255,92,.25)!important}.fitem.me b{color:var(--lime)!important}
+/* motion: blur-in stagger on page switch, only while .gl-enter */
+@keyframes glin{from{opacity:0;filter:blur(14px);transform:translateY(16px) scale(.975)}to{opacity:1;filter:none;transform:none}}
+.gl-enter .card,.gl-enter .wk,.gl-enter .zk,.gl-enter .row{animation:glin .6s cubic-bezier(.2,.8,.2,1) both!important}
+.gl-enter .card:nth-child(2),.gl-enter .wk:nth-child(2){animation-delay:.07s!important}.gl-enter .card:nth-child(3),.gl-enter .wk:nth-child(3){animation-delay:.14s!important}.gl-enter .card:nth-child(4),.gl-enter .wk:nth-child(4){animation-delay:.21s!important}.gl-enter .card:nth-child(n+5),.gl-enter .wk:nth-child(n+5){animation-delay:.28s!important}
+.gl-enter .wkline div,.gl-enter .grid .st,.gl-enter .sub-bar{animation:glin .55s cubic-bezier(.2,.8,.2,1) both!important}
+.gl-enter .wkline div:nth-child(2),.gl-enter .grid .st:nth-child(2),.gl-enter .sub-bar:nth-child(2){animation-delay:.05s!important}.gl-enter .wkline div:nth-child(3),.gl-enter .grid .st:nth-child(3),.gl-enter .sub-bar:nth-child(3){animation-delay:.1s!important}.gl-enter .wkline div:nth-child(4),.gl-enter .sub-bar:nth-child(4){animation-delay:.15s!important}.gl-enter .wkline div:nth-child(5),.gl-enter .sub-bar:nth-child(5){animation-delay:.2s!important}.gl-enter .wkline div:nth-child(6){animation-delay:.25s!important}.gl-enter .wkline div:nth-child(7){animation-delay:.3s!important}
+@media (prefers-reduced-motion:reduce){.gl-enter *{animation:none!important}}
+/* desktop: collapsible sidebar (icon rail <-> labels) */
+.gl-tog{display:none}
+@media (min-width:900px){
+ body{padding-bottom:30px!important;padding-right:var(--sbw,110px)!important;transition:padding-right .45s cubic-bezier(.2,.8,.2,1)}
+ body.gl-open{--sbw:240px}body:not(.gl-open){--sbw:110px}
+ .nav{left:auto!important;right:14px!important;top:14px!important;bottom:14px!important;width:calc(var(--sbw) - 28px);flex-direction:column!important;justify-content:flex-start!important;gap:6px;padding:12px 8px!important;border-radius:28px!important;transition:width .45s cubic-bezier(.2,.8,.2,1)}
+ .nav button{flex-direction:row!important;justify-content:center;gap:12px!important;font-size:0!important;min-width:0!important;width:100%;padding:13px 0!important;border-radius:20px!important}
+ .nav button svg{width:22px;height:22px;flex:none}
+ .nav button #bdg{position:absolute;top:6px;right:10px;font-size:10px!important;margin:0}
+ body.gl-open .nav button{justify-content:flex-start;padding:13px 16px!important;font-size:14px!important}
+ .gl-tog{display:flex!important;align-items:center;justify-content:center;width:100%;margin-bottom:8px;padding:10px 0!important;border-radius:16px!important;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04))!important;color:var(--tx)!important;border:1px solid var(--gb)!important;box-shadow:none!important;position:relative;z-index:1}
+ .gl-tog svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;transition:transform .4s}
+ body.gl-open .gl-tog svg{transform:scaleX(-1)}
+ .top{max-width:732px}
+}
+.nav.gl-pilled{position:fixed!important;border-radius:30px}
+html,body{overflow-x:clip}
+@media (max-width:899px){.nav .gl-tog{display:none!important}}
+#bgfx{background:radial-gradient(ellipse 80% 55% at 15% 92%,rgba(196,112,52,.42),transparent 60%),radial-gradient(ellipse 70% 50% at 90% 8%,rgba(130,150,40,.30),transparent 60%),radial-gradient(ellipse 60% 40% at 60% 55%,rgba(120,80,40,.18),transparent 70%),#0b0905}
+#bgfx i{filter:blur(70px)}
+#azt{display:flex;gap:6px;overflow:auto;padding:2px 0 8px}#azt button{white-space:nowrap;padding:8px 14px;font-size:13px;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04))!important;color:var(--tx)!important;border:1px solid var(--gb)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.14)!important}
+#azt button.on{background:linear-gradient(180deg,var(--lime),var(--lime2))!important;color:var(--ink)!important}
+.zk .tp{background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.05))!important;color:var(--tx)!important;border:1px solid rgba(230,255,92,.45)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 0 18px rgba(230,255,92,.1)!important}
+.zk.done .tp{border-color:rgba(255,255,255,.15)!important}
 </style></head><body>
 <div class="auth" id="auth"><div class="box"><div id="authbox"><h1 style="text-align:center">جدولك</h1><p class="note" style="text-align:center">خطة المذاكرة بتاعتك للثانوية</p><p class="note" style="text-align:center">حساب محلي على جهازك. بياناتك محفوظة في المتصفح بس.</p><div class="chips" id="authseg"><button data-m="login" class="on">دخول</button><button data-m="signup">حساب جديد</button></div><input type="text" id="un" placeholder="اسم المستخدم" autocomplete="username" autocapitalize="none" spellcheck="false"><div id="unh" class="unh">من غير مسافات. مسموح حروف وأرقام و <b class="sy">_</b> <b class="sy">-</b> <b class="sy">.</b></div><input type="password" id="pw" placeholder="كلمة السر" autocomplete="current-password"><div id="err" style="color:#f87171;min-height:22px"></div><button id="authgo" style="width:100%">دخول</button><section class="about"><h2>إزاي جدولك بيساعدك؟</h2><p>جدولك بيحوّل منهج سنتك لخطة مذاكرة واضحة: أسابيع، وكل أسبوع مقسوم لأيام من السبت للجمعة، لحد ميعاد امتحانك. بتختار سنتك ونظامك (ثانوي عام أو بكالوريا أو أزهر)، وبتشوف دروس كل يوم، وبتعلّم اللي خلصته، وبتراجع اللي اتراكم عليك من غير ما تتلخبط.</p><h3>تنظيم المواد والمراجعة</h3><p>كل مادة ليها دروسها في الجدول، وفيه أيام مراجعة قبل الامتحانات الشهرية، ويوم راحة بتحدده انت.</p><h3>مهامك اليومية</h3><p>صفحة النهاردة بتجمع دروس اليوم والمتأخر، ومعاها مؤقت تركيز وأذكار الصباح والمساء. البيانات من مصادر منشورة مش رسمية من الوزارة، فراجع الجدول مع مدرستك.</p><h3>جداول جاهزة</h3><ul><li><a href="/first-secondary/">جدول مذاكرة أولى ثانوي (عام وبكالوريا)</a></li><li><a href="/first-secondary-azhar/">جدول مذاكرة أولى ثانوي أزهري (البكالوريا الأزهرية)</a></li><li><a href="/second-bac-engineering/">جدول مذاكرة تانية بكالوريا: مسار الهندسة وعلوم الحاسب (برمجة)</a></li><li><a href="/second-bac-medicine-physics/">جدول مذاكرة تانية بكالوريا: الطب وعلوم الحياة (فيزياء)</a></li><li><a href="/second-bac-medicine-maths/">جدول مذاكرة تانية بكالوريا: الطب وعلوم الحياة (رياضيات)</a></li><li><a href="/second-general-science/">جدول مذاكرة تانية ثانوي عام: القسم العلمي</a></li><li><a href="/second-general-literary/">جدول مذاكرة تانية ثانوي عام: القسم الأدبي</a></li><li><a href="/third-general-science/">جدول مذاكرة تالتة ثانوي عام: علمي علوم</a></li><li><a href="/third-general-math/">جدول مذاكرة تالتة ثانوي عام: علمي رياضة</a></li><li><a href="/third-general-literary/">جدول مذاكرة تالتة ثانوي عام: أدبي</a></li><li><a href="/second-azhar-science/">جدول مذاكرة تانية ثانوي أزهري: القسم العلمي</a></li><li><a href="/second-azhar-literary/">جدول مذاكرة تانية ثانوي أزهري: القسم الأدبي</a></li><li><a href="/third-azhar-science/">جدول مذاكرة تالتة ثانوي أزهري: القسم العلمي</a></li><li><a href="/third-azhar-literary/">جدول مذاكرة تالتة ثانوي أزهري: القسم الأدبي</a></li><li><a href="/second-bac-engineering-chemistry/">جدول مذاكرة تانية بكالوريا: الهندسة وعلوم الحاسب (كيمياء)</a></li><li><a href="/second-bac-business-accounting/">جدول مذاكرة تانية بكالوريا: مسار الأعمال (محاسبة)</a></li><li><a href="/second-bac-business-admin/">جدول مذاكرة تانية بكالوريا: مسار الأعمال (إدارة أعمال)</a></li><li><a href="/second-bac-arts-psychology/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (علم النفس)</a></li><li><a href="/second-bac-arts-french/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (فرنسي)</a></li><li><a href="/second-bac-arts-german/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (ألماني)</a></li><li><a href="/second-bac-arts-spanish/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (إسباني)</a></li><li><a href="/second-bac-arts-italian/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (إيطالي)</a></li><li><a href="/second-bac-arts-chinese/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (صيني)</a></li></ul></section></div>
 <div id="prof" style="display:none"></div>
@@ -1097,4 +1201,52 @@ function boot(){if(!ON)return;if(!document.getElementById("hm")||!document.getEl
 document.addEventListener("DOMContentLoaded",boot);if(document.readyState!="loading")boot();
 })();
 
+</script><script>(function(){
+/* slide pill: clip-path edges, lead edge fast (.36s power3.out), trail edge slow (.55s power3.inOut) */
+var pOut=function(t){return 1-Math.pow(1-t,3)},pIO=function(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2};
+function clip(s){return "inset("+s.t+"px "+s.r+"px "+s.b+"px "+s.l+"px round 22px)"}
+function tween(st,key,to,dur,ease,paint,tok){var from=st[key],t0=performance.now();(function f(n){if(st.tok!==tok)return;var p=Math.min(1,(n-t0)/(dur*1e3));st[key]=from+(to-from)*ease(p);paint();if(p<1)requestAnimationFrame(f)})(t0)}
+function slidePill(pill,el,snap){
+ var box=pill.parentElement,W=box.clientWidth,H=box.clientHeight;
+ var to={l:el.offsetLeft,r:W-el.offsetLeft-el.offsetWidth,t:el.offsetTop,b:H-el.offsetTop-el.offsetHeight};
+ var st=pill.__st||(pill.__st={l:to.l,r:to.r,t:to.t,b:to.b,tok:0});
+ var paint=function(){pill.style.clipPath=clip(st)};
+ st.tok++;var tok=st.tok;
+ if(snap||matchMedia("(prefers-reduced-motion:reduce)").matches){st.l=to.l;st.r=to.r;st.t=to.t;st.b=to.b;paint();return}
+ var vert=Math.abs(to.t-st.t)>=Math.abs(to.l-st.l),fwd,lead,trail;
+ if(vert){fwd=to.t>st.t;lead=fwd?"b":"t";trail=fwd?"t":"b"}else{fwd=to.l>st.l;lead=fwd?"r":"l";trail=fwd?"l":"r"}
+ var all=["l","r","t","b"];
+ tween(st,lead,to[lead],.36,pOut,paint,tok);
+ all.forEach(function(k){if(k!==lead)tween(st,k,to[k],.55,pIO,paint,tok)});
+}
+function initPill(box,sel){
+ if(!box||box.__gl)return;box.__gl=1;box.classList.add("gl-pilled");
+ var pill=document.createElement("i");pill.className="gl-pill";box.insertBefore(pill,box.firstChild);
+ var act=function(){return box.querySelector(sel+".on")};
+ var upd=function(snap){var a=act();if(!a||!a.offsetWidth)return;slidePill(pill,a,snap||!pill.__seen);pill.__seen=1};
+ new MutationObserver(function(){upd(false)}).observe(box,{attributes:true,subtree:true,attributeFilter:["class"]});
+ if(window.ResizeObserver)new ResizeObserver(function(){upd(true)}).observe(box);
+ window.addEventListener("resize",function(){upd(true)});
+ setTimeout(function(){upd(true)},60);
+ return upd;
+}
+var nav=document.querySelector(".nav");
+/* collapse toggle (desktop sidebar) */
+var tg=document.createElement("button");tg.type="button";tg.className="gl-tog";tg.setAttribute("aria-label","طي القائمة");
+tg.innerHTML='<svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>';
+nav.insertBefore(tg,nav.firstChild);
+if(localStorage.getItem("jd_sb")==="1")document.body.classList.add("gl-open");
+tg.onclick=function(){var o=document.body.classList.toggle("gl-open");localStorage.setItem("jd_sb",o?"1":"0")};
+var upNav=initPill(nav,"button[data-v]");
+// ResizeObserver misses the width transition frames; keep pill glued while sidebar animates
+nav.addEventListener("transitionrun",function(){var t0=performance.now();(function f(){if(upNav)upNav(true);if(performance.now()-t0<520)requestAnimationFrame(f)})()});
+initPill(document.getElementById("authseg"),"button");
+/* page switch: blur-in stagger + breadcrumb */
+var top=document.querySelector(".top");
+var cr=document.createElement("div");cr.className="crumb";top.insertBefore(cr,top.firstChild);
+function crumb(){var a=nav.querySelector("button[data-v].on");var n=a?a.textContent.replace(/\d+\s*$/,"").trim():"";cr.innerHTML="<span>جدولك</span><i>›</i><b>"+n+"</b>"}
+crumb();
+var views=document.querySelectorAll(".view");
+views.forEach(function(v){var was=v.classList.contains("on");new MutationObserver(function(){var on=v.classList.contains("on");if(on&&!was){v.classList.add("gl-enter");clearTimeout(v.__t);v.__t=setTimeout(function(){v.classList.remove("gl-enter")},1000);crumb()}was=on}).observe(v,{attributes:true,attributeFilter:["class"]})});
+})();
 </script></body></html>
