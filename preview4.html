@@ -1,0 +1,1020 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>جدولك | منظم جدول مذاكرة للثانوية العامة والبكالوريا والأزهر</title>
+<meta name="description" content="جدولك أداة مجانية بالعربي لطلاب الثانوية في مصر: بيقسم المنهج على أسابيع وأيام لحد الامتحان، ويرتب موادك ومراجعتك ومهامك اليومية.">
+<meta name="google-site-verification" content="5URXRAs9Zx3Wj9cNqn6ztwXYAMLvMtzaGWX_Pm0VaYQ">
+<link rel="canonical" href="https://jadwalak-app.github.io/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="جدولك">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:url" content="https://jadwalak-app.github.io/">
+<meta property="og:image" content="https://jadwalak-app.github.io/1-og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="جدولك | منظم جدول مذاكرة للثانوية العامة والبكالوريا والأزهر">
+<meta property="og:description" content="جدولك أداة مجانية بالعربي لطلاب الثانوية في مصر: بيقسم المنهج على أسابيع وأيام لحد الامتحان، ويرتب موادك ومراجعتك ومهامك اليومية.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jadwalak-app.github.io/1-og-image.png">
+<meta name="twitter:title" content="جدولك | منظم جدول مذاكرة للثانوية العامة والبكالوريا والأزهر">
+<meta name="twitter:description" content="جدولك أداة مجانية بالعربي لطلاب الثانوية في مصر: بيقسم المنهج على أسابيع وأيام لحد الامتحان، ويرتب موادك ومراجعتك ومهامك اليومية.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "جدولك", "url": "https://jadwalak-app.github.io/", "inLanguage": "ar", "applicationCategory": "EducationalApplication", "operatingSystem": "Any", "description": "أداة مجانية بالعربي لطلاب الثانوية المصرية (الثانوي العام والبكالوريا والأزهر) لتنظيم جدول المذاكرة والمراجعة والمهام اليومية.", "audience": {"@type": "EducationalAudience", "educationalRole": "student", "audienceType": "طلاب المرحلة الثانوية في مصر"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EGP"}}</script><meta name="theme-color" content="#06070F"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+:root{--bg:#06070F;--card:#0e0f1f;--card2:#15162b;--tx:#f3f1ff;--mut:#9a98b8;--pri:#8B3DFF;--pri2:rgba(139,61,255,.16);--ok:#34d399;--bd:#23244a}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#1b0f3d 0,transparent 60%),radial-gradient(900px 500px at -10% 30%,#10133a 0,transparent 55%),var(--bg);color:var(--tx);font-family:"IBM Plex Sans Arabic","Tajawal",system-ui,"Segoe UI",Tahoma,sans-serif;line-height:1.65;min-height:100vh}
+.top{display:flex;align-items:center;gap:10px;padding:14px 16px;max-width:760px;margin:auto}
+.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#8B3DFF,#5b21b6);color:#fff;display:grid;place-items:center;font-weight:700;box-shadow:0 0 20px rgba(139,61,255,.55)}
+.top b{font-size:17px}.top small{display:block;color:var(--mut);font-size:12px}
+.wrap{max-width:760px;margin:auto;padding:0 16px 80px}
+.stage{height:250px;perspective:900px;display:grid;place-items:center;touch-action:pan-y;cursor:grab;position:relative;margin-top:4px}
+.scene{width:160px;height:160px;position:relative;transform-style:preserve-3d;transform:rotateX(-18deg) rotateY(0deg)}
+.ring{position:absolute;inset:0;border-radius:50%;border:2px solid var(--pri);box-shadow:0 0 18px rgba(139,61,255,.7),inset 0 0 18px rgba(139,61,255,.4);transform-style:preserve-3d}
+.r1{transform:rotateX(75deg) scale(1.55);animation:sp1 9s linear infinite}
+.r2{transform:rotateY(70deg) scale(1.25);border-color:#c4a1ff;animation:sp2 12s linear infinite}
+.r3{transform:rotateX(20deg) rotateY(20deg) scale(.95);border-color:#6d28d9;animation:sp3 7s linear infinite reverse}
+@keyframes sp1{to{transform:rotateX(75deg) scale(1.55) rotateZ(360deg)}}
+@keyframes sp2{to{transform:rotateY(70deg) scale(1.25) rotateZ(-360deg)}}
+@keyframes sp3{to{transform:rotateX(20deg) rotateY(20deg) scale(.95) rotateZ(360deg)}}
+.core{position:absolute;inset:38px;border-radius:24px;background:linear-gradient(135deg,#8B3DFF,#3b0f8c);display:grid;place-items:center;font-size:30px;font-weight:700;color:#fff;box-shadow:0 0 50px rgba(139,61,255,.9);transform:translateZ(0)}
+.hint{position:absolute;bottom:2px;width:100%;text-align:center;font-size:11px;color:var(--mut)}
+.hero h1{font-size:26px;line-height:1.35;margin:4px 0 8px;font-weight:700}.hero h1 em{color:#b98cff;font-style:normal}
+.card,.wk{background:linear-gradient(160deg,rgba(21,22,43,.95),rgba(12,13,28,.95));border:1px solid var(--bd);border-radius:20px;margin:12px 0;box-shadow:0 14px 40px rgba(0,0,0,.45),0 0 0 1px rgba(139,61,255,.06)}
+.tilt{transform-style:preserve-3d;transition:transform .15s ease-out;will-change:transform}
+.card{padding:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.st{background:var(--pri2);border:1px solid rgba(139,61,255,.3);border-radius:16px;padding:10px;text-align:center;transform:translateZ(24px)}
+.st b{display:block;font-size:24px;color:#c4a1ff}.st span{font-size:12px;color:var(--mut)}
+.bar{height:10px;background:#1a1b36;border-radius:6px;overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;background:linear-gradient(90deg,#6d28d9,#a78bfa);width:0;transition:width .4s;box-shadow:0 0 12px #8B3DFF}
+h3{margin:0 0 8px;font-size:16px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+input[type=date]{border:1px solid var(--bd);border-radius:10px;padding:7px 9px;font-size:14px;background:#0a0b18;color:var(--tx);color-scheme:dark;font-family:inherit}
+button{background:linear-gradient(135deg,#8B3DFF,#6d28d9);color:#fff;border:0;border-radius:12px;padding:9px 15px;font-size:14px;font-family:inherit;box-shadow:0 6px 18px rgba(139,61,255,.35);transition:transform .1s}
+button:active{transform:scale(.95)}button.g{background:var(--pri2);color:#c4a1ff;box-shadow:none}button.w{background:#3a1d0b;color:#fdba74;box-shadow:none}
+.wk{overflow:hidden}.wk>summary{list-style:none;cursor:pointer;padding:13px 14px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.wk>summary::-webkit-details-marker{display:none}.wk .t{font-weight:700}.wk .d{color:var(--mut);font-size:12px}
+.tag{font-size:11px;border-radius:20px;padding:2px 10px;background:var(--pri2);color:#c4a1ff}
+.tag.rev{background:rgba(236,72,153,.18);color:#f9a8d4}.tag.mid{background:rgba(56,189,248,.16);color:#7dd3fc}.tag.now{background:rgba(52,211,153,.18);color:#6ee7b7}
+.day{border-top:1px solid var(--bd);padding:10px 14px}.day.today{background:rgba(139,61,255,.1);box-shadow:inset 3px 0 0 var(--pri)}
+.day h4{margin:0 0 4px;font-size:14px}.day h4 span{color:var(--mut);font-weight:400;font-size:12px}.fri{color:var(--mut)}
+.it{display:flex;gap:9px;align-items:flex-start;padding:5px 0}.it input{margin-top:6px;width:19px;height:19px;accent-color:#8B3DFF}
+.it label{flex:1;font-size:14px}.it.done label{opacity:.4;text-decoration:line-through}.it.late label{color:inherit}
+.s{display:inline-block;font-size:11px;border-radius:6px;padding:0 7px;margin-inline-end:6px;color:#fff;font-weight:700}
+.s.ar{background:#b45309}.s.en{background:#0369a1}.s.hi{background:#be185d}.s.prog{background:#047857}.s.x{background:#475569}
+.pgn{color:var(--mut);font-size:12px}.note{color:var(--mut);font-size:12px}
+.warn{background:rgba(251,191,36,.08);color:#fcd34d;border:1px solid rgba(251,191,36,.25);border-radius:12px;padding:9px 11px;font-size:12px;margin-top:10px}
+.timer{font-size:38px;font-weight:700;text-align:center;color:#c4a1ff;letter-spacing:2px;text-shadow:0 0 20px rgba(139,61,255,.8)}
+.rv{display:flex;gap:8px;align-items:center;padding:5px 0;font-size:14px}.rv input{width:19px;height:19px;accent-color:#8B3DFF}
+@media (prefers-reduced-motion:reduce){.ring{animation:none}.tilt{transition:none}}
+
+.view{display:none}.view.on{display:block}
+body{padding-bottom:78px}
+.nav{position:fixed;bottom:0;left:0;right:0;background:rgba(8,9,20,.92);backdrop-filter:blur(14px);border-top:1px solid var(--bd);display:flex;justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:20}
+.nav button{background:none;box-shadow:none;color:var(--mut);padding:6px 8px;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px;border-radius:12px;min-width:56px}
+.nav button svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nav button.on{color:#c4a1ff;background:var(--pri2)}
+.badge{position:absolute;margin-top:-4px;background:#8B3DFF;color:#fff;border-radius:10px;font-size:10px;padding:0 5px}
+.auth{position:fixed;inset:0;background:var(--bg);z-index:50;overflow:auto;display:none}
+.auth.on{display:block}.auth .box{max-width:420px;margin:0 auto;padding:30px 18px}
+.auth input[type=text],.auth input[type=password],.auth input[type=date],.auth input[type=number],.set input[type=number]{width:100%;margin:6px 0;border:1px solid var(--bd);border-radius:12px;padding:12px;background:#0a0b18;color:var(--tx);font-size:15px;font-family:inherit}
+.seg{display:flex;gap:6px;margin:10px 0}.seg button{flex:1;background:var(--card2);box-shadow:none;color:var(--mut)}.seg button.on{background:linear-gradient(135deg,#8B3DFF,#6d28d9);color:#fff}
+.days7{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}.days7 button{background:var(--card2);box-shadow:none;color:var(--tx)}.days7 button.on{background:linear-gradient(135deg,#8B3DFF,#6d28d9)}
+.err{color:#c4a1ff;font-size:13px;min-height:18px}
+.chips{display:flex;gap:6px;overflow:auto;padding:2px 0 8px}.chips button{white-space:nowrap;background:var(--card2);box-shadow:none;color:var(--mut);padding:6px 12px;font-size:13px}.chips button.on{background:var(--pri2);color:#c4a1ff}
+.sub-bar{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:13px}.sub-bar .nm{width:92px;flex:none}.sub-bar .b{flex:1;height:9px;background:#1a1b36;border-radius:6px;overflow:hidden}.sub-bar .b i{display:block;height:100%}.sub-bar .v{width:54px;text-align:left;color:var(--mut);font-size:12px}
+.chart{display:flex;align-items:flex-end;gap:3px;height:90px;margin-top:8px}.chart i{flex:1;background:linear-gradient(180deg,#a78bfa,#6d28d9);border-radius:4px 4px 0 0;min-height:2px}.chart i.cur{background:linear-gradient(180deg,#34d399,#059669)}
+.zk{background:var(--card2);border:1px solid var(--bd);border-radius:18px;padding:14px;margin:10px 0}.zk .tx{font-size:18px;line-height:2;margin-bottom:8px;font-weight:500}
+.zk .tp{width:100%;padding:14px;font-size:17px}.zk.done{opacity:.55;border-color:#14532d}
+.flame{display:inline-flex;gap:5px;align-items:center;background:rgba(251,146,60,.14);color:#fdba74;border-radius:20px;padding:3px 11px;font-size:13px}
+.wkline{display:flex;gap:4px;margin-top:8px}.wkline div{flex:1;text-align:center;font-size:11px;color:var(--mut);padding:5px 0;border-radius:9px;background:#14152b}.wkline .ok{background:rgba(52,211,153,.2);color:#6ee7b7}.wkline .td{outline:2px solid var(--pri)}.wkline .off{opacity:.4}
+.todo{display:flex;gap:9px;align-items:flex-start;padding:7px 0;border-top:1px solid var(--bd)}.todo:first-of-type{border-top:0}
+.todo .acts{display:flex;gap:6px}.todo .acts button{padding:4px 10px;font-size:12px}
+.top .who{margin-inline-start:auto;font-size:12px;color:var(--mut);text-align:left}.top .who button{padding:3px 10px;font-size:11px;margin-top:3px}
+.sr-only{position:absolute;left:-9999px}
+/* ===== setup wizard (glass) ===== */
+#wz{position:fixed;inset:0;z-index:70;display:none;flex-direction:column;background:#05060d;overflow:hidden}
+#wz.on{display:flex}
+.wz-orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75;pointer-events:none}
+.wz-orb.o1{width:340px;height:340px;background:#7c2dff;top:-90px;right:-80px;animation:wzf1 14s ease-in-out infinite alternate}
+.wz-orb.o2{width:300px;height:300px;background:#2a3cff;bottom:-60px;left:-90px;opacity:.55;animation:wzf2 17s ease-in-out infinite alternate}
+.wz-orb.o3{width:200px;height:200px;background:#c026d3;top:42%;left:30%;opacity:.28;animation:wzf3 19s ease-in-out infinite alternate}
+@keyframes wzf1{to{transform:translate(-60px,90px) scale(1.15)}}
+@keyframes wzf2{to{transform:translate(80px,-70px) scale(1.2)}}
+@keyframes wzf3{to{transform:translate(-90px,-50px) scale(.8)}}
+.wz-top{position:relative;display:flex;align-items:center;gap:12px;padding:calc(env(safe-area-inset-top,0px) + 16px) 18px 6px;max-width:460px;width:100%;margin:0 auto}
+#wzback{width:42px;height:42px;border-radius:50%;padding:0;font-size:18px;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(16px);box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+.wz-bar{flex:1;height:7px;border-radius:7px;background:rgba(255,255,255,.1);overflow:hidden;direction:rtl}
+.wz-bar i{display:block;height:100%;width:0;border-radius:7px;background:linear-gradient(90deg,#a66bff,#6d3bff);box-shadow:0 0 12px #8B3DFF;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+#wzcount{font-size:12px;color:#b8b3d8;min-width:30px;text-align:center;direction:ltr}
+.wz-stage{position:relative;flex:1;display:grid;align-items:center;padding:12px 16px 28px;overflow:auto}
+.wzc{max-width:430px;width:100%;margin:0 auto;padding:30px 22px 24px;border-radius:34px;color:#f3f1ff;
+ background:linear-gradient(150deg,rgba(255,255,255,.15),rgba(255,255,255,.05) 55%,rgba(139,61,255,.1));
+ backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);
+ border:1px solid rgba(255,255,255,.17);box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.04),inset 0 1px 0 rgba(255,255,255,.3),inset 0 -20px 40px rgba(139,61,255,.06)}
+.wzc h2{margin:0 0 8px;font-size:25px;line-height:1.4}
+.wzc>p{margin:0 0 20px;color:#bcb7dc;font-size:14px;line-height:1.8}
+.wzc.in{animation:wzin .52s cubic-bezier(.2,.8,.2,1) both}
+.wzc.out{animation:wzout .3s cubic-bezier(.5,0,.8,.4) both}
+@keyframes wzin{from{opacity:0;filter:blur(18px);transform:translateY(18px) scale(.965)}to{opacity:1;filter:blur(0);transform:none}}
+@keyframes wzout{to{opacity:0;filter:blur(18px);transform:translateY(-14px) scale(.965)}}
+.wz-opts{display:flex;flex-direction:column;gap:11px}.wz-opts.grid{display:grid;grid-template-columns:1fr 1fr}
+.wz-opt,#wz #pmode button{position:relative;padding:17px 14px;border-radius:22px;font-size:17px;font-family:inherit;color:#f3f1ff;text-align:center;cursor:pointer;
+ background:linear-gradient(160deg,rgba(255,255,255,.13),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.15);box-shadow:inset 0 1px 0 rgba(255,255,255,.22);
+ transition:transform .18s,background .25s,box-shadow .25s,border-color .25s;animation:wzop .5s cubic-bezier(.2,.8,.2,1) both;white-space:normal}
+@keyframes wzop{from{opacity:0;transform:translateY(12px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.wz-opt:active,#wz #pmode button:active{transform:scale(.97)}
+.wz-opt.on,#wz #pmode button.on{background:linear-gradient(150deg,rgba(166,107,255,.9),rgba(98,50,230,.85));border-color:rgba(255,255,255,.4);box-shadow:0 10px 30px rgba(139,61,255,.55),inset 0 1px 0 rgba(255,255,255,.45)}
+#wz #pmode{display:flex;flex-direction:column;gap:11px;overflow:visible;padding:0}
+#wz #pextra select,#wz input[type=text],#wz input[type=date],#wz input[type=number]{width:100%;margin:8px 0;padding:15px;border-radius:18px;font-size:16px;font-family:inherit;color:#f3f1ff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);color-scheme:dark;outline:none}
+#wz input:focus,#wz select:focus{border-color:#a66bff;box-shadow:0 0 0 3px rgba(139,61,255,.3)}
+#wz #pextra .note{color:#bcb7dc;font-size:13px;margin-top:8px}
+.wz-note{color:#9a98b8;font-size:12px;margin:2px 0 8px}
+.wz-next{width:100%;margin-top:18px;padding:17px;border-radius:22px;font-size:17px;font-weight:600;font-family:inherit;color:#fff;border:1px solid rgba(255,255,255,.3);background:linear-gradient(150deg,#a66bff,#6232e6);box-shadow:0 14px 36px rgba(139,61,255,.55),inset 0 1px 0 rgba(255,255,255,.45)}
+.wz-next:active{transform:scale(.98)}
+/* typed date */
+input.dt{text-align:center;letter-spacing:3px;font-size:22px!important}
+input.dt.bad{border-color:#ff6b8b!important;box-shadow:0 0 0 3px rgba(255,107,139,.25)!important}
+.unh{font-size:12px;color:#9a98b8;margin:0 2px 10px;line-height:1.7}.unh.bad{color:#ff8fa8}
+.unh .sy{display:inline-block;min-width:20px;text-align:center;margin:0 2px;padding:0 5px;border-radius:7px;background:rgba(255,255,255,.1);color:#f3f1ff;font-family:monospace;direction:ltr}
+.about{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);color:#bcb7dc;font-size:13px;line-height:1.9;text-align:right}.about h2{font-size:15px;margin:0 0 6px;color:#f3f1ff}.about h3{font-size:13px;margin:12px 0 2px;color:#e2dcff}.about p{margin:0}
+.nt{margin-inline-start:auto;flex:none;width:30px;height:30px;padding:0!important;border-radius:10px!important;font-size:14px;background:rgba(255,255,255,.06)!important;color:#9a98b8!important;border:1px solid rgba(255,255,255,.1)!important;box-shadow:none!important}.nt.has{color:#c4a1ff!important;background:rgba(139,61,255,.22)!important}
+#nsheet{position:fixed;inset:0;z-index:310;display:none;align-items:flex-end}#nsheet.on{display:flex}.nbk{position:absolute;inset:0;background:rgba(3,4,12,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.nbx{position:relative;width:100%;max-width:520px;margin:0 auto;padding:18px 16px calc(18px + env(safe-area-inset-bottom));border-radius:30px 30px 0 0;color:#f3f1ff;background:linear-gradient(160deg,rgba(255,255,255,.17),rgba(255,255,255,.06) 55%,rgba(139,61,255,.14));backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);border:1px solid rgba(255,255,255,.2);box-shadow:0 -20px 60px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.3);animation:nup .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes nup{from{transform:translateY(60px);opacity:0}}
+.nh{display:flex;align-items:center;gap:10px;justify-content:space-between;margin-bottom:10px}.nh b{font-size:14px;line-height:1.5}.nh button{flex:none}
+#ntx{width:100%;min-height:150px;box-sizing:border-box;resize:vertical;padding:13px;border-radius:18px;font-size:15px;font-family:inherit;line-height:1.7;color:#f3f1ff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);outline:none}
+#ntx:focus{border-color:#a66bff;box-shadow:0 0 0 3px rgba(139,61,255,.3)}
+
+.rate{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:60;display:none;align-items:center;justify-content:center;padding:18px}.rate.on{display:flex}.rate .bx{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:20px;max-width:380px;width:100%;text-align:center}.rate .bx button{margin:4px;padding:11px 14px}
+.set{position:fixed;inset:0;background:var(--bg);z-index:55;overflow:auto;display:none;padding:18px}.set.on{display:block}.set .in{max-width:520px;margin:0 auto}.set input{width:100%;margin:6px 0;border:1px solid var(--bd);border-radius:12px;padding:12px;background:#0a0b18;color:var(--tx);font-family:inherit}
+.view{display:none;max-width:760px;margin:0 auto;padding:6px 14px 100px}.view.on{display:block}.rg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.rg button{padding:10px 2px;font-size:13px}.rg button.w{background:#3b2a6b}
+/* ===== interior glass + 3D (preview layer) ===== */
+html{background:#05060d}
+body{background:#05060d!important;padding-bottom:104px!important}
+#bgfx{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+#bgfx i{position:absolute;border-radius:50%;filter:blur(60px);will-change:transform}
+#bgfx .a{width:380px;height:380px;background:#6d28d9;top:-120px;right:-110px;opacity:.7}
+#bgfx .b{width:340px;height:340px;background:#2433d6;top:48vh;left:-140px;opacity:.5}
+#bgfx .c{width:260px;height:260px;background:#a21caf;bottom:-80px;right:-60px;opacity:.32}
+.card,.wk{background:linear-gradient(150deg,rgba(255,255,255,.12),rgba(255,255,255,.04) 55%,rgba(139,61,255,.08))!important;border:1px solid rgba(255,255,255,.14)!important;border-radius:26px!important;position:relative;overflow:hidden;
+ box-shadow:0 18px 44px rgba(0,0,0,.5),0 2px 0 rgba(255,255,255,.04),inset 0 1px 0 rgba(255,255,255,.26),inset 0 -18px 34px rgba(139,61,255,.05)!important;transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateZ(0);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+#v-home .card,#v-stats .card,#v-az .card{backdrop-filter:blur(16px) saturate(170%);-webkit-backdrop-filter:blur(16px) saturate(170%)}
+.card::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(260px 200px at var(--mx,50%) var(--my,-20%),rgba(255,255,255,.2),transparent 70%);opacity:var(--ho,0);transition:opacity .3s}
+.card.pr{transition:transform .08s linear}
+.tilt{transform-style:flat!important}
+.st{transform:none!important;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(139,61,255,.14))!important;border:1px solid rgba(255,255,255,.14)!important;border-radius:20px!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 18px rgba(0,0,0,.28)}
+.fresh .card,.fresh .wk{animation:cin .7s cubic-bezier(.2,.8,.2,1) both}
+.fresh .card:nth-child(2),.fresh .wk:nth-child(2){animation-delay:.07s}.fresh .card:nth-child(3),.fresh .wk:nth-child(3){animation-delay:.14s}.fresh .card:nth-child(4),.fresh .wk:nth-child(4){animation-delay:.21s}.fresh .card:nth-child(n+5),.fresh .wk:nth-child(n+5){animation-delay:.26s}
+@keyframes cin{from{opacity:0;transform:perspective(900px) translateY(46px) rotateX(-18deg) scale(.94);filter:blur(8px)}to{opacity:1;transform:perspective(900px);filter:none}}
+.nav{left:14px!important;right:14px!important;bottom:calc(12px + env(safe-area-inset-bottom))!important;border:1px solid rgba(255,255,255,.18)!important;border-radius:32px!important;padding:7px 6px!important;
+ background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,.06))!important;backdrop-filter:blur(22px) saturate(180%)!important;-webkit-backdrop-filter:blur(22px) saturate(180%)!important;
+ box-shadow:0 22px 50px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.3)!important}
+.nav button{transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,color .3s!important;border-radius:24px!important}
+.nav button.on{background:linear-gradient(150deg,rgba(166,107,255,.85),rgba(98,50,230,.8))!important;color:#fff!important;transform:translateY(-6px) scale(1.07);box-shadow:0 12px 24px rgba(139,61,255,.55),inset 0 1px 0 rgba(255,255,255,.4)}
+button:not(.nav button){transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .2s!important}
+button:active{transform:scale(.95)!important}
+.it input[type=checkbox]{-webkit-appearance:none;appearance:none;width:26px;height:26px;flex:none;margin:1px 0 0;border-radius:9px;border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.07);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);transition:transform .2s cubic-bezier(.3,1.6,.5,1),background .25s;position:relative}
+.it input[type=checkbox]:active{transform:scale(.8)}
+.it input[type=checkbox]:checked{background:linear-gradient(150deg,#a66bff,#6232e6);border-color:rgba(255,255,255,.5)}
+.it input[type=checkbox]:checked::after{content:"";position:absolute;left:8px;top:3px;width:6px;height:12px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.card .bar{height:10px!important;border-radius:10px!important;background:rgba(255,255,255,.09)!important;overflow:hidden}
+.card .bar i{box-shadow:0 0 14px rgba(139,61,255,.8)}
+@media (prefers-reduced-motion:reduce){.fresh .card,.fresh .wk{animation:none}#bgfx i{display:none}}
+
+/* ===== glass pass 2: orb + remaining flat elements (cheap: gradients/shadows only, no extra blur layers) ===== */
+.stage{height:260px}
+.core{inset:22px!important;border-radius:50%!important;font-size:32px!important;letter-spacing:-.5px;color:#fff;border:1px solid rgba(255,255,255,.38);
+ background:radial-gradient(circle at 50% 118%,rgba(196,161,255,.75),rgba(196,161,255,0) 52%),radial-gradient(circle at 50% 55%,rgba(139,61,255,.38),rgba(58,18,150,.82) 72%,rgba(16,6,52,.95) 100%)!important;
+ box-shadow:inset 0 -16px 28px rgba(139,61,255,.6),inset 0 12px 20px rgba(255,255,255,.22),inset 0 0 0 1px rgba(255,255,255,.08),0 0 0 1px rgba(255,255,255,.06)!important;
+ text-shadow:0 2px 12px rgba(20,0,60,.7),0 0 18px rgba(196,161,255,.6);}
+.core::before{content:"";position:absolute;top:7%;left:15%;width:70%;height:42%;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.04));filter:blur(.5px);pointer-events:none}
+.core::after{content:"";position:absolute;bottom:9%;left:24%;width:52%;height:14%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,255,255,.35),transparent 70%);pointer-events:none}
+@keyframes orbf{0%,100%{transform:translateY(-4px)}50%{transform:translateY(5px)}}
+.ring{border:7px solid rgba(255,255,255,.09)!important;box-shadow:0 0 0 1px rgba(255,255,255,.38),inset 0 0 0 1px rgba(255,255,255,.3),0 0 26px rgba(139,61,255,.55),inset 0 0 24px rgba(139,61,255,.32)!important}
+/* buttons: glass pills */
+button{background:linear-gradient(160deg,rgba(166,107,255,.62),rgba(98,50,230,.5))!important;border:1px solid rgba(255,255,255,.3)!important;
+ box-shadow:0 10px 22px rgba(60,20,150,.45),inset 0 1px 0 rgba(255,255,255,.38),inset 0 -8px 14px rgba(98,50,230,.25)!important;text-shadow:0 1px 6px rgba(20,0,60,.4)}
+button.g,.seg button,.chips button,.tabs button{background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.05))!important;color:#d9c8ff!important;
+ box-shadow:0 6px 14px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.22)!important}
+button.g.on,.seg button.on,.chips button.on{background:linear-gradient(160deg,rgba(166,107,255,.7),rgba(98,50,230,.55))!important;color:#fff!important;border-color:rgba(255,255,255,.4)!important}
+button.w{background:linear-gradient(160deg,rgba(251,146,60,.4),rgba(154,52,18,.35))!important;color:#fed7aa!important}
+.nav button{background:none!important;box-shadow:none!important;border:0!important}
+.nav button.on{background:linear-gradient(150deg,rgba(166,107,255,.85),rgba(98,50,230,.8))!important;border:1px solid rgba(255,255,255,.3)!important;box-shadow:0 12px 24px rgba(139,61,255,.55),inset 0 1px 0 rgba(255,255,255,.4)!important}
+/* tags, week strip, bars, chart */
+.tag{background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(139,61,255,.18));border:1px solid rgba(255,255,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.22)}
+.tag.rev{background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(236,72,153,.22))}.tag.mid{background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(56,189,248,.2))}.tag.now{background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(52,211,153,.24))}
+.wkline div{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.wkline .ok{background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(52,211,153,.3))}
+.bar,.sub-bar .b,.wz-bar{background:rgba(255,255,255,.08)!important;border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 2px 5px rgba(0,0,0,.4)}
+.bar i,.sub-bar .b i{box-shadow:0 0 14px rgba(139,61,255,.7),inset 0 1px 0 rgba(255,255,255,.5)!important;background-image:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 55%),linear-gradient(90deg,#6d28d9,#a78bfa)}
+.sub-bar .b i{background-blend-mode:overlay}
+.chart i{box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 10px rgba(139,61,255,.45);border:1px solid rgba(255,255,255,.18);border-bottom:0}
+/* inputs and full-screen panels */
+input[type=text],input[type=password],input[type=date],input[type=number],select,textarea{background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.04))!important;border:1px solid rgba(255,255,255,.18)!important;box-shadow:inset 0 2px 6px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.1)}
+.auth,.set{background:radial-gradient(340px 340px at 90% -5%,rgba(109,40,217,.7),transparent 70%),radial-gradient(320px 320px at -10% 55%,rgba(36,51,214,.5),transparent 70%),radial-gradient(260px 260px at 100% 105%,rgba(162,28,175,.35),transparent 70%),#05060d}
+.auth .box,.set .in{margin-top:20px;padding:22px 18px;border-radius:28px;background:linear-gradient(150deg,rgba(255,255,255,.12),rgba(255,255,255,.04) 55%,rgba(139,61,255,.08));border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 44px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.26)}
+.badge{background:linear-gradient(160deg,#c4a1ff,#6232e6);border:1px solid rgba(255,255,255,.4);box-shadow:0 2px 8px rgba(139,61,255,.6)}
+.zk{background:linear-gradient(150deg,rgba(255,255,255,.1),rgba(255,255,255,.03))!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:22px!important;box-shadow:0 12px 28px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.2)!important}
+/* rings v2: thin neon-glass orbits with a fading arc, clear of the sphere */
+.ring{border:0!important;box-shadow:none!important;background:conic-gradient(from 0deg,rgba(255,255,255,0) 0deg,rgba(196,161,255,.15) 80deg,rgba(255,255,255,.95) 175deg,rgba(166,107,255,.5) 215deg,rgba(255,255,255,0) 290deg,rgba(255,255,255,0) 360deg)!important;
+ -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2.5px),#000 calc(100% - 1.5px));mask:radial-gradient(farthest-side,transparent calc(100% - 2.5px),#000 calc(100% - 1.5px));
+ will-change:transform}
+.ra{animation:rsa 9s linear infinite}.rb{animation:rsb 13s linear infinite}.rc{animation:rsc 11s linear infinite}
+@keyframes rsa{to{transform:rotateX(74deg) rotateY(-8deg) scale(1.2) rotateZ(360deg)}}
+@keyframes rsb{to{transform:rotateX(-62deg) rotateY(38deg) scale(1.42) rotateZ(-360deg)}}
+@keyframes rsc{to{transform:rotateY(76deg) rotateX(8deg) scale(1.62) rotateZ(360deg)}}
+@media (prefers-reduced-motion:reduce){.ra,.rb,.rc{animation:none}}
+
+.stage::before{content:"";position:absolute;left:50%;top:50%;width:230px;height:230px;margin:-115px 0 0 -115px;border-radius:50%;background:radial-gradient(circle,rgba(139,61,255,.55),rgba(139,61,255,.18) 45%,transparent 70%);pointer-events:none}
+.rtoast{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:99;max-width:88vw;padding:10px 16px;border-radius:16px;background:linear-gradient(160deg,rgba(255,255,255,.18),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#fff;font-size:14px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.4);animation:rtin .35s ease}
+.rtoast span{color:#d9c8ff;font-size:12px}.rtoast.out{opacity:0;transition:opacity .4s}
+@keyframes rtin{from{opacity:0;transform:translate(-50%,-14px)}}
+.rmbtns{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}.rmbtns button{flex:1}
+#v-rooms input[type=text],#v-rooms input[type=number],#v-rooms select{width:100%;margin:4px 0 10px;padding:11px 12px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);color:#fff;font:inherit}
+#v-rooms select option{color:#000}
+#v-rooms .err{color:#ff8a9a;font-size:13px;min-height:16px}
+.rcode{margin-top:10px;display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-radius:16px;background:rgba(139,61,255,.18);border:1px dashed rgba(255,255,255,.35);cursor:pointer}
+.rcode span{font-size:12px;color:#cdb8ff}.rcode b{font-size:26px;letter-spacing:6px;font-family:ui-monospace,monospace}
+.rvs3d .vsw{perspective:600px;margin:18px 6px 8px}
+.vs{display:flex;height:34px;border-radius:18px;overflow:hidden;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.8,.2,1);box-shadow:0 14px 26px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.3);direction:ltr}
+.vs i{display:flex;align-items:center;justify-content:center;transition:width .6s cubic-bezier(.2,.8,.2,1);min-width:12%}
+.vs i.w{background:linear-gradient(180deg,#fff,#cfd3e6 60%,#a9aed0);color:#1b1640}
+.vs i.r{background:linear-gradient(180deg,#ff6b7d,#d11f3a 60%,#8e1026);color:#fff}
+.vs em{font-style:normal;font-weight:800;font-size:15px}
+.vsn{display:flex;justify-content:space-between;direction:ltr;font-size:12px;color:#cdb8ff;padding:0 6px}
+.vsm{text-align:center;margin-top:8px;font-weight:700}
+.mrow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)}.mrow:last-child{border:0}
+.mrow .rk{width:24px;height:24px;border-radius:50%;background:rgba(139,61,255,.4);display:flex;align-items:center;justify-content:center;font-size:12px}
+.mrow .mi{flex:1}.mrow .mv{font-weight:800}.mrow small{color:#a99ccf;font-weight:400}
+.fitem{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08)}.fitem:last-child{border:0}.fitem.me b{color:#c9a7ff}
+.gm .role{margin:10px 0;padding:12px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);text-align:center}
+.gm .role b{font-size:18px;display:block;margin:4px 0}.gm .role.spy{background:rgba(209,31,58,.2);border-color:rgba(255,107,125,.5)}
+.clue{padding:8px 10px;margin:6px 0;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14)}.clue small{color:#a99ccf}.clue audio{width:100%;height:34px;margin-top:6px}
+.turn{margin:10px 0;font-size:14px}.vlist{display:flex;flex-direction:column;gap:8px;margin:8px 0}
+.result{margin:12px 0;padding:14px;border-radius:18px;text-align:center;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08)}.result b{font-size:19px;display:block;margin-bottom:6px}
+.result.spyw{background:rgba(209,31,58,.22)}.result.grpw{background:rgba(52,199,120,.2)}
+.gcard{padding:10px 0}.gcard button{margin-top:10px;width:100%}
+</style></head><body>
+<div class="auth" id="auth"><div class="box"><div id="authbox"><h1 style="text-align:center">جدولك</h1><p class="note" style="text-align:center">خطة المذاكرة بتاعتك للثانوية</p><p class="note" style="text-align:center">حساب محلي على جهازك. بياناتك محفوظة في المتصفح بس.</p><div class="chips" id="authseg"><button data-m="login" class="on">دخول</button><button data-m="signup">حساب جديد</button></div><input type="text" id="un" placeholder="اسم المستخدم" autocomplete="username" autocapitalize="none" spellcheck="false"><div id="unh" class="unh">من غير مسافات. مسموح حروف وأرقام و <b class="sy">_</b> <b class="sy">-</b> <b class="sy">.</b></div><input type="password" id="pw" placeholder="كلمة السر" autocomplete="current-password"><div id="err" style="color:#f87171;min-height:22px"></div><button id="authgo" style="width:100%">دخول</button><section class="about"><h2>إزاي جدولك بيساعدك؟</h2><p>جدولك بيحوّل منهج سنتك لخطة مذاكرة واضحة: أسابيع، وكل أسبوع مقسوم لأيام من السبت للجمعة، لحد ميعاد امتحانك. بتختار سنتك ونظامك (ثانوي عام أو بكالوريا أو أزهر)، وبتشوف دروس كل يوم، وبتعلّم اللي خلصته، وبتراجع اللي اتراكم عليك من غير ما تتلخبط.</p><h3>تنظيم المواد والمراجعة</h3><p>كل مادة ليها دروسها في الجدول، وفيه أيام مراجعة قبل الامتحانات الشهرية، ويوم راحة بتحدده انت.</p><h3>مهامك اليومية</h3><p>صفحة النهاردة بتجمع دروس اليوم والمتأخر، ومعاها مؤقت تركيز وأذكار الصباح والمساء. البيانات من مصادر منشورة مش رسمية من الوزارة، فراجع الجدول مع مدرستك.</p><h3>جداول جاهزة</h3><ul><li><a href="/first-secondary/">جدول مذاكرة أولى ثانوي (عام وبكالوريا)</a></li><li><a href="/first-secondary-azhar/">جدول مذاكرة أولى ثانوي أزهري (البكالوريا الأزهرية)</a></li><li><a href="/second-bac-engineering/">جدول مذاكرة تانية بكالوريا: مسار الهندسة وعلوم الحاسب (برمجة)</a></li><li><a href="/second-bac-medicine-physics/">جدول مذاكرة تانية بكالوريا: الطب وعلوم الحياة (فيزياء)</a></li><li><a href="/second-bac-medicine-maths/">جدول مذاكرة تانية بكالوريا: الطب وعلوم الحياة (رياضيات)</a></li><li><a href="/second-general-science/">جدول مذاكرة تانية ثانوي عام: القسم العلمي</a></li><li><a href="/second-general-literary/">جدول مذاكرة تانية ثانوي عام: القسم الأدبي</a></li><li><a href="/third-general-science/">جدول مذاكرة تالتة ثانوي عام: علمي علوم</a></li><li><a href="/third-general-math/">جدول مذاكرة تالتة ثانوي عام: علمي رياضة</a></li><li><a href="/third-general-literary/">جدول مذاكرة تالتة ثانوي عام: أدبي</a></li><li><a href="/second-azhar-science/">جدول مذاكرة تانية ثانوي أزهري: القسم العلمي</a></li><li><a href="/second-azhar-literary/">جدول مذاكرة تانية ثانوي أزهري: القسم الأدبي</a></li><li><a href="/third-azhar-science/">جدول مذاكرة تالتة ثانوي أزهري: القسم العلمي</a></li><li><a href="/third-azhar-literary/">جدول مذاكرة تالتة ثانوي أزهري: القسم الأدبي</a></li><li><a href="/second-bac-engineering-chemistry/">جدول مذاكرة تانية بكالوريا: الهندسة وعلوم الحاسب (كيمياء)</a></li><li><a href="/second-bac-business-accounting/">جدول مذاكرة تانية بكالوريا: مسار الأعمال (محاسبة)</a></li><li><a href="/second-bac-business-admin/">جدول مذاكرة تانية بكالوريا: مسار الأعمال (إدارة أعمال)</a></li><li><a href="/second-bac-arts-psychology/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (علم النفس)</a></li><li><a href="/second-bac-arts-french/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (فرنسي)</a></li><li><a href="/second-bac-arts-german/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (ألماني)</a></li><li><a href="/second-bac-arts-spanish/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (إسباني)</a></li><li><a href="/second-bac-arts-italian/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (إيطالي)</a></li><li><a href="/second-bac-arts-chinese/">جدول مذاكرة تانية بكالوريا: الآداب والفنون (صيني)</a></li></ul></section></div>
+<div id="prof" style="display:none"></div>
+<div id="onb" style="display:none"><h2>أهلاً! اضبط خطتك</h2><b>يوم الراحة بتاعك إيه؟</b><div class="chips" id="days7" style="flex-wrap:wrap"></div><b>اليوم ده يبقى إيه؟</b><div class="chips" id="omode"></div><b>وصلت لفين في المنهج؟</b><div class="chips" id="pmode" style="flex-wrap:wrap"></div><div id="pextra"></div><b>ميعاد أول امتحان (تقدر تغيره)</b><input type="text" class="dt" id="exd" inputmode="numeric" maxlength="10" placeholder="2027-05-15" dir="ltr"><p class="note">الوزارة لسه معلنتش اليوم بالظبط (مايو). الافتراضي 15 مايو 2027.</p><button id="onbgo" style="width:100%">ابدأ الخطة</button></div></div></div>
+<div class="top"><div><b id="who"></b></div><div style="margin-inline-start:auto;display:flex;gap:6px"><button class="g" id="setb">⚙︎</button><button class="g" id="lo">خروج</button></div></div>
+<div class="view on" id="v-home"><div class="stage" id="stage"><div class="scene" id="scene"><div class="ring ra" style="transform:rotateX(74deg) rotateY(-8deg) scale(1.2)"></div><div class="ring rb" style="transform:rotateX(-62deg) rotateY(38deg) scale(1.42)"></div><div class="ring rc" style="transform:rotateY(76deg) rotateX(8deg) scale(1.62)"></div><div class="core" id="core"></div></div></div><div id="hm"></div>
+<div class="card"><h3>بومودورو</h3><div style="font-size:38px;text-align:center" id="tm">25:00</div><div class="row" style="justify-content:center"><button id="tb">ابدأ</button><button class="g" id="tr">إعادة</button><button class="g" id="tf">استراحة</button></div></div></div>
+<div class="view" id="v-sched"><div id="weeks"></div></div>
+<div class="view" id="v-back"><div id="bsum"></div><div class="chips" id="bchips"></div><div id="cu"></div><div class="card"><h3>كل المتراكم</h3><div id="blist"></div></div><div class="row"><button id="ball">خلّص الكل</button><button class="g" id="bun">أجّل الكل</button></div></div>
+<div class="view" id="v-stats"><div id="stl"></div></div>
+<div class="view" id="v-az"><div id="azt"></div><div id="azl"></div><div id="azs"></div></div>
+<div class="set" id="set"><div class="in"><h2>الإعدادات</h2><b>ميعاد الامتحان</b><input type="text" class="dt" id="sex" inputmode="numeric" maxlength="10" placeholder="2027-05-15" dir="ltr"><button id="sexg">حفظ</button><p><b>يوم الراحة</b></p><div class="chips" id="sdays" style="flex-wrap:wrap"></div><b>يوم الراحة يبقى</b><div class="chips" id="somode"></div><b>نقل بياناتك</b><div class="row"><button class="g" id="sexp">تصدير بياناتي</button><button class="g" id="simp">استيراد</button></div><input type="file" id="sfile" accept=".json,application/json" style="display:none"><div class="note" id="sdn">التصدير بينزّل ملف فيه حسابك وتقدمك. الاستيراد بيرجّعهم على جهاز أو عنوان تاني.</div><b>ظبط تقدمك</b><div class="row"><input type="number" id="swk" min="0" max="40" placeholder="خلّصت لحد أسبوع رقم" style="flex:1"><button id="swkg">طبّق</button></div><div class="note" id="swkn">بيعتبر كل دروس الأسابيع لحد الرقم ده خلصانة.</div><button class="g" id="sprof" style="width:100%;margin-bottom:8px">غيّر السنة / النظام / المسار</button><button class="g" id="sclose" style="width:100%">إغلاق</button></div></div>
+<nav class="nav"><button data-v="home" class="on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10H3z"/></svg>الرئيسية</button><button data-v="sched"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>الجدول</button><button data-v="back"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>متراكم <span id="bdg" style="display:none;background:#8B3DFF;color:#fff;border-radius:9px;padding:0 6px;font-size:10px"></span></button><button data-v="stats"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>إحصاء</button><button data-v="az"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 016 6c0 4-6 12-6 12S6 13 6 9a6 6 0 016-6z"/></svg>أذكار</button></nav>
+<script src="d3.js"></script><script>
+const S={ar:["عربي","ar"],en:["إنجليزي","en"],hi:["تاريخ","hi"],pg:["برمجة","prog"]};
+const T1B=[],T2B=[];
+function add(arr,k,list){list.forEach(x=>arr.push({k,t:x[0],p:x[1]||""}))}
+add(T1B,"ar",[["الوحدة 1: العلم بين القانون والضمير + الأسماء الخمسة","ص8"],["الوحدة 1: الخلق جوهر الفضيلة + تابع الأسماء الخمسة","ص26"],["الوحدة 1: العلم نور (شعر) + تطبيق الأسماء الخمسة","ص41"],["الوحدة 2: التقنية وصناعة الرأي العام + الممنوع من الصرف","ص56"],["الوحدة 2: بين الذوق والعقل + تابع الممنوع من الصرف","ص73"],["الوحدة 2: أثر الكلمة وحفظ اللسان (شعر) + تطبيق","ص90"],["الوحدة 3: حقوق الإنسان بين العالمية والخصوصية + النعت والبدل","ص106"],["الوحدة 3: الحرية الفكرية + العطف","ص124"],["الوحدة 3: يا أخي الإنسان (شعر)","ص143"]]);
+add(T1B,"en",[["Unit 1 Section A: Social Reflection","ص12"],["Unit 1 Section B: Shared Responsibility","ص12"],["Unit 2 Section A: Leisure in a Digital World","ص39"],["Unit 2 Section B: Lifelong Activity + Review A","ص39"],["Unit 3 Section A: Historical Landscape","ص74"],["Unit 3 Section B: Documenting History","ص74"],["Unit 4 Section A: Food Awareness","ص102"],["Unit 4 Section B: Online Consumption + Review B","ص102"],["Unit 5 Section A: Climate Change","ص140"],["Unit 5 Section B: Egypt's Green Change Makers","ص140"]]);
+add(T1B,"hi",[["و1 د1: بناء الدولة المصرية واستمرارها","ص9"],["و1 د2: الدولة القديمة ومقاومة الاحتلال","ص21"],["و1 د3: التحولات الكبرى (العصر الوسيط)","ص31"],["و1 د4: التحولات الكبرى (العصر الحديث)","ص41"],["و2 د1: سياسات الاحتلال بمصر","ص55"],["و2 د2: صمود الشعب ومقاومة الاحتلال","ص64"],["و2 د3: ثورة 23 يوليو","ص73"],["و2 د4: الهوية الوطنية مقابل الاستعمار الجديد","ص83"],["و3 د1: التحرر ضد الاحتلال الفرنسي والإيطالي","ص95"],["و3 د2: التحرر ضد البريطاني والإسباني","ص105"],["و3 د3: مرتكزات الدور المصري","ص112"],["و3 د4: دور مصر في دعم التحرر","ص118"]]);
+add(T1B,"pg",[["1-1 تطور تكنولوجيا المعلومات والتحول الاجتماعي","ص5"],["1-2 كيف يعمل الذكاء الاصطناعي","ص13"],["1-3 الذكاء الاصطناعي في الحياة والصناعة","ص19"],["1-4 القضايا الأخلاقية للذكاء الاصطناعي","ص25"],["2-1 التشفير والمصادقة","ص32"],["2-2 تصميم أمن الشبكات","ص39"],["2-3 الاستجابة للحوادث وإدارة المخاطر","ص45"],["3-1 البنية العامة لتطبيقات الويب","ص51"],["3-2 طرق الاتصال في تطبيقات الويب","ص57"],["3-3 أساسيات الواجهة الأمامية","ص63"],["4-1 أنواع الوسائط وخصائصها","ص69"],["4-2 تصميم المعلومات وتجربة المستخدم","ص75"],["4-3 أساليب تقييم المواقع","ص82"],["4-4 التحسين التكراري للمواقع","ص88"]]);
+add(T2B,"ar",[["الوحدة 4: المرأة وبناء الدولة الحديثة","ص8"],["الوحدة 4: مصر الحقيقة والمرأة المصرية","ص30"],["الوحدة 4: أهواك يا وطني (شعر)","ص46"],["الوحدة 5: التفاوض إستراتيجية القيادة الواعية","ص64"],["الوحدة 5: القيادة أمانة وعدل","ص84"],["الوحدة 5: دعوة إلى السلام (شعر)","ص100"],["الوحدة 6: المثقف في العصر الرقمي","ص120"],["الوحدة 6: الثقافة أداة لا حلية","ص139"],["الوحدة 6: غربة وحنين (شعر)","ص157"]]);
+add(T2B,"en",[["Unit 6 Section A: Global Responsibility","ص6"],["Unit 6 Section B: Speaking Up for Others + Review C","ص6"],["Unit 7 Section A: Where Passion Begins","ص40"],["Unit 7 Section B: What Passion Leaves Behind","ص40"],["Unit 8 Section A: Bridging Skills and Careers","ص66"],["Unit 8 Section B: Building Future Professionals + Review D","ص66"],["Unit 9 Section A: A Sense of Belonging","ص101"],["Unit 9 Section B: Inclusion and Community Action","ص101"],["Unit 10 Section A: What We Don't See","ص126"],["Unit 10 Section B: The Price We Don't Count + Review E","ص126"]]);
+add(T2B,"hi",[["و4 د1: مقدمات الحرب العالمية الأولى","ص9"],["و4 د2: الحرب العالمية الأولى المعارك الكبرى","ص17"],["و4 د3: مقدمات الحرب العالمية الثانية","ص25"],["و4 د4: من الحرب العالمية الثانية إلى الحرب الباردة","ص32"],["و5 د1: القضية الفلسطينية حتى 1948","ص45"],["و5 د2: مصر والصراع العربي الإسرائيلي","ص54"],["و5 د3: حرب أكتوبر 1973","ص63"],["و5 د4: مصر والقضية بعد أكتوبر 1973","ص74"],["و6 د1: مفهوم السلام العالمي","ص86"],["و6 د2: تحديات السلام العالمي","ص93"],["و6 د3: المنظمات الدولية والإقليمية","ص100"],["و6 د4: دور مصر في السلام العالمي","ص105"]]);
+add(T2B,"pg",[["5-1 طرق جمع البيانات","ص5"],["5-2 تنقية البيانات وتحويلها","ص12"],["5-3 البيانات المفتوحة وواجهات API","ص20"],["6-1 الاستدلال الإحصائي","ص27"],["6-2 تحليل الانحدار وتقييمه","ص35"],["6-3 تمثيل البيانات المرئي والتواصل","ص43"],["7-1 أساسيات التعلم الآلي","ص51"],["7-2 الشبكات العصبية والتعلم العميق","ص60"],["7-3 نماذج اللغة الكبيرة والذكاء التوليدي","ص68"]]);
+const stories=["حكاية الغريب","عودة الروح","كفاح طيبة","الأرض","شمس وليل","العبرات","وا إسلاماه","عبقرية عمر","رجل تحت الصفر","صح النوم"];
+stories.forEach((s,i)=>(i<5?T1B:T2B).push({k:"x",t:"قصة: "+s,p:"كتاب القصة"}));
+
+const T1A=[],T2A=[];
+function addA(arr,k,seg,list){list.forEach(t=>arr.push({k,t,p:"",seg}))}
+/* 1st year general. seg 1 = monthly exam 1 scope (weeks 1-5), seg 2 = monthly exam 2 scope (to week 11), seg 3 = rest of term 1 (titles ASSUMED). */
+addA(T1A,"ar",1,["النصوص: شباب تسامى للعلى وكهول","النصوص: قيم الحياة الزوجية","القراءة: مكارم الأخلاق + حاتم الطائي","النحو: الأفعال الناقصة والتامة","النحو: أفعال المقاربة والرجاء والشروع","الأدب: الشعر في العصر الجاهلي","الأدب: النثر في العصر الجاهلي","البلاغة: الحقيقة والمجاز","البلاغة: التشبيه المركب","القصة (عنترة): الفصول 1 إلى 3"]);
+addA(T1A,"ar",2,["النصوص: العفو مأمول","النصوص: من أجل حياة كريمة","القراءة: قيم اجتماعية","النحو: إعمال اسم الفاعل","النحو: إعمال صيغ المبالغة","الأدب: الشعر والنثر في عصر صدر الإسلام","البلاغة: الاستعارة المكنية وتطبيقاتها","القصة (عنترة): الفصل 4 والفصل 5"]);
+addA(T1A,"ar",3,["الأدب: العصر الأموي (شعر ونثر)","النحو: إعمال اسم المفعول","البلاغة: الاستعارة التصريحية","القصة (عنترة): الفصول 6 إلى 8","مراجعة نهاية الترم: النصوص والقراءة"]);
+addA(T1A,"en",1,["Unit 1","Unit 2","Novel: Chapter 1","Novel: Chapter 2"]);
+addA(T1A,"en",2,["Unit 3","Unit 4","Novel: Chapter 3"]);
+addA(T1A,"en",3,["Unit 5","Unit 6","مراجعة نهاية الترم: Units 1-6 والرواية"]);
+addA(T1A,"hi",1,["الوحدة 1: مدخل لدراسة حضارة مصر والعالم القديم (الحضارة والتاريخ)","الوحدة 1: مصادر دراسة الحضارات","الوحدة 1: عوامل قيام الحضارات","الوحدة 2 د1: ملامح التاريخ الفرعوني وعصور الأسرات"]);
+addA(T1A,"hi",2,["الوحدة 2 د2: الحياة الاقتصادية","الوحدة 2 د3: الحياة السياسية والإدارية"]);
+addA(T1A,"hi",3,["الوحدة 2 د4: الحياة الاجتماعية","الوحدة 2 د5: الحياة الدينية","الوحدة 2 د6: الحياة الثقافية والفكرية","مراجعة نهاية الترم: الوحدتين 1 و2"]);
+addA(T1A,"mt",1,["الجبر: الدرس 1","الجبر: الدرس 2","الجبر: الدرس 3","حساب المثلثات: الدرس 1","حساب المثلثات: الدرس 2","حساب المثلثات: الدرس 3","الهندسة: الدرس 1","الهندسة: الدرس 2","الهندسة: الدرس 3"]);
+addA(T1A,"mt",2,["الجبر: الدرس 4","الجبر: الدرس 5 حتى إشارة الدالة الخطية","حساب المثلثات: الدرس 4","حساب المثلثات: الدرس 5","الهندسة: من نظرية 4 إلى آخر الوحدة 3"]);
+addA(T1A,"mt",3,["الجبر: إشارة دالة الدرجة الثانية","الجبر: متباينات الدرجة الثانية","الهندسة: المماس والقاطع وقوة النقطة بالنسبة لدائرة","مراجعة نهاية الترم: الجبر والمثلثات والهندسة"]);
+addA(T1A,"sc",1,["الوحدة الأولى (النظام البيئي المائي): الدرس 1","الوحدة الأولى: الدرس 2","الوحدة الأولى: الدرس 3","الوحدة الأولى: الدرس 4","الوحدة الأولى: الدرس 5"]);
+addA(T1A,"sc",2,["الوحدة الأولى: الدرس 6","الوحدة الأولى: الدرس 7","الوحدة الأولى: الدرس 8","الوحدة الأولى: الدرس 9"]);
+addA(T1A,"sc",3,["المحور الثاني: الغلاف الجوي (طبقاته وتفاعلاته)","المحور الثاني: التغيرات المناخية","التربة وأثر الممارسات البشرية","مراجعة نهاية الترم: العلوم المتكاملة"]);
+addA(T1A,"ph",1,["الفلسفة: الفصل الأول (مبادئ التفكير الفلسفي)","المنطق: الفصل الأول حتى الرابطة الموجبة والسالبة"]);
+addA(T1A,"ph",2,["الفلسفة: الفصل الثاني حتى الإطار الفكري الأيديولوجي للمجتمع","المنطق: القضايا المنطقية حتى آخر الفصل الأول"]);
+addA(T1A,"ph",3,["الفلسفة: باقي الفصل الثاني (مهارات التفكير الفلسفي)","مراجعة نهاية الترم: الفلسفة والمنطق"]);
+/* term 2: topic level from one blog summary, ASSUMED order, no monthly exam scope published yet */
+addA(T2A,"ar",0,["العصر العباسي: الأدب والنصوص","الأدب في العصر الحديث","النحو: أسلوب الاستثناء","النحو: المقصور والممدود والمنقوص","النحو: ملحقات المثنى وجمع المذكر والمؤنث السالم","البلاغة: المحسنات البديعية","البلاغة: الكناية","القصة (عنترة): الفصول 9 إلى 12","القصة (عنترة): الفصول 13 إلى 16"]);
+addA(T2A,"en",0,["Unit 7","Unit 8","Unit 9","Unit 10","Unit 11","Unit 12","Novel: Chapters 4 to 6"]);
+addA(T2A,"hi",0,["الوحدة 3: حضارة بلاد العراق القديم (السومريون)","الوحدة 3: البابليون والآشوريون","الوحدة 3: فينيقيا","الوحدة 4: حضارة اليونان","الوحدة 4: حضارة الرومان","الوحدة 4: مصر في العصرين البطلمي والروماني"]);
+addA(T2A,"mt",0,["الجبر: المصفوفات وعملياتها","الجبر: المحددات وحل المعادلات بطريقة كرامر","الجبر: معكوس المصفوفة ونظم المتباينات الخطية","المثلثات: المتطابقات الأساسية","المثلثات: حل المعادلات المثلثية وحل المثلث القائم","المثلثات: زوايا الارتفاع والانخفاض والقطاع والقطعة الدائرية","الهندسة التحليلية: الكميات القياسية والمتجهة","الهندسة التحليلية: المتجهات والتقسيم","الهندسة التحليلية: معادلة الخط المستقيم والزاوية بين مستقيمين"]);
+addA(T2A,"sc",0,["الغلاف الحيوي واستقراره","العمليات الحيوية: الإخراج والتنفس والتغذية","مصادر الطاقة المتجددة","التلوث والملوثات الصناعية","التنمية المستدامة والانبعاثات"]);
+addA(T2A,"ph",0,["مبادئ التفكير العلمي وخطواته","التفكير الناقد والإبداعي","صياغة الحجج المنطقية","المنطق الصوري: تصنيف القضايا","الاستدلال المباشر (مربع التقابل)"]);
+function cpFor(A){return [1,2,3].map(s=>{const n={};A.forEach(x=>{if(x.seg<=s)n[x.k]=(n[x.k]||0)+1});return n})}
+
+const T1M={py:[["1-1 متجهات السرعة والسرعة النسبية", "ص2"], ["1-2 حركة المقذوفات الأفقية", "ص8"], ["1-3 حركة المقذوفات بزاوية", "ص14"], ["1-4 عزم القوة", "ص21"], ["1-5 اتزان القوى", "ص27"], ["1-6 القدرة والكفاءة", "ص33"], ["1-7 كمية التحرك والدفع", "ص40"], ["1-8 حفظ كمية الحركة", "ص46"], ["1-9 كمية التحرك والطاقة الميكانيكية", "ص53"], ["1-10 الحركة الدائرية المنتظمة والقوة المركزية", "ص59"], ["1-11 الحركة الدائرية: الأفقية والرأسية", "ص65"], ["1-12 قوانين كبلر والجاذبية الكونية", "ص72"], ["2-1 الحركة التوافقية البسيطة", "ص80"], ["2-2 البندول الزنبركي", "ص86"], ["2-3 البندول البسيط", "ص93"], ["2-4 الموجات الجيبية", "ص99"], ["2-5 تداخل الموجات والموجات الموقوفة", "ص107"], ["2-6 انكسار الموجات", "ص114"], ["2-7 تداخل موجات الصوت", "ص121"], ["2-8 تأثير دوبلر", "ص128"], ["2-9 انكسار الضوء والانعكاس الكلي الداخلي", "ص135"], ["2-10 العدسات والصور", "ص142"], ["2-11 تجربة الشق المزدوج ليونج", "ص151"]],mm:[["تقديري · البراهين الجبرية: بنود 1-1 إلى 1-2", ""], ["تقديري · البراهين الجبرية: بنود 1-3 إلى 1-4", ""], ["تقديري · البراهين الجبرية: بنود 1-5 إلى 1-6", ""], ["تقديري · البراهين الجبرية: بنود 1-7 إلى 1-8", ""], ["تقديري · البراهين الجبرية: بنود 1-9 إلى 1-10", ""], ["تقديري · البراهين الجبرية: بنود 1-11 إلى 1-12", ""], ["تقديري · البراهين الجبرية: بنود 1-13 إلى 1-14", ""], ["تقديري · البراهين الجبرية: بنود 1-15 إلى 1-16", ""], ["تقديري · المتتابعات: بنود 2-1 إلى 2-2", ""], ["تقديري · المتتابعات: بنود 2-3 إلى 2-4", ""], ["تقديري · المتتابعات: بنود 2-5 إلى 2-6", ""], ["تقديري · المتتابعات: بنود 2-7 إلى 2-8", ""], ["تقديري · المتتابعات: بنود 2-9 إلى 2-10", ""], ["تقديري · المتتابعات: بنود 2-11 إلى 2-12", ""], ["تقديري · المتتابعات: بنود 2-13 إلى 2-14", ""], ["تقديري · المتتابعات: بنود 2-15 إلى 2-16", ""], ["تقديري · المتتابعات: بنود 2-17 إلى 2-18", ""], ["تقديري · المتتابعات: بنود 2-19 إلى 2-20", ""], ["تقديري · المتتابعات: بنود 2-21 إلى 2-22", ""], ["تقديري · المتتابعات: بنود 2-23 إلى 2-24", ""], ["تقديري · المتتابعات: بنود 2-25 إلى 2-26", ""], ["تقديري · الأعداد المركّبة والمعادلات: بنود 3-1 إلى 3-2", ""], ["تقديري · الأعداد المركّبة والمعادلات: بنود 3-3 إلى 3-4", ""], ["تقديري · الأعداد المركّبة والمعادلات: بنود 3-5 إلى 3-6", ""], ["تقديري · الأعداد المركّبة والمعادلات: بنود 3-7 إلى 3-8", ""], ["تقديري · الأعداد المركّبة والمعادلات: بنود 3-9 إلى 3-10", ""], ["تقديري · الأعداد المركّبة والمعادلات: بنود 3-11 إلى 3-12", ""], ["تقديري · الأعداد المركّبة والمعادلات: بنود 3-13 إلى 3-14", ""], ["تقديري · الأعداد المركّبة والمعادلات: بنود 3-15 إلى 3-16", ""], ["تقديري · الأعداد المركّبة والمعادلات: بنود 3-17 إلى 3-18", ""], ["تقديري · الأعداد المركّبة والمعادلات: بنود 3-19 إلى 3-20", ""], ["تقديري · الهندسة والمعادلات: بنود 4-1 إلى 4-2", ""], ["تقديري · الهندسة والمعادلات: بنود 4-3 إلى 4-4", ""], ["تقديري · الهندسة والمعادلات: بنود 4-5 إلى 4-6", ""], ["تقديري · الهندسة والمعادلات: بنود 4-7 إلى 4-8", ""], ["تقديري · الهندسة والمعادلات: بنود 4-9 إلى 4-10", ""], ["تقديري · الهندسة والمعادلات: بنود 4-11 إلى 4-12", ""], ["تقديري · الهندسة والمعادلات: بنود 4-13 إلى 4-14", ""], ["تقديري · الهندسة والمعادلات: بنود 4-15 إلى 4-16", ""], ["تقديري · الهندسة والمعادلات: بنود 4-17 إلى 4-18", ""], ["تقديري · الهندسة والمعادلات: بنود 4-19 إلى 4-20", ""], ["تقديري · الهندسة والمعادلات: بنود 4-21 إلى 4-22", ""], ["تقديري · الهندسة والمعادلات: بنود 4-23 إلى 4-24", ""], ["تقديري · الهندسة والمعادلات: بنود 4-25 إلى 4-26", ""]]},T2M={py:[["1-1 قانون بويل–شارل", "ص2"], ["1-2 معادلة الحالة للغاز المثالي (القانون العام للغازات)", "ص9"], ["1-3 حركة جزيئات الغاز", "ص14"], ["1-4 الطاقة الداخلية للغاز", "ص22"], ["1-5 تغيرات حالة الغاز والحرارة والشغل", "ص30"], ["1-6 السعة الحرارية المولية", "ص37"], ["2-1 قانون كولوم", "ص44"], ["2-2 المجال الكهربي", "ص52"], ["2-3 الجهد الكهربي", "ص59"], ["2-4 المجال الكهربائي المنتظم وفرق الجهد", "ص66"], ["2-5 حركة الشحنات تحت تأثير قوة كهروستاتيكية", "ص72"], ["2-6 المكثف", "ص78"], ["3-1 الأميتر والفولتميتر", "ص85"], ["3-2 قانونا كيرشوف", "ص92"], ["4-1 المجال المغناطيسي الناتج عن تيار كهربي", "ص101"], ["4-2 القوة المؤثرة على تيار كهربي بواسطة مجال مغناطيسي", "ص108"], ["4-3 حركة الجسيمات المشحونة في مجال مغناطيسي", "ص115"], ["4-4 الحث الكهرومغناطيسي", "ص122"], ["4-5 الحث الذاتي", "ص129"], ["5-1 الطبيعة الجسيمية للضوء", "ص137"], ["5-2 الأشعة السينية", "ص144"], ["5-3 موجات المادة", "ص151"]],mm:[["تقديري · الدوال المثلثية: بنود 5-1 إلى 5-2", ""], ["تقديري · الدوال المثلثية: بنود 5-3 إلى 5-4", ""], ["تقديري · الدوال المثلثية: بنود 5-5 إلى 5-6", ""], ["تقديري · الدوال المثلثية: بنود 5-7 إلى 5-8", ""], ["تقديري · الدوال المثلثية: بنود 5-9 إلى 5-10", ""], ["تقديري · الدوال المثلثية: بنود 5-11 إلى 5-12", ""], ["تقديري · الدوال المثلثية: بنود 5-13 إلى 5-14", ""], ["تقديري · الدوال المثلثية: بنود 5-15 إلى 5-16", ""], ["تقديري · الدوال المثلثية: بنود 5-17 إلى 5-18", ""], ["تقديري · الدوال المثلثية: بنود 5-19 إلى 5-20", ""], ["تقديري · الدوال المثلثية: بنود 5-21 إلى 5-22", ""], ["تقديري · الدوال المثلثية: بنود 5-23 إلى 5-24", ""], ["تقديري · الدوال المثلثية: بنود 5-25 إلى 6-1", ""], ["تقديري · الأسس واللوغاريتمات: بنود 6-2 إلى 6-3", ""], ["تقديري · الأسس واللوغاريتمات: بنود 6-4 إلى 6-5", ""], ["تقديري · الأسس واللوغاريتمات: بنود 6-6 إلى 6-7", ""], ["تقديري · الأسس واللوغاريتمات: بنود 6-8 إلى 6-9", ""], ["تقديري · الأسس واللوغاريتمات: بنود 6-10 إلى 6-11", ""], ["تقديري · الأسس واللوغاريتمات: بنود 6-12 إلى 6-13", ""], ["تقديري · الأسس واللوغاريتمات: بنود 6-14 إلى 6-15", ""], ["تقديري · الأسس واللوغاريتمات: بنود 6-16 إلى 6-17", ""], ["تقديري · الأسس واللوغاريتمات: بنود 6-18 إلى 6-19", ""], ["تقديري · الأسس واللوغاريتمات: بنود 6-20 إلى 6-21", ""], ["تقديري · الأسس واللوغاريتمات: بنود 6-22 إلى 7-1", ""], ["تقديري · التفاضل والتكامل: بنود 7-2 إلى 7-3", ""], ["تقديري · التفاضل والتكامل: بنود 7-4 إلى 7-5", ""], ["تقديري · التفاضل والتكامل: بنود 7-6 إلى 7-7", ""], ["تقديري · التفاضل والتكامل: بنود 7-8 إلى 7-9", ""], ["تقديري · التفاضل والتكامل: بنود 7-10 إلى 7-11", ""], ["تقديري · التفاضل والتكامل: بنود 7-12 إلى 7-13", ""], ["تقديري · التفاضل والتكامل: بنود 7-14 إلى 7-15", ""], ["تقديري · التفاضل والتكامل: بنود 7-16 إلى 7-17", ""], ["تقديري · التفاضل والتكامل: بنود 7-18 إلى 7-19", ""], ["تقديري · التفاضل والتكامل: بنود 7-20 إلى 7-21", ""], ["تقديري · التفاضل والتكامل: بنود 7-22 إلى 7-23", ""], ["تقديري · التفاضل والتكامل: بنود 7-24 إلى 7-25", ""], ["تقديري · التفاضل والتكامل: بنود 7-26 إلى 7-27", ""], ["تقديري · التفاضل والتكامل: بنود 7-28 إلى 7-29", ""], ["تقديري · التفاضل والتكامل: بنود 7-30 إلى 8-1", ""], ["تقديري · الاستدلال الإحصائي: بنود 8-2 إلى 8-3", ""], ["تقديري · الاستدلال الإحصائي: بنود 8-4 إلى 8-5", ""], ["تقديري · الاستدلال الإحصائي: بنود 8-6 إلى 8-7", ""], ["تقديري · الاستدلال الإحصائي: بنود 8-8 إلى 8-9", ""], ["تقديري · الاستدلال الإحصائي: بنود 8-10 إلى 8-11", ""], ["تقديري · الاستدلال الإحصائي: بنود 8-12", ""]]};
+
+const T1Z=[{"k": "nh", "t": "من أول (الكلام وما يتألف منه) إلى آخر (إعراب المعتل من الأفعال). ومن أول (النكرة والمعرفة): الضمير إلى نهاية (الضمير المنصوب المنفصل) وهو قوله: «وإياهن للغائبات»", "p": "", "seg": 1}, {"k": "nh", "t": "(العلم) كاملا", "p": "", "seg": 2}, {"k": "nh", "t": "تعلم ذاتي: اسم الإشارة. من أول (الموصول) إلى نهاية (شرط جملة الصلة) وهو قوله: «جاء الذي اليوم»", "p": "", "seg": 2}, {"k": "nh", "t": "تعلم ذاتي: المعرف بأداة التعريف. من أول (الابتداء) إلى نهاية (استتار الضمير وإبرازه في الخبر المشتق)", "p": "", "seg": 2}, {"k": "nh", "t": "من أول (الخبر شبه الجملة) إلى نهاية (جواز تعدد الخبر)", "p": "", "seg": 3}, {"k": "sf", "t": "(التعريف بعلم الصرف) - (المجرد والمزيد) - (أدلة الزيادة)", "p": "", "seg": 1}, {"k": "sf", "t": "تعلم ذاتي: مواضع زيادة الحروف. (الميزان الصرفي) - (ما يراعى في الميزان وما لا يراعى)", "p": "", "seg": 1}, {"k": "sf", "t": "من أول (البحث في المعاجم) إلى نهاية (صياغة الفعل المضارع)", "p": "", "seg": 2}, {"k": "sf", "t": "من أول (أبواب مضارع الثلاثي) إلى نهاية (صياغة فعل الأمر)", "p": "", "seg": 3}, {"k": "bl", "t": "(أهمية البلاغة وفائدة دراستها) - (تعريف البلاغة وتقسيمها إلى علوم ثلاثة)", "p": "", "seg": 1}, {"k": "bl", "t": "تعلم ذاتي: من أول (تاريخ نشأة علم البلاغة) إلى نهاية (من أبرز علماء البلاغة) وهو قوله: «في ميادين بلاغية مختلفة». من أول (الفصاحة) إلى نهاية (أحوال الإسناد الخبري) وهو قوله: «موفقا بإذن الله»", "p": "", "seg": 1}, {"k": "bl", "t": "من أول (تقسيم الكلام إلى خبر وإنشاء) إلى نهاية درس (المجاز العقلي) وهو قوله: «بما اكتسبه من مكانه في الجملة»", "p": "", "seg": 2}, {"k": "bl", "t": "من أول (المسند إليه صوره وأحواله) إلى نهاية (حذف المسند إليه)", "p": "", "seg": 3}, {"k": "ad", "t": "أدب ونصوص: الأدب: من أول (الغاية من دراسة تاريخ الأدب ونصوصه) إلى نهاية (أغراض الشعر الجاهلي)", "p": "", "seg": 1}, {"k": "ad", "t": "أدب ونصوص: النصوص: في وصف الفرس والصيد لامرئ القيس كله دراسة، ويحفظ سبعة أبيات من أول النص إلى قوله: (بخيط موصل)", "p": "", "seg": 1}, {"k": "ad", "t": "أدب ونصوص: الأدب: (أول المعلقات) إلى قوله: «معلقة عبيد بن الأبرص»؛ من أول (النثر الجاهلي) إلى نهاية (سجع الكهان)", "p": "", "seg": 2}, {"k": "ad", "t": "أدب ونصوص: النصوص: 1) نص عروة بن الورد يحاور زوجه كله دراسة ويحفظ سبعة أبيات من أوله إلى قوله (ومنظر) 2) خطبة قس بن ساعدة تدرس وتحفظ كلها", "p": "", "seg": 2}, {"k": "ad", "t": "أدب ونصوص: الأدب: (عصر صدر الإسلام) من أول مقدمة إلى نهاية (أغراض الشعر في عصر صدر الإسلام)", "p": "", "seg": 3}, {"k": "ad", "t": "أدب ونصوص: النصوص: 1) مدح الرسول وصحابته لحسان بن ثابت كله دراسة وحفظ عشرة أبيات من أول النص حتى قوله (جاهد جدعوا)", "p": "", "seg": 3}, {"k": "ad", "t": "مطالعة: سيدنا موسى والخضر؛ الإسلام بريء من صراع الطبقات (قراءة)", "p": "", "seg": 1}, {"k": "ad", "t": "مطالعة: في أمثال العرب - زهد الصحابة في صدر الإسلام", "p": "", "seg": 2}, {"k": "ad", "t": "مطالعة: زينب بنت جحش (قراءة)", "p": "", "seg": 3}, {"k": "ad", "t": "إنشاء: المقدمات الإنشائية - تقاسيم الإنشاء", "p": "", "seg": 1}, {"k": "ad", "t": "إنشاء: وسائل تنمية ملكة الإنشاء: تدريبات - مطالعة النصوص الفصيحة وحفظها - تدريبات", "p": "", "seg": 2}, {"k": "ad", "t": "إنشاء: يختار موضوعان لبيان قيمة السماع ومطالعة النصوص", "p": "", "seg": 3}, {"k": "sc", "t": "الوحدة الأولى: النظام البيئي المائي: 1-1 الغلاف المائي على كوكب الأرض", "p": "", "seg": 1}, {"k": "sc", "t": "1-2 الخواص الكيميائية للماء", "p": "", "seg": 1}, {"k": "sc", "t": "1-3 الخواص الفيزيائية للماء", "p": "", "seg": 1}, {"k": "sc", "t": "1-4 المحاليل المائية وخواصها", "p": "", "seg": 1}, {"k": "sc", "t": "1-5 الأهمية البيولوجية للماء", "p": "", "seg": 1}, {"k": "sc", "t": "1-6 التكيفات البيولوجية للكائنات الحية في البيئة المائية", "p": "", "seg": 1}, {"k": "sc", "t": "1-7 تأثير غازات الغلاف الجوي على البيئات المائية", "p": "", "seg": 2}, {"k": "sc", "t": "1-8 تأثير الضوء والإشعاع الشمسي على البيئات المائية", "p": "", "seg": 2}, {"k": "sc", "t": "1-9 تأثير الضغط المائي على الكائنات الحية", "p": "", "seg": 2}, {"k": "sc", "t": "1-10 التوازن البيئي ودور الإنسان في استدامة الحياة المائية", "p": "", "seg": 2}, {"k": "sc", "t": "الوحدة الثانية: الغلاف الجوي: 2-1 مكونات وطبقات الغلاف الجوي", "p": "", "seg": 3}, {"k": "sc", "t": "2-2 التفاعلات الكيميائية في الغلاف الجوي", "p": "", "seg": 3}, {"k": "sc", "t": "2-3 العوامل الفيزيائية وتأثيرها في الغلاف الجوي", "p": "", "seg": 3}, {"k": "sc", "t": "2-4 الغلاف الجوي ودور العلم في استدامته", "p": "", "seg": 3}, {"k": "hi", "t": "الوحدة الأولى: مدخل لدراسة حضارة مصر والعالم القديم: الدرس 1 الحضارة والتاريخ", "p": "", "seg": 1}, {"k": "hi", "t": "2 مصادر دراسة الحضارات", "p": "", "seg": 1}, {"k": "hi", "t": "3 عوامل قيام الحضارات", "p": "", "seg": 1}, {"k": "hi", "t": "الوحدة الثانية: حضارة مصر القديمة (الفرعونية): الدرس 1 ملامح من تاريخ مصر القديمة", "p": "", "seg": 2}, {"k": "hi", "t": "2 الحياة الاقتصادية", "p": "", "seg": 2}, {"k": "hi", "t": "3 الحياة السياسية والإدارية", "p": "", "seg": 2}, {"k": "hi", "t": "تابع الوحدة الثانية: الدرس 4 الحياة الاجتماعية", "p": "", "seg": 3}, {"k": "hi", "t": "5 الحياة الدينية", "p": "", "seg": 3}, {"k": "hi", "t": "6 الحياة الثقافية والفكرية", "p": "", "seg": 3}, {"k": "mt", "t": "الجبر: مقدمة عن الأعداد المركبة", "p": "", "seg": 1}, {"k": "mt", "t": "الجبر: العمليات على الأعداد المركبة", "p": "", "seg": 1}, {"k": "mt", "t": "الجبر: تمارين", "p": "", "seg": 1}, {"k": "mt", "t": "الجبر: تحديد نوع جذري المعادلة التربيعية", "p": "", "seg": 1}, {"k": "mt", "t": "الجبر: تمارين على تحديد نوع الجذرين", "p": "", "seg": 1}, {"k": "mt", "t": "الجبر: العلاقة بين جذري معادلة الدرجة الثانية ومعاملات حدودها", "p": "", "seg": 1}, {"k": "mt", "t": "الجبر: تكوين المعادلة التربيعية متى علم جذراها", "p": "", "seg": 1}, {"k": "mt", "t": "حساب المثلثات: الزاوية الموجهة", "p": "", "seg": 1}, {"k": "mt", "t": "حساب المثلثات: موقع الزاوية في المستوى الإحداثي المتعامد", "p": "", "seg": 1}, {"k": "mt", "t": "حساب المثلثات: تمارين على الزاوية الموجهة", "p": "", "seg": 1}, {"k": "mt", "t": "حساب المثلثات: القياس الستيني للزاوية والقياس الدائري", "p": "", "seg": 1}, {"k": "mt", "t": "حساب المثلثات: العلاقة بين القياس الستيني والقياس الدائري", "p": "", "seg": 1}, {"k": "mt", "t": "حساب المثلثات: تمارين", "p": "", "seg": 1}, {"k": "mt", "t": "حساب المثلثات: الدوال المثلثية", "p": "", "seg": 1}, {"k": "mt", "t": "حساب المثلثات: إشارات الدوال المثلثية", "p": "", "seg": 1}, {"k": "mt", "t": "حساب المثلثات: الدوال المثلثية لبعض الزوايا الخاصة", "p": "", "seg": 1}, {"k": "mt", "t": "حساب المثلثات: تمارين", "p": "", "seg": 1}, {"k": "mt", "t": "حساب المثلثات: الزوايا المنتسبة وتمارين", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: تشابه المضلعات", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: العلاقة بين محيطي مضلعين متشابهين", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: معامل تشابه مضلعين وتمارين", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: تشابه المثلثات", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: نتائج هامة على التشابه", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: نظرية (1)", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: نظرية (2)", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: تمارين على تشابه المثلثات", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: العلاقة بين مساحتي سطحي مثلثين متشابهين", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: نظرية (3)", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: تمارين", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: نظرية (4)", "p": "", "seg": 1}, {"k": "mt", "t": "الهندسة المستوية: تمارين على العلاقة بين مساحتي سطحي مضلعين متشابهين", "p": "", "seg": 1}, {"k": "mt", "t": "الجبر: تكوين المعادلة التربيعية بمعلومية معادلة تربيعية أخرى", "p": "", "seg": 2}, {"k": "mt", "t": "الجبر: تمارين على العلاقة بين جذري معادلة الدرجة الثانية ومعاملات حدودها", "p": "", "seg": 2}, {"k": "mt", "t": "الجبر: إشارة الدالة الثابتة والخطية", "p": "", "seg": 2}, {"k": "mt", "t": "الجبر: إشارة الدالة التربيعية", "p": "", "seg": 2}, {"k": "mt", "t": "الجبر: تمارين على إشارة الدالة", "p": "", "seg": 2}, {"k": "mt", "t": "الجبر: تمارين على الوحدة الأولى", "p": "", "seg": 2}, {"k": "mt", "t": "حساب المثلثات: الحل العام للمعادلات المثلثية وتمارين", "p": "", "seg": 2}, {"k": "mt", "t": "حساب المثلثات: التمثيل البياني للدوال المثلثية (دالة الجيب، دالة جيب التمام)", "p": "", "seg": 2}, {"k": "mt", "t": "حساب المثلثات: تمارين على التمثيل البياني", "p": "", "seg": 2}, {"k": "mt", "t": "حساب المثلثات: إيجاد قياس زاوية بمعلومية إحدى نسبها المثلثية", "p": "", "seg": 2}, {"k": "mt", "t": "حساب المثلثات: تمارين", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: تطبيقات التشابه في الدائرة", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: تمارين على التمرين المشهور", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: نتيجة (1) و(2)", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: تمارين على تطبيقات التشابه", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: الوحدة الثالثة: المستقيمات المتوازية والأجزاء المتناسبة (نظرية 1)", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: نتيجة", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: عكس نظرية (1)", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: نظرية تاليس العامة (نظرية 2)", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: نظرية تاليس الخاصة", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: تمارين", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: منصف الزاوية والأجزاء المتناسبة (نظرية 3)", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: تمارين على نظرية (3)", "p": "", "seg": 2}, {"k": "mt", "t": "الهندسة المستوية: تمرين مشهور", "p": "", "seg": 2}, {"k": "mt", "t": "الجبر: متباينات الدرجة الثانية في مجهول واحد", "p": "", "seg": 3}, {"k": "mt", "t": "الجبر: تمارين على متباينات الدرجة الثانية", "p": "", "seg": 3}, {"k": "mt", "t": "حساب المثلثات: تمارين عامة على الوحدة الرابعة", "p": "", "seg": 3}, {"k": "mt", "t": "الهندسة المستوية: حالات خاصة", "p": "", "seg": 3}, {"k": "mt", "t": "الهندسة المستوية: تمارين على منصفي الزاوية والأجزاء المتناسبة", "p": "", "seg": 3}, {"k": "mt", "t": "الهندسة المستوية: تمارين على الوحدة الثالثة", "p": "", "seg": 3}, {"k": "qr", "t": "النساء من الآية 24 (والمحصنات من النساء) إلى الآية 73 (يا ليتني كنت معهم فأفوز فوزا عظيما)", "p": "", "seg": 1}, {"k": "qr", "t": "النساء من الآية 74 (فليقاتل في سبيل الله) إلى الآية 103 (إن الصلاة كانت على المؤمنين كتابا موقوتا)", "p": "", "seg": 2}, {"k": "qr", "t": "النساء من الآية 104 (ولا تهنوا في ابتغاء القوم) إلى الآية 147 (وكان الله شاكرا عليما)", "p": "", "seg": 3}, {"k": "tf", "t": "علوم القرآن: من أول مقدمة في علوم القرآن إلى نهاية التعريف بالقرآن الكريم وبأسمائه ومقاصده", "p": "", "seg": 1}, {"k": "tf", "t": "التفسير: من أول سورة النبأ إلى قوله تعالى (إن في ذلك لعبرة لمن يخشى) الآية 26 من سورة النازعات", "p": "", "seg": 1}, {"k": "tf", "t": "علوم القرآن: أول وآخر ما نزل من القرآن الكريم", "p": "", "seg": 2}, {"k": "tf", "t": "التفسير: سورة النازعات من الآية 27 (أأنتم أشد خلقا أم السماء بناها) إلى نهاية سورة عبس", "p": "", "seg": 2}, {"k": "tf", "t": "علوم القرآن: المكي والمدني", "p": "", "seg": 3}, {"k": "tf", "t": "التفسير: سورتا التكوير والانفطار", "p": "", "seg": 3}, {"k": "hd", "t": "علم الحديث: من أول تمهيد (علم الحديث) إلى نهاية بيان لبعض مصطلحات تدور بين المحدثين", "p": "", "seg": 1}, {"k": "hd", "t": "التراجم: الإمام البخاري. الحديث: تدرس الأحاديث 1، 2، 3، 4 ويحفظ منها رقم 1", "p": "", "seg": 1}, {"k": "hd", "t": "علم الحديث: بداية من المبحث الأول تقسيم الخبر باعتبار طرقه إلى نهاية الحديث العزيز", "p": "", "seg": 2}, {"k": "hd", "t": "التراجم: الإمام مسلم. الأحاديث 5، 6، 7 ويحفظ رقم 6", "p": "", "seg": 2}, {"k": "hd", "t": "علم الحديث: بداية من الحديث الغريب إلى نهاية المبحث الثاني الحديث الصحيح لغيره", "p": "", "seg": 3}, {"k": "hd", "t": "التراجم: أبو داود. الأحاديث 8، 9، 10 ويحفظ رقم 8", "p": "", "seg": 3}, {"k": "tw", "t": "من أول مقدمة الجوهرة وشرحها إلى نهاية فقرة رأي العلماء في طريق وجوب المعرفة وهو قوله: «ما أثبته العقل»", "p": "", "seg": 1}, {"k": "tw", "t": "من أول: الحكم وأقسامه إلى نهاية فقرة أدلة أهل السنة من درس الإيمان والإسلام وهو قوله: (وأن يبصره بأمور دينه)", "p": "", "seg": 2}, {"k": "tw", "t": "من أول: تعريف الإسلام إلى نهاية الصفة النفسية وهو قوله (بكل هذه الوسائل)", "p": "", "seg": 3}, {"k": "lg", "t": "من أول نشأة علم المنطق إلى نهاية أنواع العلم الحادث", "p": "", "seg": 1}, {"k": "lg", "t": "من أول الدلالة إلى نهاية صورة توضيحية لتقسيم اللازم عند المناطقة", "p": "", "seg": 2}, {"k": "lg", "t": "من أول مباحث الألفاظ إلى نهاية التعريف الثاني", "p": "", "seg": 3}, {"k": "ic", "t": "1 أدب الحوار كاملا", "p": "", "seg": 1}, {"k": "ic", "t": "2 حول المفهوم الصحيح للهجرة", "p": "", "seg": 1}, {"k": "ic", "t": "3 الفهم الصحيح لمسألة دار الإسلام ودار الحرب", "p": "", "seg": 1}, {"k": "ic", "t": "4 قضية التكفير", "p": "", "seg": 1}, {"k": "ic", "t": "5 المفهوم الصحيح للجهاد في الإسلام", "p": "", "seg": 1}, {"k": "ic", "t": "6 المفهوم الصحيح لمنصب الخلافة", "p": "", "seg": 2}, {"k": "ic", "t": "7 المفهوم الصحيح لآيات الحاكمية في القرآن الكريم", "p": "", "seg": 2}, {"k": "ic", "t": "8 التحذير من الانضمام لجماعات العنف والإرهاب", "p": "", "seg": 2}, {"k": "ic", "t": "9 حكم التدخين والخمر والمخدرات", "p": "", "seg": 3}, {"k": "ic", "t": "10 الإلحاد كاملا", "p": "", "seg": 3}, {"k": "ic", "t": "11 أهل السنة والجماعة", "p": "", "seg": 3}, {"k": "ic", "t": "12 السلفية", "p": "", "seg": 3}, {"k": "ic", "t": "ملحق مختصر وثيقة الأخوة الإنسانية من أجل السلام العالمي والعيش المشترك", "p": "", "seg": 3}],T2Z=[{"k": "nh", "t": "(نواسخ الابتداء) - (كان وأخواتها) كاملا", "p": "", "seg": 0}, {"k": "nh", "t": "تعلم ذاتي: فصل في ما - لا - لات - إن المشبهات بليس. (أفعال المقاربة) كاملا", "p": "", "seg": 0}, {"k": "nh", "t": "من أول (إن وأخواتها) إلى نهاية (إبطال عمل إن إذا اتصلت بها الزائدة) وهو قوله: «إن فعلك حسن»", "p": "", "seg": 0}, {"k": "nh", "t": "تعلم ذاتي: لا التي لنفي الجنس. من أول (ظن وأخواتها) إلى نهاية (مواضع جواز الإلغاء) وهو قوله: «وعلمت هل زيد قائم أم عمرو»", "p": "", "seg": 0}, {"k": "sf", "t": "من أول (الفعل من حيث التصرف والجمود) إلى نهاية (إسناد الأفعال الصحيحة إلى الضمائر)", "p": "", "seg": 0}, {"k": "sf", "t": "من أول (إسناد الأفعال المعتلة إلى الضمائر) إلى نهاية (جواز توكيد المضارع بالنون) وهو قوله: «وبأداة شرط غير إما»", "p": "", "seg": 0}, {"k": "bl", "t": "من أول (ذكر المسند إليه) إلى نهاية (الأغراض البلاغية لتعريف المسند إليه بالإشارة)", "p": "", "seg": 0}, {"k": "bl", "t": "من أول (تنكير المسند إليه) إلى نهاية (الالتفات) وهو قوله: «إلى وعيدهم وتهديدهم في الثانية»", "p": "", "seg": 0}, {"k": "bl", "t": "تعلم ذاتي: (أحوال المسند) كاملا", "p": "", "seg": 0}, {"k": "ad", "t": "أدب ونصوص: الأدب: من أول (النثر في عصر صدر الإسلام) إلى نهاية (الكتابة في صدر الإسلام)؛ من أول (الحياة الأدبية في العصر الأموي) إلى نهاية (مظاهر عناية الأمويين بالأدب)", "p": "", "seg": 0}, {"k": "ad", "t": "أدب ونصوص: النصوص: 1) في المديح لكعب بن زهير كله دراسة ويحفظ عشرة أبيات من (أبنت أن رسول الله) إلى آخر النص 2) خطبة لأبي بكر الصديق دراسة كلها فقط", "p": "", "seg": 0}, {"k": "ad", "t": "أدب ونصوص: الأدب: من أول (الشعر العربي في العصر الأموي) إلى نهاية (طوائف الشعراء الأمويين)؛ من أول (النثر في العصر الأموي) إلى نهاية (التوقيعات)", "p": "", "seg": 0}, {"k": "ad", "t": "أدب ونصوص: النصوص: 1) رسالة (الحسن البصري) إلى (عمر بن عبد العزيز) حفظ ودراسة كلها 2) رسالة عبد الحميد الكاتب إلى أهله وهو منهزم", "p": "", "seg": 0}, {"k": "ad", "t": "مطالعة: بلاء أعظم من بلاء؛ صور من كفاح الشعوب المعاصرة (قراءة)؛ حب الوطن", "p": "", "seg": 0}, {"k": "ad", "t": "مطالعة: مثل من أمثلة المروءة؛ مسلمو الروهينجا (قراءة)", "p": "", "seg": 0}, {"k": "ad", "t": "إنشاء: الفهم الدقيق - تدريبات - حل الشعر وعقد النثر - تدريبات؛ التمرن على إجادة الإنشاء - تدريبات", "p": "", "seg": 0}, {"k": "ad", "t": "إنشاء: يختار موضوعان يعالجان ظواهر اجتماعية أحدهما وظيفي والآخر إبداعي", "p": "", "seg": 0}, {"k": "sc", "t": "الوحدة الثالثة: الغلاف الحيوي: 3-1 الغلاف الحيوي واستقراره", "p": "", "seg": 0}, {"k": "sc", "t": "3-2 العمليات الحيوية في الكائنات الحية واستقرار الغلاف الحيوي", "p": "", "seg": 0}, {"k": "sc", "t": "3-3 الإحساس والاستجابة ودورها في تفاعل الكائنات الحية", "p": "", "seg": 0}, {"k": "sc", "t": "3-4 تطبيقات النانو تكنولوجي واستدامة الغلاف الجوي (كما هو مكتوب)", "p": "", "seg": 0}, {"k": "sc", "t": "الوحدة الرابعة: الغلاف الصخري: 4-1 الغلاف الصخري واستقرار كوكب الأرض وتوازنه", "p": "", "seg": 0}, {"k": "sc", "t": "4-2 المواد المكونة للغلاف الصخري ودورها في استقرار الأرض واستمراراها (كما كتب)", "p": "", "seg": 0}, {"k": "sc", "t": "4-3 الغلاف الصخري واستدامة موارد الطاقة", "p": "", "seg": 0}, {"k": "sc", "t": "ثم مراجعة", "p": "", "seg": 0}, {"k": "hi", "t": "الوحدة الثالثة: حضارة بلاد العراق القديم وحضارة فينيقيا: الدرس 1 حضارة بلاد العراق القديم", "p": "", "seg": 0}, {"k": "hi", "t": "2 حضارة فينيقيا. الوحدة الرابعة: حضارة اليونان وحضارة الرومان: الدرس 1 الحضارة اليونانية (الإغريقية)", "p": "", "seg": 0}, {"k": "hi", "t": "2 مصر تحت حكم البطالمة", "p": "", "seg": 0}, {"k": "hi", "t": "تابع الوحدة الرابعة: الدرس 3 الحضارة الرومانية", "p": "", "seg": 0}, {"k": "hi", "t": "4 مصر تحت حكم الرومان", "p": "", "seg": 0}, {"k": "qr", "t": "النساء من الآية 148 (لا يحب الله الجهر بالسوء من القول) إلى آخر السورة؛ ثم آل عمران من أولها إلى الآية 51 (هذا صراط مستقيم)", "p": "", "seg": 0}, {"k": "qr", "t": "آل عمران من الآية 52 (فلما أحس عيسى منهم الكفر) إلى الآية 92 (وما تنفقوا من شيء فإن الله به عليم)", "p": "", "seg": 0}, {"k": "tf", "t": "علوم القرآن: نزول القرآن الكريم منجما؛ ومن أول درس تفسير القرآن العظيم لابن كثير إلى نهاية الدرس", "p": "", "seg": 0}, {"k": "tf", "t": "التفسير: سورة البروج؛ سورة الطارق، الأعلى، الغاشية", "p": "", "seg": 0}, {"k": "tf", "t": "علوم القرآن: من أول درس التفسير بالرأي إلى نهاية درس منهج علوم القرآن", "p": "", "seg": 0}, {"k": "tf", "t": "التفسير: سور الفجر والبلد والشمس", "p": "", "seg": 0}, {"k": "hd", "t": "علم الحديث: من أول المبحث الثالث الحديث الحسن لذاته إلى نهاية الحديث الحسن لغيره", "p": "", "seg": 0}, {"k": "hd", "t": "التراجم: الترمذي. الأحاديث 18، 19 ويحفظ رقم 18. ثم من أول المبحث الرابع الحديث الضعيف إلى نهاية المبحث", "p": "", "seg": 0}, {"k": "hd", "t": "التراجم: النسائي. الأحاديث 20، 21، 22 ويحفظ رقم 20", "p": "", "seg": 0}, {"k": "hd", "t": "علم الحديث: من أول المبحث الخامس أحوال الرواة إلى نهاية المبحث", "p": "", "seg": 0}, {"k": "hd", "t": "التراجم: ابن ماجه. الأحاديث 23، 24، 25 ويحفظ رقم 23", "p": "", "seg": 0}, {"k": "tw", "t": "من أول: أولا الصفات السلبية إلى نهاية صفة القيام بالنفس؛ ومن أول صفة الوحدانية إلى نهاية صفة العلم", "p": "", "seg": 0}, {"k": "tw", "t": "من أول صفة الحياة إلى نهاية صفة البصر؛ ومن أول النصوص الموهمة للتشبيه إلى نهاية (أمثلة لنصوص توهم التشبيه وكيفية التعامل معها) وهو قوله: بحسب ظاهره", "p": "", "seg": 0}, {"k": "lg", "t": "من أول الكليات الخمس إلى نهاية أقسام الفصل؛ ومن أول النوع إلى نهاية السؤال بما وأي", "p": "", "seg": 0}, {"k": "lg", "t": "من أول المعرفات إلى نهاية الكتاب", "p": "", "seg": 0}];
+(function(){const a=(arr,seg,l)=>l.forEach(t=>arr.push({k:"en",t,p:"",seg}));
+a(T1Z,1,["Unit 1","Unit 2","A Glimpse of Revelation: Unit 2 (قراءة بس، ومش مؤكد إن Unit 1 مش مقرر)"]);
+a(T1Z,2,["Unit 3","Revision 1","Unit 4","A Glimpse of Revelation: Unit 2 (تابع) + Unit 3 (قراءة بس)"]);
+a(T1Z,3,["Unit 5","Unit 6","Revision 2","A Glimpse of Revelation: Unit 3 (تابع) (قراءة بس)"]);
+a(T2Z,0,["Unit 7","Unit 8","Unit 9","Revision 3","Unit 10","Unit 11","Unit 12","Revision 4","A Glimpse of Revelation: Unit 5 + Unit 6 (قراءة بس)"]);})();
+
+const FQ={"hanafi": {"t1": [{"k": "fq", "t": "من أول كتاب الطهارة إلى نهاية المسح على الجبائر وهو قوله: (لما ذكرنا)", "p": "", "seg": 1}, {"k": "fq", "t": "ومن أول فصل في الاستنجاء إلى نهايته وهو قوله (برءوس أصابعها)", "p": "", "seg": 1}, {"k": "fq", "t": "من أول كتاب الصلاة إلى نهاية فقرة الفتح على الإمام وهو قوله (وقد بيناه)", "p": "", "seg": 2}, {"k": "fq", "t": "ومن أول باب سجود السهو إلى فقرة الشك في عدد الركعات وهو قوله (أول ما سها استقبل)", "p": "", "seg": 2}, {"k": "fq", "t": "من أول باب صلاة الجمعة إلى نهاية باب الشهيد والمباحث المتعلقة به وهو قوله: (ولم يغسل)", "p": "", "seg": 3}], "t2": [{"k": "fq", "t": "من أول كتاب الزكاة إلى نهاية باب مصارف الزكاة وهو قوله (لإطلاق النصوص)", "p": "", "seg": 0}, {"k": "fq", "t": "من أول كتاب الصوم إلى فقرة ما يكره للصائم وهو قوله (يجوز لها المضغ أولى)", "p": "", "seg": 0}, {"k": "fq", "t": "من أول كتاب الحج إلى نهاية طواف الوداع وهو قوله: (في طواف الصدر)", "p": "", "seg": 0}, {"k": "fq", "t": "من أول فصل في العمرة إلى نهاية فصل في الاحتكار وهو قوله \"إلى يومنا\"", "p": "", "seg": 0}, {"k": "fq", "t": "ومن أول كتاب الأضحية إلى نهاية الكتاب", "p": "", "seg": 0}]}, "maliki": {"t1": [{"k": "fq", "t": "من أول باب الطهارة إلى نهاية فصل في فرائض الوضوء وهو قوله: (أي بعد إتمامه فلا يضر)", "p": "", "seg": 1}, {"k": "fq", "t": "من سنن الوضوء إلى نهاية فصل في المسح على الجبيرة وهو قوله (وبنى إن طال نسياناً)", "p": "", "seg": 2}, {"k": "fq", "t": "ومن أول باب الصلاة فصل في الأذان إلى نهاية مبطلاتها \"مبطلات الصلاة\"، وهو قوله: \"وأولى لترك فضيلة كقنوت\"", "p": "", "seg": 2}, {"k": "fq", "t": "من أول فصل (صلاة الجماعة) إلى نهاية ما يفعله المسبوق إذا وجد الإمام في ركوع أو سجود أو جلوس وهو قوله (فتلغى جزما)", "p": "", "seg": 3}, {"k": "fq", "t": "ومن أول فصل في بيان شروط الجمعة وآدابها ومكروهاتها وموانعها وما يتعلق بذلك إلى نهاية صلاة الجنازة، وهو قوله: \"أعلم بحقيقة الحال\"", "p": "", "seg": 3}], "t2": [{"k": "fq", "t": "من أول (باب في الزكاة وشروط وجوبها) إلى نهاية فصل في زكاة الفطر وحكمها وعلى من تكون؟ ولمن تصرف؟ ووقت إخراجها وهو قوله: (وهو اليوم كله)", "p": "", "seg": 0}, {"k": "fq", "t": "من أول \"باب في صوم رمضان\" إلى نهايته وهو قوله: \"وهذا لفظ حديث روى عن النبي صلى الله عليه وسلم\"", "p": "", "seg": 0}, {"k": "fq", "t": "ومن أول \"باب في الحج والعمرة\" إلى نهاية مندوبات الطواف وهو قوله: \"للغروب على ما سيأتي\"", "p": "", "seg": 0}, {"k": "fq", "t": "من أول \"الركن الثالث من أركان الحج\" وهو الحضور بعرفة ليلة النحر إلى نهاية باب العقيقة وهو قوله: \"والله تعالى أعلم\"", "p": "", "seg": 0}, {"k": "fq", "t": "ومن أول باب اليمين إلى نهاية وقت وجوب الكفارة وهو قوله: \"فأولى إن ترك طائعًا\"", "p": "", "seg": 0}]}, "shafii": {"t1": [{"k": "fq", "t": "من أول كتاب الطهارة إلى نهاية حكم الماء الجاري وهو قوله (بين الجاري والراكد)", "p": "", "seg": 1}, {"k": "fq", "t": "ومن أول فصل في السواك إلى نهاية فروض الوضوء وهو قوله: \"أو بعد الفراغ لم يؤثر\"", "p": "", "seg": 1}, {"k": "fq", "t": "من أول فصل في الاستنجاء إلى نهاية: حكم من اجتمع عليه أغسال، وهو قوله: \"وحسن الأدب معهم\"", "p": "", "seg": 1}, {"k": "fq", "t": "فصل: في المسح على الخفين إلى آخر الفصل وهو قوله: \"ويفارقه عند عروض المبطل\"", "p": "", "seg": 2}, {"k": "fq", "t": "التيمم وما يتعلق به من أحكام كاملاً أي إلى قوله: \"وخرج بالفرض النفل فلا يفعل\"", "p": "", "seg": 2}, {"k": "fq", "t": "من أول: فصل في إزالة النجاسة كاملاً إلى قوله: (فيما عدا ذلك)", "p": "", "seg": 2}, {"k": "fq", "t": "ومن أول كتاب الصلاة إلى نهاية فقرة أحكام سجدة الشكر وهو قوله (من غير سبب حرم)", "p": "", "seg": 3}, {"k": "fq", "t": "ومن أول فصل في شروط الصلاة إلى نهاية الركن الثالث من أركان الصلاة وهو قوله (باختلاف النية أشد)", "p": "", "seg": 3}], "t2": [{"k": "fq", "t": "من أول الركن الرابع من أركان الصلاة إلى نهاية سنن الصلاة بعد الدخول فيها وتسمى الأبعاض وهو قوله (خلافاً لبعض المتأخرين)", "p": "", "seg": 0}, {"k": "fq", "t": "من أول فصل مبطلات الصلاة إلى نهاية درس الستر أمام المصلى، وهو قوله: \"أي لا يجعلها تلقاء وجهه\"", "p": "", "seg": 0}, {"k": "fq", "t": "ومن أول فصل في سجود السهو في الصلاة فرضًا كانت أو نفلًا، إلى قوله: \"هو آخر الأمرين من فعله ﷺ\"", "p": "", "seg": 0}, {"k": "fq", "t": "صلاة الجماعة كاملة إلى نهاية شروط الاقتداء وهو قوله: \"لكنه في الفعلي بلا عذر حرام\"", "p": "", "seg": 0}, {"k": "fq", "t": "صلاة الجمعة وما يتعلق بها من أحكام كاملة، صلاة العيدين وما يتعلق بها من أحكام كاملة", "p": "", "seg": 0}, {"k": "fq", "t": "من أول فصل في صلاة الجنازة إلى نهاية سنن صلاة الجنازة وهو قوله (مالم يخف تغيره)", "p": "", "seg": 0}, {"k": "fq", "t": "ومن أول كتاب الزكاة إلى شروط وجوب زكاة الفطر وهو قوله (والعيب والغلت)", "p": "", "seg": 0}]}, "hanbali": {"t1": [{"k": "fq", "t": "أول: كتاب الطهارة إلى نهاية باب الغسل وهو قوله: \"والغسل أفضل\"", "p": "", "seg": 1}, {"k": "fq", "t": "من أول: كتاب الصلاة إلى نهاية باب سجود السهو وهو قوله: \"حكم المستقل في نفسه\"", "p": "", "seg": 2}, {"k": "fq", "t": "من أول: باب صلاة الجماعة إلى نهاية سنن الخطبتين وهو قوله: \"ويعيدها ظهرا\"", "p": "", "seg": 3}], "t2": [{"k": "fq", "t": "فصل في صفة صلاة الجمعة وبعض أحكامها إلى نهاية باب: صلاة الاستسقاء وهو قوله: \"قاله في المبدع\"", "p": "", "seg": 0}, {"k": "fq", "t": "من أول: كتاب الزكاة إلى نهاية باب: ما يفسد الصوم ويوجب الكفارة وهو قوله: \"ولم يتبين له الخطأ\"", "p": "", "seg": 0}, {"k": "fq", "t": "من أول: كتاب المناسك إلى نهاية أركان العمرة، وهو قوله: \"وهزم الأحزاب وحده\"", "p": "", "seg": 0}]}};
+const FQN={hanafi:"حنفي",maliki:"مالكي",shafii:"شافعي",hanbali:"حنبلي"};
+
+const G2={sci:[{"k": "ar", "t": "1 من مهارات الحياة · إعمال العقل (قراءة، زكي نجيب محمود) + قواعد: إعراب الفعل المضارع", "p": "ص 4", "seg": 1}, {"k": "ar", "t": "1 من مهارات الحياة · من تجارب الحياة (نص شعري، زهير بن أبي سلمى) + بلاغة: الطباق والمقابلة + أدب: المعلقات", "p": "ص 12", "seg": 1}, {"k": "ar", "t": "1 من مهارات الحياة · من وصايا الحكماء (نص نثري، ذو الإصبع العدواني) + بلاغة: السجع + أدب: الحكم والأمثال + قواعد: جزم المضارع في جواب الطلب", "p": "ص 25", "seg": 1}, {"k": "ar", "t": "2 قيم سامية · آداب الصداقة (قراءة، ابن مسكويه) + قواعد: حالات توكيد الفعل بالنون", "p": "ص 38", "seg": 1}, {"k": "ar", "t": "2 قيم سامية · سبيل الرشاد (نص شعري، حسان بن ثابت) + بلاغة: الجناس + أدب: سمات الشعر في عصر صدر الإسلام", "p": "ص 46", "seg": 1}, {"k": "ar", "t": "2 قيم سامية · من الهدي النبوي في خطبة الوداع (نص نثري) + بلاغة: التورية + أدب: الخطابة في عصر صدر الإسلام", "p": "ص 54", "seg": 1}, {"k": "ar", "t": "3 علم وعمل · العلم والتقنية (قراءة، أحمد فؤاد باشا) + قواعد: المصادر الثلاثية وغير الثلاثية، الميمي والصناعي", "p": "ص 68", "seg": 1}, {"k": "ar", "t": "3 علم وعمل · العلم حياة (نص شعري، سابق بن عبد الله البربري) + بلاغة: الإيجاز والإطناب + أدب: أغراض الشعر في العصر الأموي", "p": "ص 78", "seg": 1}, {"k": "ar", "t": "3 علم وعمل · علم وعمل (نص نثري، الإمام الحسن البصري) + أدب: الخطابة في العصر الأموي", "p": "ص 88", "seg": 1}, {"k": "ar", "t": "القصة: فصل 1", "p": "ص 5", "seg": 2}, {"k": "ar", "t": "القصة: فصل 2", "p": "ص 8", "seg": 2}, {"k": "ar", "t": "القصة: فصل 3", "p": "ص 13", "seg": 2}, {"k": "ar", "t": "القصة: فصل 4", "p": "ص 16", "seg": 2}, {"k": "ar", "t": "القصة: فصل 5", "p": "ص 24", "seg": 2}, {"k": "ar", "t": "القصة: فصل 6", "p": "ص 29", "seg": 2}, {"k": "ar", "t": "القصة: فصل 7", "p": "ص 34", "seg": 2}, {"k": "ar", "t": "القصة: فصل 8", "p": "ص 42", "seg": 2}, {"k": "ar", "t": "القصة: فصل 9", "p": "ص 50", "seg": 3}, {"k": "ar", "t": "القصة: فصل 10", "p": "ص 56", "seg": 3}, {"k": "ar", "t": "القصة: فصل 11", "p": "ص 68", "seg": 3}, {"k": "ar", "t": "القصة: فصل 12", "p": "ص 82", "seg": 3}, {"k": "ar", "t": "القصة: فصل 13", "p": "ص 85", "seg": 3}, {"k": "ar", "t": "القصة: فصل 14", "p": "ص 97", "seg": 3}, {"k": "ar", "t": "القصة: فصل 15", "p": "ص 108", "seg": 3}, {"k": "ar", "t": "القصة: فصل 16", "p": "ص 110", "seg": 3}, {"k": "en", "t": "Unit 1 Egypt-Africa Cooperation · Lesson 1", "p": "p 8", "seg": 1}, {"k": "en", "t": "Unit 1 Egypt-Africa Cooperation · Lesson 2", "p": "p 10", "seg": 1}, {"k": "en", "t": "Unit 1 Egypt-Africa Cooperation · Lesson 3", "p": "p 12", "seg": 1}, {"k": "en", "t": "Unit 1 Egypt-Africa Cooperation · Lesson 4", "p": "p 14", "seg": 1}, {"k": "en", "t": "Unit 1 Egypt-Africa Cooperation · Lesson 5", "p": "p 16", "seg": 1}, {"k": "en", "t": "Unit 2 Startups & Young Entrepreneurs · Lesson 1", "p": "p 20", "seg": 1}, {"k": "en", "t": "Unit 2 Startups & Young Entrepreneurs · Lesson 2", "p": "p 22", "seg": 1}, {"k": "en", "t": "Unit 2 Startups & Young Entrepreneurs · Lesson 3", "p": "p 24", "seg": 1}, {"k": "en", "t": "Unit 2 Startups & Young Entrepreneurs · Lesson 4", "p": "p 26", "seg": 1}, {"k": "en", "t": "Unit 2 Startups & Young Entrepreneurs · Lesson 5", "p": "p 28", "seg": 1}, {"k": "en", "t": "Unit 3 Sustainable Development Goals (SDG) · Lesson 1", "p": "p 32", "seg": 1}, {"k": "en", "t": "Unit 3 Sustainable Development Goals (SDG) · Lesson 2", "p": "p 34", "seg": 1}, {"k": "en", "t": "Unit 3 Sustainable Development Goals (SDG) · Lesson 3", "p": "p 36", "seg": 2}, {"k": "en", "t": "Unit 3 Sustainable Development Goals (SDG) · Lesson 4", "p": "p 37", "seg": 2}, {"k": "en", "t": "Unit 3 Sustainable Development Goals (SDG) · Lesson 5", "p": "p 38", "seg": 2}, {"k": "en", "t": "Review 1 (Units 1-3)", "p": "p 41-48", "seg": 2}, {"k": "en", "t": "Unit 4 Natural Disasters · Lesson 1", "p": "p 50", "seg": 2}, {"k": "en", "t": "Unit 4 Natural Disasters · Lesson 2", "p": "p 52", "seg": 2}, {"k": "en", "t": "Unit 4 Natural Disasters · Lesson 3", "p": "p 54", "seg": 2}, {"k": "en", "t": "Unit 4 Natural Disasters · Lesson 4", "p": "p 55", "seg": 2}, {"k": "en", "t": "Unit 4 Natural Disasters · Lesson 5", "p": "p 57", "seg": 2}, {"k": "en", "t": "Unit 5 Media Manipulation · Lesson 1", "p": "p 62", "seg": 2}, {"k": "en", "t": "Unit 5 Media Manipulation · Lesson 2", "p": "p 64", "seg": 2}, {"k": "en", "t": "Unit 5 Media Manipulation · Lesson 3", "p": "p 66", "seg": 2}, {"k": "en", "t": "Unit 5 Media Manipulation · Lesson 4", "p": "p 68", "seg": 3}, {"k": "en", "t": "Unit 5 Media Manipulation · Lesson 5", "p": "p 70", "seg": 3}, {"k": "en", "t": "Unit 6 Soft Skills vs. Hard Skills · Lesson 1", "p": "p 74", "seg": 3}, {"k": "en", "t": "Unit 6 Soft Skills vs. Hard Skills · Lesson 2", "p": "p 76", "seg": 3}, {"k": "en", "t": "Unit 6 Soft Skills vs. Hard Skills · Lesson 3", "p": "p 77", "seg": 3}, {"k": "en", "t": "Unit 6 Soft Skills vs. Hard Skills · Lesson 4", "p": "p 79", "seg": 3}, {"k": "en", "t": "Unit 6 Soft Skills vs. Hard Skills · Lesson 5", "p": "p 82", "seg": 3}, {"k": "en", "t": "Review 2 (Units 4-6)", "p": "p 84-90", "seg": 3}, {"k": "en", "t": "Novel (separate book) · Chapter 1", "p": "", "seg": 3}, {"k": "en", "t": "Novel (separate book) · Chapter 2", "p": "", "seg": 3}, {"k": "en", "t": "Novel (separate book) · Chapter 3", "p": "", "seg": 3}, {"k": "mt", "t": "الوحدة 1: الدوال الحقيقية ورسم المنحنيات · الدوال الحقيقية", "p": "ص 4", "seg": 1}, {"k": "mt", "t": "الوحدة 1: الدوال الحقيقية ورسم المنحنيات · بعض خواص الدوال", "p": "ص 13", "seg": 1}, {"k": "mt", "t": "الوحدة 1: الدوال الحقيقية ورسم المنحنيات · اطراد الدوال", "p": "ص 21", "seg": 1}, {"k": "mt", "t": "الوحدة 1: الدوال الحقيقية ورسم المنحنيات · التمثيل البياني للدوال والتحويلات الهندسية", "p": "ص 36", "seg": 1}, {"k": "mt", "t": "الوحدة 1: الدوال الحقيقية ورسم المنحنيات · حل معادلات ومتباينات القيمة المطلقة", "p": "ص 42", "seg": 1}, {"k": "mt", "t": "الوحدة 2: الأسس واللوغاريتمات وتطبيقاتها · الأسس الكسرية", "p": "ص 52", "seg": 1}, {"k": "mt", "t": "الوحدة 2: الأسس واللوغاريتمات وتطبيقاتها · الدالة الأسية وتطبيقاتها", "p": "ص 58", "seg": 1}, {"k": "mt", "t": "الوحدة 2: الأسس واللوغاريتمات وتطبيقاتها · المعادلات الأسية", "p": "ص 63", "seg": 2}, {"k": "mt", "t": "الوحدة 2: الأسس واللوغاريتمات وتطبيقاتها · الدالة العكسية", "p": "ص 67", "seg": 2}, {"k": "mt", "t": "الوحدة 2: الأسس واللوغاريتمات وتطبيقاتها · الدالة اللوغاريتمية وتمثيلها البياني", "p": "ص 72", "seg": 2}, {"k": "mt", "t": "الوحدة 2: الأسس واللوغاريتمات وتطبيقاتها · بعض خواص اللوغاريتمات", "p": "ص 78", "seg": 2}, {"k": "mt", "t": "الوحدة 3: النهايات والاتصال · مقدمة في النهايات", "p": "ص 88", "seg": 2}, {"k": "mt", "t": "الوحدة 3: النهايات والاتصال · إيجاد نهاية الدالة جبريا", "p": "ص 95", "seg": 2}, {"k": "mt", "t": "الوحدة 3: النهايات والاتصال · نهاية الدالة عند اللانهاية", "p": "ص 103", "seg": 3}, {"k": "mt", "t": "الوحدة 3: النهايات والاتصال · نهاية الدوال المثلثية", "p": "ص 109", "seg": 3}, {"k": "mt", "t": "الوحدة 3: النهايات والاتصال · بحث وجود نهاية للدالة عند نقطة", "p": "ص 114", "seg": 3}, {"k": "mt", "t": "الوحدة 3: النهايات والاتصال · الاتصال", "p": "ص 119", "seg": 3}, {"k": "mt", "t": "الوحدة 4: حساب المثلثات · قانون قاعدة الجيب", "p": "ص 130", "seg": 3}, {"k": "mt", "t": "الوحدة 4: حساب المثلثات · قانون قاعدة جيب التمام", "p": "ص 136", "seg": 3}, {"k": "ap", "t": "الوحدة 1: الاستاتيكا · القوى", "p": "ص 12", "seg": 1}, {"k": "ap", "t": "الوحدة 1: الاستاتيكا · تحليل القوى", "p": "ص 20", "seg": 1}, {"k": "ap", "t": "الوحدة 1: الاستاتيكا · محصلة عدة قوى مستوية متلاقية في نقطة", "p": "ص 26", "seg": 1}, {"k": "ap", "t": "الوحدة 1: الاستاتيكا · اتزان جسم جاسئ تحت تأثير مجموعة من القوى المستوية المتلاقية في نقطة", "p": "ص 31", "seg": 1}, {"k": "ap", "t": "الوحدة 1: الاستاتيكا · اتزان جسم على مستوى أفقي خشن", "p": "ص 42", "seg": 2}, {"k": "ap", "t": "الوحدة 1: الاستاتيكا · اتزان جسم على مستوى مائل خشن", "p": "ص 50", "seg": 2}, {"k": "ap", "t": "الوحدة 2: الهندسة والقياس · المستقيمات والمستويات في الفراغ", "p": "ص 58", "seg": 2}, {"k": "ap", "t": "الوحدة 2: الهندسة والقياس · الهرم والمخروط", "p": "ص 64", "seg": 2}, {"k": "ap", "t": "الوحدة 2: الهندسة والقياس · المساحة الكلية لكل من الهرم والمخروط", "p": "ص 69", "seg": 3}, {"k": "ap", "t": "الوحدة 2: الهندسة والقياس · حجم الهرم والمخروط القائم", "p": "ص 73", "seg": 3}, {"k": "ap", "t": "الوحدة 2: الهندسة والقياس · معادلة الدائرة", "p": "ص 78", "seg": 3}, {"k": "hi", "t": "الوحدة 1: الحضارة العربية وظهور الإسلام · حضارات شبه الجزيرة العربية قبل ظهور الإسلام", "p": "ص 9", "seg": 1}, {"k": "hi", "t": "الوحدة 1: الحضارة العربية وظهور الإسلام · ظهور الإسلام", "p": "ص 19", "seg": 1}, {"k": "hi", "t": "الوحدة 1: الحضارة العربية وظهور الإسلام · دعائم بناء الدولة الإسلامية", "p": "ص 29", "seg": 1}, {"k": "hi", "t": "الوحدة 1: الحضارة العربية وظهور الإسلام · الأخطار التي واجهت الدولة الإسلامية في المدينة النبوية", "p": "ص 35", "seg": 1}, {"k": "hi", "t": "الوحدة 2: الفتوحات الإسلامية وانتشار الإسلام · الدولة الإسلامية عقب وفاة النبي", "p": "ص 45", "seg": 1}, {"k": "hi", "t": "الوحدة 2: الفتوحات الإسلامية وانتشار الإسلام · الفتوحات في عصر الخلفاء الراشدين", "p": "ص 52", "seg": 1}, {"k": "hi", "t": "الوحدة 2: الفتوحات الإسلامية وانتشار الإسلام · الفتوحات في عصر الدولة الأموية", "p": "ص 60", "seg": 2}, {"k": "hi", "t": "الوحدة 2: الفتوحات الإسلامية وانتشار الإسلام · الفتوحات في عصر الدولة العباسية", "p": "ص 68", "seg": 2}, {"k": "hi", "t": "الوحدة 3: مصر والدول المستقلة · مصر من الفتح الإسلامي حتى قيام الدول المستقلة", "p": "ص 73", "seg": 2}, {"k": "hi", "t": "الوحدة 3: مصر والدول المستقلة · مصر في عصري الطولونيين والإخشيديين", "p": "ص 81", "seg": 2}, {"k": "hi", "t": "الوحدة 3: مصر والدول المستقلة · مصر في عصر الفاطميين", "p": "ص 86", "seg": 2}, {"k": "hi", "t": "الوحدة 3: مصر والدول المستقلة · مصر في عصري الأيوبيين والمماليك", "p": "ص 91", "seg": 3}, {"k": "hi", "t": "الوحدة 4: الحضارة الإسلامية وإسهاماتها · النظام السياسي والإداري", "p": "ص 103", "seg": 3}, {"k": "hi", "t": "الوحدة 4: الحضارة الإسلامية وإسهاماتها · النظام المالي", "p": "ص 114", "seg": 3}, {"k": "hi", "t": "الوحدة 4: الحضارة الإسلامية وإسهاماتها · الحياة الاقتصادية والاجتماعية", "p": "ص 121", "seg": 3}, {"k": "hi", "t": "الوحدة 4: الحضارة الإسلامية وإسهاماتها · الحياة العلمية وفنون العمارة", "p": "ص 132", "seg": 3}, {"k": "ch", "t": "الباب الأول: الحساب الكيميائي · المول وكتلة المول", "p": "ص 6", "seg": 1}, {"k": "ch", "t": "الباب الأول: الحساب الكيميائي · الحجم المولي للغازات", "p": "ص 6", "seg": 1}, {"k": "ch", "t": "الباب الأول: الحساب الكيميائي · الحساب الكيميائي بدلالة المعادلة الرمزية الموزونة", "p": "ص 6", "seg": 1}, {"k": "ch", "t": "الباب الأول: الحساب الكيميائي · العامل المحدد للتفاعل", "p": "ص 6", "seg": 1}, {"k": "ch", "t": "الباب الأول: الحساب الكيميائي · الصيغة الأولية والجزيئية", "p": "ص 6", "seg": 1}, {"k": "ch", "t": "الباب الأول: الحساب الكيميائي · التركيز المولاري", "p": "ص 6", "seg": 2}, {"k": "ch", "t": "الباب الثاني: بنية الذرة · نماذج طومسون ورذرفورد وبور", "p": "ص 22", "seg": 2}, {"k": "ch", "t": "الباب الثاني: بنية الذرة · طيف الانبعاث الذري (p26)", "p": "ص 22", "seg": 2}, {"k": "ch", "t": "الباب الثاني: بنية الذرة · الأسس النظرية الحديثة وأعداد الكم", "p": "ص 22", "seg": 2}, {"k": "ch", "t": "الباب الثاني: بنية الذرة · مبدأ باولي والبناء التصاعدي وقاعدة هوند", "p": "ص 22", "seg": 2}, {"k": "ch", "t": "الباب الثالث: الجدول الدوري وتصنيف العناصر · وصف الجدول الدوري وفئاته (s,p,d,f)", "p": "ص 40", "seg": 3}, {"k": "ch", "t": "الباب الثالث: الجدول الدوري وتصنيف العناصر · تدرج الخواص: نصف القطر، جهد التأين، الميل الإلكتروني، السالبية", "p": "ص 40", "seg": 3}, {"k": "ch", "t": "الباب الثالث: الجدول الدوري وتصنيف العناصر · الخواص الفلزية واللافلزية والحامضية والقاعدية", "p": "ص 40", "seg": 3}, {"k": "ch", "t": "الباب الثالث: الجدول الدوري وتصنيف العناصر · أعداد التأكسد وموازنة معادلات الأكسدة والاختزال", "p": "ص 40", "seg": 3}, {"k": "py", "t": "الوحدة 1: الكميات الفيزيائية ووحدات القياس · الفصل 1: القياس الفيزيائي", "p": "ص 6", "seg": 1}, {"k": "py", "t": "الوحدة 2: الحركة الخطية · الفصل 2: الحركة في خط مستقيم", "p": "ص 25", "seg": 1}, {"k": "py", "t": "الوحدة 2: الحركة الخطية · الفصل 3: القوة والحركة", "p": "ص 37", "seg": 2}, {"k": "py", "t": "الوحدة 3: خواص المادة · الفصل 4: خواص الموائع المتحركة", "p": "ص 47", "seg": 2}, {"k": "py", "t": "الوحدة 3: خواص المادة · الفصل 5: خواص الموائع الساكنة", "p": "ص 61", "seg": 3}, {"k": "py", "t": "الوحدة 4: الحرارة · الفصل 6: قوانين الغازات", "p": "ص 80", "seg": 3}],lit:[{"k": "ar", "t": "1 من مهارات الحياة · إعمال العقل (قراءة، زكي نجيب محمود) + قواعد: إعراب الفعل المضارع", "p": "ص 4", "seg": 1}, {"k": "ar", "t": "1 من مهارات الحياة · من تجارب الحياة (نص شعري، زهير بن أبي سلمى) + بلاغة: الطباق والمقابلة + أدب: المعلقات", "p": "ص 12", "seg": 1}, {"k": "ar", "t": "1 من مهارات الحياة · من وصايا الحكماء (نص نثري، ذو الإصبع العدواني) + بلاغة: السجع + أدب: الحكم والأمثال + قواعد: جزم المضارع في جواب الطلب", "p": "ص 25", "seg": 1}, {"k": "ar", "t": "2 قيم سامية · آداب الصداقة (قراءة، ابن مسكويه) + قواعد: حالات توكيد الفعل بالنون", "p": "ص 38", "seg": 1}, {"k": "ar", "t": "2 قيم سامية · سبيل الرشاد (نص شعري، حسان بن ثابت) + بلاغة: الجناس + أدب: سمات الشعر في عصر صدر الإسلام", "p": "ص 46", "seg": 1}, {"k": "ar", "t": "2 قيم سامية · من الهدي النبوي في خطبة الوداع (نص نثري) + بلاغة: التورية + أدب: الخطابة في عصر صدر الإسلام", "p": "ص 54", "seg": 1}, {"k": "ar", "t": "3 علم وعمل · العلم والتقنية (قراءة، أحمد فؤاد باشا) + قواعد: المصادر الثلاثية وغير الثلاثية، الميمي والصناعي", "p": "ص 68", "seg": 1}, {"k": "ar", "t": "3 علم وعمل · العلم حياة (نص شعري، سابق بن عبد الله البربري) + بلاغة: الإيجاز والإطناب + أدب: أغراض الشعر في العصر الأموي", "p": "ص 78", "seg": 1}, {"k": "ar", "t": "3 علم وعمل · علم وعمل (نص نثري، الإمام الحسن البصري) + أدب: الخطابة في العصر الأموي", "p": "ص 88", "seg": 1}, {"k": "ar", "t": "القصة: فصل 1", "p": "ص 5", "seg": 2}, {"k": "ar", "t": "القصة: فصل 2", "p": "ص 8", "seg": 2}, {"k": "ar", "t": "القصة: فصل 3", "p": "ص 13", "seg": 2}, {"k": "ar", "t": "القصة: فصل 4", "p": "ص 16", "seg": 2}, {"k": "ar", "t": "القصة: فصل 5", "p": "ص 24", "seg": 2}, {"k": "ar", "t": "القصة: فصل 6", "p": "ص 29", "seg": 2}, {"k": "ar", "t": "القصة: فصل 7", "p": "ص 34", "seg": 2}, {"k": "ar", "t": "القصة: فصل 8", "p": "ص 42", "seg": 2}, {"k": "ar", "t": "القصة: فصل 9", "p": "ص 50", "seg": 3}, {"k": "ar", "t": "القصة: فصل 10", "p": "ص 56", "seg": 3}, {"k": "ar", "t": "القصة: فصل 11", "p": "ص 68", "seg": 3}, {"k": "ar", "t": "القصة: فصل 12", "p": "ص 82", "seg": 3}, {"k": "ar", "t": "القصة: فصل 13", "p": "ص 85", "seg": 3}, {"k": "ar", "t": "القصة: فصل 14", "p": "ص 97", "seg": 3}, {"k": "ar", "t": "القصة: فصل 15", "p": "ص 108", "seg": 3}, {"k": "ar", "t": "القصة: فصل 16", "p": "ص 110", "seg": 3}, {"k": "en", "t": "Unit 1 Egypt-Africa Cooperation · Lesson 1", "p": "p 8", "seg": 1}, {"k": "en", "t": "Unit 1 Egypt-Africa Cooperation · Lesson 2", "p": "p 10", "seg": 1}, {"k": "en", "t": "Unit 1 Egypt-Africa Cooperation · Lesson 3", "p": "p 12", "seg": 1}, {"k": "en", "t": "Unit 1 Egypt-Africa Cooperation · Lesson 4", "p": "p 14", "seg": 1}, {"k": "en", "t": "Unit 1 Egypt-Africa Cooperation · Lesson 5", "p": "p 16", "seg": 1}, {"k": "en", "t": "Unit 2 Startups & Young Entrepreneurs · Lesson 1", "p": "p 20", "seg": 1}, {"k": "en", "t": "Unit 2 Startups & Young Entrepreneurs · Lesson 2", "p": "p 22", "seg": 1}, {"k": "en", "t": "Unit 2 Startups & Young Entrepreneurs · Lesson 3", "p": "p 24", "seg": 1}, {"k": "en", "t": "Unit 2 Startups & Young Entrepreneurs · Lesson 4", "p": "p 26", "seg": 1}, {"k": "en", "t": "Unit 2 Startups & Young Entrepreneurs · Lesson 5", "p": "p 28", "seg": 1}, {"k": "en", "t": "Unit 3 Sustainable Development Goals (SDG) · Lesson 1", "p": "p 32", "seg": 1}, {"k": "en", "t": "Unit 3 Sustainable Development Goals (SDG) · Lesson 2", "p": "p 34", "seg": 1}, {"k": "en", "t": "Unit 3 Sustainable Development Goals (SDG) · Lesson 3", "p": "p 36", "seg": 2}, {"k": "en", "t": "Unit 3 Sustainable Development Goals (SDG) · Lesson 4", "p": "p 37", "seg": 2}, {"k": "en", "t": "Unit 3 Sustainable Development Goals (SDG) · Lesson 5", "p": "p 38", "seg": 2}, {"k": "en", "t": "Review 1 (Units 1-3)", "p": "p 41-48", "seg": 2}, {"k": "en", "t": "Unit 4 Natural Disasters · Lesson 1", "p": "p 50", "seg": 2}, {"k": "en", "t": "Unit 4 Natural Disasters · Lesson 2", "p": "p 52", "seg": 2}, {"k": "en", "t": "Unit 4 Natural Disasters · Lesson 3", "p": "p 54", "seg": 2}, {"k": "en", "t": "Unit 4 Natural Disasters · Lesson 4", "p": "p 55", "seg": 2}, {"k": "en", "t": "Unit 4 Natural Disasters · Lesson 5", "p": "p 57", "seg": 2}, {"k": "en", "t": "Unit 5 Media Manipulation · Lesson 1", "p": "p 62", "seg": 2}, {"k": "en", "t": "Unit 5 Media Manipulation · Lesson 2", "p": "p 64", "seg": 2}, {"k": "en", "t": "Unit 5 Media Manipulation · Lesson 3", "p": "p 66", "seg": 2}, {"k": "en", "t": "Unit 5 Media Manipulation · Lesson 4", "p": "p 68", "seg": 3}, {"k": "en", "t": "Unit 5 Media Manipulation · Lesson 5", "p": "p 70", "seg": 3}, {"k": "en", "t": "Unit 6 Soft Skills vs. Hard Skills · Lesson 1", "p": "p 74", "seg": 3}, {"k": "en", "t": "Unit 6 Soft Skills vs. Hard Skills · Lesson 2", "p": "p 76", "seg": 3}, {"k": "en", "t": "Unit 6 Soft Skills vs. Hard Skills · Lesson 3", "p": "p 77", "seg": 3}, {"k": "en", "t": "Unit 6 Soft Skills vs. Hard Skills · Lesson 4", "p": "p 79", "seg": 3}, {"k": "en", "t": "Unit 6 Soft Skills vs. Hard Skills · Lesson 5", "p": "p 82", "seg": 3}, {"k": "en", "t": "Review 2 (Units 4-6)", "p": "p 84-90", "seg": 3}, {"k": "en", "t": "Novel (separate book) · Chapter 1", "p": "", "seg": 3}, {"k": "en", "t": "Novel (separate book) · Chapter 2", "p": "", "seg": 3}, {"k": "en", "t": "Novel (separate book) · Chapter 3", "p": "", "seg": 3}, {"k": "mt", "t": "الوحدة 1: الدوال الحقيقية ورسم المنحنيات · الدوال الحقيقية", "p": "ص 4", "seg": 1}, {"k": "mt", "t": "الوحدة 1: الدوال الحقيقية ورسم المنحنيات · اطراد الدوال", "p": "ص 11", "seg": 1}, {"k": "mt", "t": "الوحدة 1: الدوال الحقيقية ورسم المنحنيات · الدوال الزوجية والدوال الفردية", "p": "ص 15", "seg": 1}, {"k": "mt", "t": "الوحدة 1: الدوال الحقيقية ورسم المنحنيات · التمثيل البياني للدوال والتحويلات الهندسية", "p": "ص 21", "seg": 1}, {"k": "mt", "t": "الوحدة 1: الدوال الحقيقية ورسم المنحنيات · حل معادلات ومتباينات القيمة المطلقة", "p": "ص 31", "seg": 1}, {"k": "mt", "t": "الوحدة 2: الأسس واللوغاريتمات وتطبيقات عليها · الأسس الكسرية", "p": "ص 38", "seg": 2}, {"k": "mt", "t": "الوحدة 2: الأسس واللوغاريتمات وتطبيقات عليها · الدالة الأسية وتطبيقاتها", "p": "ص 44", "seg": 2}, {"k": "mt", "t": "الوحدة 2: الأسس واللوغاريتمات وتطبيقات عليها · حل المعادلات الأسية", "p": "ص 46", "seg": 2}, {"k": "mt", "t": "الوحدة 2: الأسس واللوغاريتمات وتطبيقات عليها · الدالة اللوغاريتمية وتمثيلها البياني", "p": "ص 50", "seg": 2}, {"k": "mt", "t": "الوحدة 2: الأسس واللوغاريتمات وتطبيقات عليها · بعض خواص اللوغاريتمات", "p": "ص 55", "seg": 2}, {"k": "mt", "t": "الوحدة 3: النهايات · مقدمة في النهايات", "p": "ص 64", "seg": 3}, {"k": "mt", "t": "الوحدة 3: النهايات · إيجاد نهاية الدالة جبريا", "p": "ص 70", "seg": 3}, {"k": "mt", "t": "الوحدة 3: النهايات · نهاية الدالة عند اللانهاية", "p": "ص 77", "seg": 3}, {"k": "mt", "t": "الوحدة 4: حساب المثلثات · قانون (قاعدة) الجيب", "p": "ص 84", "seg": 3}, {"k": "mt", "t": "الوحدة 4: حساب المثلثات · قانون (قاعدة) جيب التمام", "p": "ص 92", "seg": 3}, {"k": "hi", "t": "الوحدة 1: الحضارة العربية وظهور الإسلام · حضارات شبه الجزيرة العربية قبل ظهور الإسلام", "p": "ص 9", "seg": 1}, {"k": "hi", "t": "الوحدة 1: الحضارة العربية وظهور الإسلام · ظهور الإسلام", "p": "ص 19", "seg": 1}, {"k": "hi", "t": "الوحدة 1: الحضارة العربية وظهور الإسلام · دعائم بناء الدولة الإسلامية", "p": "ص 29", "seg": 1}, {"k": "hi", "t": "الوحدة 1: الحضارة العربية وظهور الإسلام · الأخطار التي واجهت الدولة الإسلامية في المدينة النبوية", "p": "ص 35", "seg": 1}, {"k": "hi", "t": "الوحدة 2: الفتوحات الإسلامية وانتشار الإسلام · الدولة الإسلامية عقب وفاة النبي", "p": "ص 45", "seg": 1}, {"k": "hi", "t": "الوحدة 2: الفتوحات الإسلامية وانتشار الإسلام · الفتوحات في عصر الخلفاء الراشدين", "p": "ص 52", "seg": 1}, {"k": "hi", "t": "الوحدة 2: الفتوحات الإسلامية وانتشار الإسلام · الفتوحات في عصر الدولة الأموية", "p": "ص 60", "seg": 2}, {"k": "hi", "t": "الوحدة 2: الفتوحات الإسلامية وانتشار الإسلام · الفتوحات في عصر الدولة العباسية", "p": "ص 68", "seg": 2}, {"k": "hi", "t": "الوحدة 3: مصر والدول المستقلة · مصر من الفتح الإسلامي حتى قيام الدول المستقلة", "p": "ص 73", "seg": 2}, {"k": "hi", "t": "الوحدة 3: مصر والدول المستقلة · مصر في عصري الطولونيين والإخشيديين", "p": "ص 81", "seg": 2}, {"k": "hi", "t": "الوحدة 3: مصر والدول المستقلة · مصر في عصر الفاطميين", "p": "ص 86", "seg": 2}, {"k": "hi", "t": "الوحدة 3: مصر والدول المستقلة · مصر في عصري الأيوبيين والمماليك", "p": "ص 91", "seg": 3}, {"k": "hi", "t": "الوحدة 4: الحضارة الإسلامية وإسهاماتها · النظام السياسي والإداري", "p": "ص 103", "seg": 3}, {"k": "hi", "t": "الوحدة 4: الحضارة الإسلامية وإسهاماتها · النظام المالي", "p": "ص 114", "seg": 3}, {"k": "hi", "t": "الوحدة 4: الحضارة الإسلامية وإسهاماتها · الحياة الاقتصادية والاجتماعية", "p": "ص 121", "seg": 3}, {"k": "hi", "t": "الوحدة 4: الحضارة الإسلامية وإسهاماتها · الحياة العلمية وفنون العمارة", "p": "ص 132", "seg": 3}, {"k": "ge", "t": "الوحدة 1: مدخل إلى جغرافية التنمية · جغرافية التنمية ومجالاتها", "p": "ص 2", "seg": 1}, {"k": "ge", "t": "الوحدة 1: مدخل إلى جغرافية التنمية · التقنيات الحديثة ودورها في جغرافية التنمية", "p": "ص 8", "seg": 1}, {"k": "ge", "t": "الوحدة 2: جغرافية التنمية وموارد البيئة · البيئة نظامها ووموارد ها", "p": "ص 16", "seg": 1}, {"k": "ge", "t": "الوحدة 2: جغرافية التنمية وموارد البيئة · الموارد المائية وأساليب إدارتها", "p": "ص 24", "seg": 1}, {"k": "ge", "t": "الوحدة 2: جغرافية التنمية وموارد البيئة · الموارد المعدنية ومصادر الطاقة وأساليب إدارتها", "p": "ص 34", "seg": 1}, {"k": "ge", "t": "الوحدة 3: جغرافية التنمية الاقتصادية · ماهية التنمية الاقتصادية", "p": "ص 48", "seg": 2}, {"k": "ge", "t": "الوحدة 3: جغرافية التنمية الاقتصادية · التنمية الزراعية والحيوانية", "p": "ص 55", "seg": 2}, {"k": "ge", "t": "الوحدة 3: جغرافية التنمية الاقتصادية · التنمية الصناعية", "p": "ص 70", "seg": 2}, {"k": "ge", "t": "الوحدة 3: جغرافية التنمية الاقتصادية · التنمية السياحية", "p": "ص 79", "seg": 2}, {"k": "ge", "t": "الوحدة 4: جغرافية التنمية البشرية · ماهية التنمية البشرية", "p": "ص 88", "seg": 3}, {"k": "ge", "t": "الوحدة 4: جغرافية التنمية البشرية · مؤشرات التنمية البشرية", "p": "ص 94", "seg": 3}, {"k": "ge", "t": "الوحدة 4: جغرافية التنمية البشرية · نماذج تنموية رائدة", "p": "ص 102", "seg": 3}, {"k": "ge", "t": "الوحدة 4: جغرافية التنمية البشرية · مستقبل التنمية في الوطن العربي", "p": "ص 111", "seg": 3}],psn:30};
+
+
+function mix(arr){ // round robin proportional
+ const g={};arr.forEach(x=>(g[x.k]=g[x.k]||[]).push(x));
+ const ks=Object.keys(g),out=[];const tot=arr.length;
+ const pos={};ks.forEach(k=>pos[k]=0);
+ for(let i=0;i<tot;i++){let best=null,bv=1e9;ks.forEach(k=>{if(pos[k]<g[k].length){const v=(pos[k]+.5)/g[k].length;if(v<bv){bv=v;best=k}}});out.push(g[best][pos[best]++])}
+ return out}
+const DN=["السبت","الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة"];
+const MO=["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
+const fmt=d=>d.getDate()+" "+MO[d.getMonth()];
+const D=(y,m,d)=>new Date(Date.UTC(y,m-1,d,12));
+const add_=(d,n)=>new Date(d.getTime()+n*864e5);
+
+/* step-by-step setup wizard: one question per screen */
+var WZ={i:0,d:{},mode:"full",busy:false};
+function wzList(){var d=WZ.d,l=["year","sys"];if(d.sys=="az"&&d.year>=1&&d.year<=3)l.push("madh");
+ if((d.year==2||d.year==3)&&d.sys=="am"||(d.year==2||d.year==3)&&d.sys=="az")l.push("gtrack");if(d.year==2&&d.sys=="bac"){l.push("track");if(d.track)l.push("elective")}
+ if(WZ.mode!="profile")l.push("dayoff","offmode","progress","exam");
+ return l}
+var WZQ={
+ year:{t:"أنت في سنة كام؟",s:"هنظبط الجدول على منهج سنتك.",o:function(){return[[1,"أولى ثانوي"],[2,"تانية ثانوي"],[3,"تالتة ثانوي"]]},get:function(){return WZ.d.year},set:function(v){WZ.d.year=v;if(v!=3&&WZ.d.exam=="2027-01-09")WZ.d.exam="2027-05-15";if(!SYSOPT[v].includes(WZ.d.sys))WZ.d.sys="";WZ.d.track=WZ.d.elective=""}},
+ sys:{t:"بتدرس بأنهي نظام؟",s:"كل نظام له منهج ومواعيد مختلفة.",o:function(){return SYSOPT[WZ.d.year].map(function(k){return[k,SYS[k]]})},get:function(){return WZ.d.sys},set:function(v){WZ.d.sys=v;if(WZ.d.year==3&&v=="am"&&WZ.d.exam=="2027-05-15")WZ.d.exam="2027-01-09";if(!(WZ.d.year==3&&v=="am")&&WZ.d.exam=="2027-01-09")WZ.d.exam="2027-05-15";WZ.d.track=WZ.d.elective=""}},
+ madh:{t:"مذهبك الفقهي إيه؟",s:"الفقه في الأزهر بيتدرّس حسب المذهب، وهنحمّل لك المقرر بتاعه.",o:function(){return[["hanafi","حنفي"],["maliki","مالكي"],["shafii","شافعي"],["hanbali","حنبلي"]]},get:function(){return WZ.d.madh},set:function(v){WZ.d.madh=v}},
+ gtrack:{t:"قسمك إيه؟",s:"اختار قسمك عشان نحمّل مواده.",o:function(){return WZ.d.year==3&&WZ.d.sys=="am"?[["ss","علمي علوم"],["sm","علمي رياضة"],["lit","أدبي"]]:[["sci","علمي"],["lit","أدبي"]]},get:function(){return WZ.d.track},set:function(v){WZ.d.track=v;WZ.d.elective=""}},
+ track:{t:"مسارك إيه؟",s:"المسار بيتحدد من تانية بكالوريا.",o:function(){return Object.entries(TRK)},get:function(){return WZ.d.track},set:function(v){WZ.d.track=v;WZ.d.elective=""}},
+ elective:{t:"مادتك الاختيارية؟",s:"كل مادة اختيارية ليها جدول لوحدها.",o:function(){return ELEC[WZ.d.track]||null},get:function(){return WZ.d.elective},set:function(v){WZ.d.elective=v}},
+ dayoff:{t:"يوم الراحة بتاعك إيه؟",s:"اليوم ده مش هيتحط فيه دروس جديدة.",o:function(){return DN.map(function(n,i){return[i,n]})},get:function(){return WZ.d.dayoff},set:function(v){WZ.d.dayoff=v}},
+ offmode:{t:"اليوم ده يبقى إيه؟",s:"تقدر تغيّر ده بعدين من الإعدادات.",o:function(){return[["empty","فاضي تمامًا"],["one","مهمة صغيرة واحدة"],["rev","يوم مراجعة"]]},get:function(){return WZ.d.offmode},set:function(v){WZ.d.offmode=v}},
+ progress:{t:"وصلت لفين في المنهج؟",s:"كل اللي قبل النقطة دي هيتعلّم كأنه خلصان.",custom:1},
+ exam:{t:"امتحانك الأول إمتى؟",s:"الوزارة لسه معلنتش اليوم بالظبط. الافتراضي 15 مايو 2027 وتقدر تغيّره.",custom:1}
+};
+function wzEl(){var e=document.getElementById("wz");if(!e){e=document.createElement("div");e.id="wz";e.innerHTML='<div class="wz-orb o1"></div><div class="wz-orb o2"></div><div class="wz-orb o3"></div><div class="wz-top"><button id="wzback" aria-label="رجوع">&#8594;</button><div class="wz-bar"><i id="wzfill"></i></div><span id="wzcount"></span></div><div class="wz-stage"><div class="wzc" id="wzc"></div></div>';document.body.appendChild(e);document.getElementById("wzback").onclick=wzBack}return e}
+function wzStart(mode){WZ.mode=mode;WZ.i=mode=="onb"?0:0;var u=U||{};WZ.d={madh:u.madh||"",year:u.year||0,sys:u.sys||"",track:u.track||"",elective:u.elective||"",dayoff:u.dayoff==null?6:u.dayoff,offmode:u.offmode||"empty",exam:u.exam||"2027-05-15"};
+ if(mode=="onb"){WZ.mode="full";WZ.i=wzList().length-4}
+ if(WZ.d.year==3&&WZ.d.sys=="am"&&(!u.exam||u.exam=="2027-05-15"))WZ.d.exam="2027-01-09";pmSel="sync";wzEl();document.getElementById("auth").classList.remove("on");document.getElementById("wz").classList.add("on");wzRender(false)}
+function wzClose(){var e=document.getElementById("wz");if(e)e.classList.remove("on");var o=document.getElementById("onb");["pmode","pextra","exd"].forEach(function(id){var x=document.getElementById(id);if(x&&o)o.appendChild(x)})}
+function wzBack(){if(WZ.busy||WZ.i==0)return;WZ.i--;wzRender(true)}
+function wzRender(anim){var l=wzList(),id=l[WZ.i],q=WZQ[id],c=document.getElementById("wzc");WZ.busy=true;
+ var draw=function(){
+  var u=U;if(id=="progress"){U.year=WZ.d.year;U.sys=WZ.d.sys;U.track=WZ.d.track;U.elective=WZ.d.elective}
+  document.getElementById("wzfill").style.width=((WZ.i+1)/l.length*100)+"%";document.getElementById("wzcount").textContent=(WZ.i+1)+"/"+l.length;
+  document.getElementById("wzback").style.visibility=WZ.i==0?"hidden":"visible";
+  var h='<h2>'+q.t+'</h2><p>'+(id=="exam"&&WZ.d.year==3&&WZ.d.sys=="am"?"امتحانات الترم الأول بتبدأ 9 يناير 2027 حسب خبر واحد (مش جدول رسمي). غيّره لو عندك ميعاد تاني.":q.s)+'</p>';
+  if(!q.custom){var o=q.o();if(!o){h+='<input type="text" id="wzel" placeholder="اكتب المادة الاختيارية" value="'+esc(WZ.d.elective||"")+'"><p class="wz-note">المنهج بتاع المسار ده لسه محمّلش، هتشوف رسالة بكده بعد الخطوة الجاية.</p><button class="wz-next" id="wzok">كمّل</button>'}
+   else{h+='<div class="wz-opts '+(o.length>4?"grid":"")+'">'+o.map(function(p,n){return'<button class="wz-opt'+(String(p[0])==String(q.get())?" on":"")+'" data-v="'+p[0]+'" style="animation-delay:'+(n*45)+'ms">'+p[1]+'</button>'}).join("")+'</div>'}}
+  else if(id=="progress"){h+='<div class="wz-opts" id="wzpm"></div><div id="wzpx"></div><button class="wz-next" id="wzok">كمّل</button>'}
+  else{h+='<div id="wzex"></div><button class="wz-next" id="wzok">ابدأ الخطة</button>'}
+  c.innerHTML=h;
+  if(id=="progress"){useProfile();var pm=document.getElementById("pmode"),px=document.getElementById("pextra");document.getElementById("wzpm").appendChild(pm);document.getElementById("wzpx").appendChild(px);drawPm()}
+  if(id=="exam"){var ex=document.getElementById("exd");document.getElementById("wzex").appendChild(ex);ex.value=WZ.d.exam}
+  c.querySelectorAll(".wz-opt").forEach(function(b){b.onclick=function(){if(WZ.busy)return;var v=b.dataset.v;q.set(isNaN(+v)?v:+v);c.querySelectorAll(".wz-opt").forEach(function(x){x.classList.toggle("on",x==b)});if(window.sfx)sfx("tick");setTimeout(wzNext,230)}});
+  var ok=document.getElementById("wzok");if(ok)ok.onclick=function(){if(WZ.busy)return;if(id=="elective"){var t=document.getElementById("wzel");if(t){if(!t.value.trim())return;WZ.d.elective=t.value.trim()}}if(id=="exam"){var ev=document.getElementById("exd");if(ev.value&&!dtValid(ev.value)){ev.classList.add("bad");return}WZ.d.exam=ev.value||"2027-05-15"}wzNext()};
+  c.className="wzc in";setTimeout(function(){WZ.busy=false;c.className="wzc"},520)};
+ if(anim){c.className="wzc out";setTimeout(draw,300)}else draw()}
+function wzNext(){if(WZ.busy)return;var l=wzList();if(WZ.i<l.length-1){WZ.i++;wzRender(true)}else wzFinish()}
+function wzFinish(){var d=WZ.d;U.year=d.year;U.sys=d.sys;U.track=d.track||"";U.elective=d.elective||"";U.madh=(d.sys=="az")?(d.madh||""):"";
+ if(WZ.mode=="profile"){saveU();wzClose();if(U.dayoff==null)wzStart("onb");else enter();return}
+ U.dayoff=d.dayoff;U.offmode=d.offmode;U.exam=d.exam||"2027-05-15";U.start=iso(PLAN0);saveU();applyProgress();wzClose();enter()}
+function showProfile(){wzStart(U&&U.dayoff!=null?"profile":"full")}
+function showOnboard(){wzStart("onb")}
+
+/* sounds + confetti (original, synthesized with Web Audio) */
+var FX={ctx:null};
+function fxMuted(){try{return localStorage.getItem("jd_mute")=="1"}catch(e){return false}}
+function fxCtx(){if(FX.ctx)return FX.ctx;try{FX.ctx=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}return FX.ctx}
+function fxNote(c,t,f,d,v,type){var o=c.createOscillator(),g=c.createGain();o.type=type||"sine";o.frequency.value=f;g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(v,t+0.015);g.gain.exponentialRampToValueAtTime(0.0001,t+d);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+d+0.05)}
+window.sfx=function(n){if(fxMuted())return;var c=fxCtx();if(!c)return;try{if(c.state=="suspended")c.resume();var t=c.currentTime;
+ if(n=="tick")fxNote(c,t,880,.07,.05,"triangle");
+ else if(n=="tap")fxNote(c,t,660,.09,.07,"sine");
+ else if(n=="done"){[523.25,659.25,783.99,1046.5].forEach(function(f,i){fxNote(c,t+i*.075,f,.35,.1,"sine");fxNote(c,t+i*.075,f*2,.2,.025,"sine")})}
+ else if(n=="dhikr"){[392,587.33,783.99].forEach(function(f,i){fxNote(c,t+i*.12,f,.7,.09,"sine")})}
+}catch(e){}};
+function confetti(n){if(fxMuted()&&0)return;var cv=document.createElement("canvas");cv.style.cssText="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:200";var W=cv.width=innerWidth,H=cv.height=innerHeight;document.body.appendChild(cv);var x=cv.getContext("2d");
+ var cols=["#8B3DFF","#b98cff","#5b7bff","#38d9c0","#ffd166","#ff7ab6","#fff"];var ps=[];n=n||90;
+ for(var i=0;i<n;i++){var a=-Math.PI/2+(Math.random()-.5)*1.5,s=7+Math.random()*10;ps.push({x:W/2,y:H*.62,vx:Math.cos(a)*s,vy:Math.sin(a)*s,r:3+Math.random()*4,c:cols[i%cols.length],rot:Math.random()*6,vr:(Math.random()-.5)*.4,sh:Math.random()<.5})}
+ var f=0;(function loop(){x.clearRect(0,0,W,H);f++;ps.forEach(function(p){p.vy+=.28;p.vx*=.992;p.x+=p.vx;p.y+=p.vy;p.rot+=p.vr;x.save();x.translate(p.x,p.y);x.rotate(p.rot);x.globalAlpha=Math.max(0,1-f/110);x.fillStyle=p.c;if(p.sh){x.beginPath();x.arc(0,0,p.r,0,7);x.fill()}else x.fillRect(-p.r,-p.r/2,p.r*2.2,p.r);x.restore()});
+  if(f<115)requestAnimationFrame(loop);else cv.remove()})()}
+function celebrate(kind){sfx(kind=="dhikr"?"dhikr":"done");confetti(kind=="dhikr"?120:80)}
+/* typed date input YYYY-MM-DD (no native picker) */
+function dtValid(v){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(v||"");if(!m)return false;var y=+m[1],mo=+m[2],d=+m[3];if(y<2026||y>2032)return false;var t=new Date(y,mo-1,d);return t.getFullYear()==y&&t.getMonth()==mo-1&&t.getDate()==d}
+function dtInit(el){if(el._dt)return;el._dt=1;el.addEventListener("input",function(){var d=el.value.replace(/[٠-٩]/g,function(c){return "٠١٢٣٤٥٦٧٨٩".indexOf(c)}).replace(/\D/g,"").slice(0,8),o=d.slice(0,4);if(d.length>4)o+="-"+d.slice(4,6);if(d.length>6)o+="-"+d.slice(6,8);el.value=o;el.classList.toggle("bad",o.length==10&&!dtValid(o))})}
+document.querySelectorAll("input.dt").forEach(dtInit);
+/* mute toggle in settings */
+(function(){var sp=document.getElementById("sprof");if(!sp)return;var b=document.createElement("button");b.className="g";b.id="smute";b.style.cssText="width:100%;margin-bottom:8px";var up=function(){b.textContent=fxMuted()?"🔇 الأصوات مقفولة (اضغط للتشغيل)":"🔊 الأصوات شغالة (اضغط للكتم)"};up();b.onclick=function(){localStorage.setItem("jd_mute",fxMuted()?"0":"1");up();if(!fxMuted())sfx("done")};sp.parentNode.insertBefore(b,sp)})();
+
+const $=id=>document.getElementById(id);
+const iso=d=>d.toISOString().slice(0,10);
+const pd=s=>new Date(s+"T12:00:00Z");
+const J=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}};const W=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+function todayD(){const t=new Date();return D(t.getFullYear(),t.getMonth()+1,t.getDate())}
+function dow(d){return (d.getUTCDay()+1)%7} // 0=Sat..6=Fri
+let T1END=D(2027,1,21),T2START=D(2027,2,6),PLAN0=D(2026,9,12);
+const SUBJ={nh:["نحو","#d97706"],sf:["صرف","#0284c7"],ch:["كيمياء","#22c55e"],ap:["تطبيقات الرياضيات","#f59e0b"],ge:["جغرافيا","#0ea5e9"],fq:["فقه","#22c55e"],bl:["بلاغة","#db2777"],ad:["أدب","#a855f7"],qr:["قرآن","#10b981"],tf:["تفسير","#14b8a6"],hd:["حديث","#6366f1"],tw:["توحيد","#f59e0b"],lg:["منطق","#64748b"],ic:["ثقافة إسلامية","#84cc16"],py:["فيزياء","#f97316"],mm:["رياضيات","#eab308"],mt:["رياضيات","#eab308"],sc:["علوم","#14b8a6"],ph:["فلسفة","#6366f1"],ar:["عربي","#d97706"],en:["إنجليزي","#0284c7"],hi:["تاريخ","#db2777"],pg:["برمجة","#059669"],x:["قصة","#64748b"],acc:["محاسبة","#0ea5e9"],ba:["إدارة أعمال","#8b5cf6"],de:["ألماني","#f59e0b"],es:["إسباني","#ef4444"],it:["إيطالي","#22c55e"],zh:["صيني","#ec4899"],mu:["مطالعة","#d97706"],ins:["إنشاء","#f472b6"],ur:["عروض وقافية","#c084fc"],fr:["فرنسي","#38bdf8"],ps:["علم نفس","#818cf8"],cm:["كمبيوتر","#2dd4bf"],bi:["أحياء","#16a34a"],mj:["جبر وهندسة فراغية","#eab308"],mc:["تفاضل وتكامل","#f59e0b"],ma:["رياضة تطبيقية","#fb923c"],st:["إحصاء","#38bdf8"]};
+const MEX2=[{n:"أكتوبر",s:D(2026,10,17),e:D(2026,10,22),sc:"من أول الأسبوع 1 لنهاية الأسبوع 5"},{n:"نوفمبر",s:D(2026,11,28),e:D(2026,12,3),sc:"لحد نهاية الأسبوع 11"}];
+const CP2=[{end:D(2026,10,16),n:{ar:3,en:2,hi:4,pg:4}},{end:D(2026,11,27),n:{ar:6,en:8,hi:5,pg:7}},{end:T1END,n:{ar:9,en:10,hi:12,pg:14}}];
+let MEX=MEX2,CP=CP2,KS=["ar","en","hi","pg"],T1=T1B,T2=T2B,PK="2b";
+const DEFKS=["ar","en","hi","pg"];
+function useProfile(){const g2=U&&U.year==2&&U.sys=="am"&&(U.track=="sci"||U.track=="lit");const bxk=U&&U.year==2&&U.sys=="bac"?(U.track=="eng"&&U.elective=="chem"?"chem":U.track=="biz"&&(U.elective=="acc"||U.elective=="ba")?U.elective:U.track=="art"&&["ps","fr","de","es","it","zh"].includes(U.elective)?U.elective:""):"",az3=U&&U.year==3&&U.sys=="az"&&(U.track=="sci"||U.track=="lit"),az2=U&&U.year==2&&U.sys=="az"&&(U.track=="sci"||U.track=="lit"),g3=U&&U.year==3&&U.sys=="am"&&(U.track=="ss"||U.track=="sm"||U.track=="lit"),y1=U&&U.year==1&&(U.sys=="am"||U.sys=="bac"),med=U&&U.year==2&&U.sys=="bac"&&U.track=="med"&&(U.elective=="py"||U.elective=="mm");
+ T1END=D(2027,1,21);
+ if(bxk){MEX=MEX2;PK="2e";const B=BX[bxk],k=bxk=="chem"?"ch":bxk;KS=["ar","en","hi",k];T1=T1B.filter(x=>x.k!="pg").concat(B.t1);T2=T2B.filter(x=>x.k!="pg").concat(B.t2);const n1=B.t1.length,nn=bxk=="chem"?[8,19,26]:[Math.ceil(n1*.3),Math.ceil(n1*.7),n1];CP=CP2.map((c,i)=>{const n={...c.n};delete n.pg;n[k]=nn[i];return {end:c.end,n}})}
+ else if(az3){PK="az3";const AZ=AZ3[U.track],FM=FQ3[U.madh]&&FQ3[U.madh][U.track];T1=FM?AZ.t1.concat(FM.t1):AZ.t1;T2=FM?AZ.t2.concat(FM.t2):AZ.t2;const bs=U.track=="sci"?["qr","tf","hd","tw","nh","sf","bl","ad","mu","en","mt","ma","py","ch","bi"]:["qr","tf","hd","tw","nh","sf","bl","ad","mu","en","fr","st"];KS=bs.concat(FM?["fq"]:[]);MEX=[];T1END=D(2026,12,30);const c=cpFor(T1);CP=[{end:D(2026,10,31),n:c[0]},{end:D(2026,11,30),n:c[1]},{end:T1END,n:c[2]}]}
+ else if(az2){PK="az2";const AZ=AZ2[U.track],FM=FQ2[U.madh]&&FQ2[U.madh][U.track];T1=FM?AZ.t1.concat(FM.t1):AZ.t1;T2=FM?AZ.t2.concat(FM.t2):AZ.t2;const bs=U.track=="sci"?["qr","tf","hd","tw","nh","sf","bl","ad","mu","ins","en","mt","py","ch","cm"]:["qr","tf","hd","tw","lg","nh","sf","bl","ad","ur","mu","ins","en","fr","ps","cm"];KS=bs.concat(FM?["fq"]:[]);MEX=[];T1END=D(2026,12,30);const c=cpFor(T1);CP=[{end:D(2026,10,31),n:c[0]},{end:D(2026,11,30),n:c[1]},{end:T1END,n:c[2]}]}
+ else if(U&&U.year==1&&U.sys=="az"){PK="az1";const FM=FQ[U.madh];T1=FM?T1Z.concat(FM.t1):T1Z;T2=FM?T2Z.concat(FM.t2):T2Z;KS=["qr","tf","hd","tw","lg","ic","nh","sf","bl","ad","en","mt","sc","hi"].concat(FM?["fq"]:[]);MEX=[];T1END=D(2026,12,30);const c=cpFor(T1);CP=[{end:D(2026,10,31),n:c[0]},{end:D(2026,11,30),n:c[1]},{end:T1END,n:c[2]}]}
+ else if(g3){PK="3g";MEX=[];const GL=TH3[U.track=="ss"?"sc":U.track=="sm"?"mt":"lit"];T1=GL;T2=[];KS=U.track=="ss"?["ar","en","py","ch","bi"]:U.track=="sm"?["ar","en","py","ch","mj","mc","ma"]:["ar","en","hi","ge","st"];T1END=D(2027,1,8);const c=cpFor(GL);CP=[{end:D(2026,10,31),n:c[0]},{end:D(2026,11,30),n:c[1]},{end:T1END,n:c[2]}]}
+ else if(g2){MEX=MEX2;PK="2g";const GL=G2[U.track];T1=GL;T2=[];KS=U.track=="sci"?["ar","en","mt","ap","hi","ch","py"]:["ar","en","mt","hi","ge"];const c=cpFor(GL);CP=[{end:CP2[0].end,n:c[0]},{end:CP2[1].end,n:c[1]},{end:CP2[2].end,n:c[2]}]}
+ else if(y1){MEX=MEX2;PK="1a";T1=T1A;T2=T2A;KS=["ar","en","hi","mt","sc","ph"];const c=cpFor(T1A);CP=[{end:CP2[0].end,n:c[0]},{end:CP2[1].end,n:c[1]},{end:CP2[2].end,n:c[2]}]}
+ else if(med){MEX=MEX2;const E=U.elective;PK="2m";KS=["ar","en","hi",E];T1=T1B.filter(x=>x.k!="pg").concat(T1M[E].map(x=>({k:E,t:x[0],p:x[1]})));T2=T2B.filter(x=>x.k!="pg").concat(T2M[E].map(x=>({k:E,t:(E=="py"?"ج2 ":"")+x[0],p:x[1]})));
+  const nn=E=="py"?[4,12,T1M.py.length]:[8,26,T1M.mm.length];CP=CP2.map((c,i)=>{const n={...c.n};delete n.pg;n[E]=nn[i];return {end:c.end,n}})}
+ else{MEX=MEX2;PK="2b";T1=T1B;T2=T2B;KS=DEFKS;CP=CP2}}
+const BXN={chem:"الكيمياء: 52 درس في 4 أبواب، الترم الأول 26 والتاني 26. قائمة الدروس من مصدر واحد (فهرس الكتاب كما نقله elbakalorya) وعدد الصفحات بيطابق الكتاب الرسمي. نهاية امتحان نوفمبر عند درس التحليل الكهربي 2-6 من مصدر واحد، وباقي توزيع الأسابيع تقديري لأن مفيش جدول رسمي. الكيمياء ليها جدول لوحدها غير البرمجة.",acc:"المحاسبة: الكتاب مقسّم لوحدات مش دروس، فكل وحدة بند. الجزء الأول للترم الأول والتاني للترم التاني (استنتاج مش معلن رسميًا). مفيش جدول شهري رسمي، فتوزيع الوحدات على الأسابيع تقديري. العناوين والصفحات متأكدة من الكتاب ومصدر تاني.",ba:"إدارة الأعمال: الكتاب مقسّم لوحدات، فكل وحدة بند. الجزء الأول ترم أول والتاني ترم تاني. مفيش جدول شهري رسمي، فالتوزيع تقديري. عنوان الوحدة 9 في الكتاب (التمويل وأداء الأعمال) بيتكتب في موقع تاني بشكل مختلف.",ps:"علم النفس: الجزء الأول ترم أول والتاني ترم تاني (استنتاج من تقسيم الكتاب، الوزارة ماقالتش ده صراحة). العناوين والصفحات متأكدة من الكتاب الرسمي ومصدر تاني. مفيش جدول شهري رسمي، فالتوزيع تقديري.",fr:"الفرنسي لغة تانية: وحدات 1-3 ترم أول و4-6 ترم تاني حسب تقسيم الكتاب والجدول المنشور في موقع تاني (مش وثيقة رسمية). الصفحات من مصدر واحد وبعضها دقته متوسطة. التوزيع على الأسابيع تقديري.",de:"الألماني لغة تانية: المنشور كتاب الدرس بس (Kursbuch)، وكتاب التمارين بيتبع نفس الموديولات ومش منهج منفصل. الترم مش معلن، فكل المحتوى في الترم الأول والتوزيع تقديري. الصفحات من مصدر واحد.",es:"الإسباني لغة تانية: الجزء الأول (الفصل الأول) بس هو المنشور، والجزء التاني لسه ماتنشرش، فمفيش دروس ترم تاني دلوقتي. الكتاب مش بيحدد صفحة لكل درس. التوزيع تقديري.",it:"الإيطالي لغة تانية: الجزء الأول بس هو المنشور (عناوينه وصفحاته متأكدة من الكتاب ومصدر تاني). الجزء التاني لسه ماتنشرش، فمفيش دروس ترم تاني دلوقتي. التوزيع تقديري.",zh:"الصيني لغة تانية: الجزء الأول (كتابين أ وب) في الترم الأول والجزء التاني (كتاب ج) في الترم التاني، والتقسيم ده مش معلن رسميًا. العناوين من الكتاب الرسمي والصفحات من مصدر واحد. التوزيع تقديري."};
+let U=null; // current user data
+/* ---------- auth (local, per device) ---------- */
+const enc=new TextEncoder();
+async function hashPw(pw,salt){const k=await crypto.subtle.importKey("raw",enc.encode(pw),"PBKDF2",false,["deriveBits"]);const b=await crypto.subtle.deriveBits({name:"PBKDF2",salt:enc.encode(salt),iterations:150000,hash:"SHA-256"},k,256);return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,"0")).join("")}
+const users=()=>J("bac_users",{});
+function saveU(){if(U){W("bac_data_"+U.id,U)}}
+let authMode="login";
+function authUI(){document.querySelectorAll("#authseg button").forEach(b=>b.classList.toggle("on",b.dataset.m==authMode));$("authgo").textContent=authMode=="login"?"دخول":"إنشاء حساب";$("err").textContent=""}
+const UNH="اسم المستخدم بدون مسافات، 3 حروف على الأقل. مسموح حروف وأرقام و _ و - و .";
+async function authGo(){
+ const n=$("un").value.trim().toLowerCase(),p=$("pw").value;const us=users();
+ if(n.length<3||!/^[a-z0-9_.\-\u0600-\u06FF]+$/i.test(n)){$("unh").classList.add("bad");$("un").focus();return}
+ if(p.length<6){$("err").textContent="كلمة السر 6 أحرف على الأقل";return}
+ if(authMode=="signup"){
+  if(us[n]){$("err").textContent="الاسم ده مستخدم على الجهاز ده";return}
+  const salt=crypto.getRandomValues(new Uint32Array(4)).join("-");const id="u"+Date.now();
+  us[n]={id,salt,h:await hashPw(p,salt)};W("bac_users",us);
+  U={id,name:n,dayoff:null,exam:"2027-05-15",start:null,done:{},moves:{},rev:{},focus:{},adhkar:{},azdone:{},created:iso(todayD())};saveU();localStorage.setItem("bac_session",id);
+  showProfile()
+ }else{
+  const r=us[n];if(!r||r.h!==await hashPw(p,r.salt)){$("err").textContent="الاسم أو كلمة السر غلط";return}
+  U=J("bac_data_"+r.id,null);if(!U){$("err").textContent="بيانات الحساب مش موجودة";return}localStorage.setItem("bac_session",r.id);if(U.year)enter();else showProfile()
+ }}
+let offSel=6,omSel="empty";
+function drawOm(id){$(id).innerHTML=[["empty","فاضي تمامًا"],["one","مهمة صغيرة واحدة"],["rev","يوم مراجعة"]].map(([v,t])=>`<button data-om="${v}" class="${v==(id=="omode"?omSel:(U.offmode||"empty"))?"on":""}">${t}</button>`).join("");document.querySelectorAll("#"+id+" button").forEach(b=>b.onclick=()=>{if(id=="omode"){omSel=b.dataset.om;drawOm(id)}else{U.offmode=b.dataset.om;saveU();renderAll();drawOm(id)}})}
+function showOnboard_old(){useProfile();pmSel="sync";drawPm();$("authbox").style.display="none";$("onb").style.display="block";offSel=6;omSel="empty";drawDays();drawOm("omode");$("exd").value=U.exam}
+function drawDays(){$("days7").innerHTML=DN.map((d,i)=>`<button data-d="${i}" class="${i==offSel?"on":""}">${d}</button>`).join("");document.querySelectorAll("#days7 button").forEach(b=>b.onclick=()=>{offSel=+b.dataset.d;drawDays()})}
+function onbGo(){if($("exd").value&&!dtValid($("exd").value)){$("exd").classList.add("bad");return}U.dayoff=offSel;U.offmode=omSel;U.exam=$("exd").value||"2027-05-15";U.start=iso(PLAN0);saveU();applyProgress();enter()}
+function enter(){$("auth").classList.remove("on");$("who").textContent=U.name;go(localStorage.getItem("bac_view")||"home");renderAll()}
+function logout(){saveU();localStorage.removeItem("bac_session");U=null;$("auth").classList.add("on");$("authbox").style.display="block";$("onb").style.display="none";$("un").value="";$("pw").value=""}
+/* ---------- plan ---------- */
+function build(){
+ const exam=pd(U.exam),start=PLAN0,off=U.dayoff;
+ const days=[];for(let d=start;d<=exam;d=add_(d,1))days.push({date:d,items:[],kind:"",off:dow(d)==off});
+ days.forEach(x=>{const m=MEX.findIndex(z=>x.date>=z.s&&x.date<=add_(z.s,6));if(m>=0){x.mex=m;x.kind="mexam"}});
+ const revStart=add_(exam,-28);
+ const q1=mix(T1.map((x,i)=>({...x,core:1}))),q2=mix(T2.map(x=>({...x,core:1})));
+ const t1d=days.filter(x=>!x.off&&!x.mex&&x.date<=T1END),gap=days.filter(x=>x.date>T1END&&x.date<T2START),t2d=days.filter(x=>!x.off&&x.date>=T2START&&x.date<revStart);
+ let Q2=q2;if(!t1d.length){Q2=q1.concat(q2)}
+ const place=(ds,q,kind)=>{ds.forEach(x=>{x.kind=kind});if(!ds.length)return;q.forEach((it,i)=>ds[Math.floor(i*ds.length/q.length)].items.push(it));ds.forEach(x=>{if(!x.items.length)x.items=[{k:"x",t:"يوم مراجعة: راجع آخر درسين واحل أسئلة عليهم",p:"",auto:1}]})};
+ const ks0=KS;let prevEnd=add_(PLAN0,-1);
+ CP.forEach((cp,si)=>{const sd=t1d.filter(x=>x.date>prevEnd&&x.date<=cp.end);sd.forEach(x=>x.kind="new");const prevN=si?CP[si-1].n:{};
+  ks0.forEach((k,ki)=>{const L=q1.filter(x=>x.k==k).slice(prevN[k]||0,cp.n[k]||0);if(!sd.length)return;L.forEach((it,j)=>{const idx=Math.min(sd.length-1,Math.floor((j+ki*.25)*sd.length/L.length));sd[idx].items.push(it)})});prevEnd=cp.end});
+ t1d.forEach(x=>{if(!x.items.length)x.items=[{k:"x",t:"يوم مراجعة: راجع آخر درسين واحل أسئلة عليهم",p:"",auto:1}]});
+ const rv=KS,ex=["عربي","إنجليزي","تاريخ","البرمجة (التخصصي)"];
+ days.filter(x=>x.mex!=null&&!x.off).forEach(x=>{const w=dow(x.date),M=MEX[x.mex].n;const it=[];
+  const rev=k=>({k,t:"مراجعة شهر "+M+": "+SUBJ[k][0]+" (كل اللي اتذاكر قبل الامتحان)",p:"",auto:1});
+  if(PK=="1a"){if(w<=4){it.push(rev(KS[(w*2)%KS.length]),rev(KS[(w*2+1)%KS.length]))}else if(w==5)it.push({k:"x",t:"استراحة وملخصات خفيفة بعد الامتحانات",p:"",auto:1});x.items=it;return}
+  if(w==0)it.push(rev("ar"),rev("en"));else if(w==1){it.push({k:"ar",t:"امتحان شهر "+M+": عربي (على الأغلب)",p:"",auto:1},rev("en"))}else if(w==2){it.push({k:"en",t:"امتحان شهر "+M+": إنجليزي (على الأغلب)",p:"",auto:1},rev("hi"))}else if(w==3){it.push({k:"hi",t:"امتحان شهر "+M+": تاريخ (على الأغلب)",p:"",auto:1},rev(KS[3]))}else if(w==4){it.push({k:KS[3],t:"امتحان شهر "+M+": المادة التخصصية (على الأغلب)",p:"",auto:1},{k:"x",t:"مراجعة سريعة لنقط الضعف من كل المواد",p:"",auto:1})}else if(w==5)it.push({k:"x",t:"استراحة وملخصات خفيفة بعد الامتحانات",p:"",auto:1});x.items=it});
+ place(t2d,Q2,"new");
+ let gi=0;const ks=KS;
+ gap.forEach(x=>{x.kind="gap";if(x.off)return;if(PK=="az2"||PK=="az3"){x.items=[{k:"x",t:"فترة مراجعة وامتحانات الترم الأول (يناير 2027 حسب التوزيع الرسمي) ونصف العام: راجع واحدة واحدة",p:"",auto:1}];return}if(PK=="az1"){x.items=[{k:"x",t:x.date<=D(2027,1,11)?"امتحانات نهاية الفصل الأول (31 ديسمبر – 11 يناير): راجع مادة امتحان بكرة وبص على جدولك":"فترة راحة نصف العام: ارتاح وراجع حاجة خفيفة",p:"",auto:1}];return}const k=ks[gi++%ks.length];x.items=[{k,t:"مراجعة شاملة ترم أول: "+SUBJ[k][0],p:"",auto:1},{k:"x",t:"حل أسئلة نهاية الوحدات للمادة",p:"",auto:1}]});
+ let ri=0;days.filter(x=>x.date>=revStart).forEach(x=>{x.kind="rev";if(x.off)return;if(x.date.getTime()==exam.getTime()){x.items=[{k:"x",t:"يوم الامتحان الأول: راجع ملخصاتك بس وارتاح",p:"",auto:1}];return}
+  const last=add_(exam,-3)<=x.date,k=ks[ri++%ks.length],k2=ks[ri%ks.length];x.items=last?[{k,t:"مراجعة سريعة: "+SUBJ[k][0]+" (الملخصات فقط)",p:"",auto:1}]:[{k,t:"مراجعة نهائية: "+SUBJ[k][0]+" كل المنهج",p:"",auto:1},{k:k2,t:"امتحان تجريبي/أسئلة: "+SUBJ[k2][0],p:"",auto:1}]});
+ const om=U.offmode||"empty";if(om!="empty")days.forEach((x,i)=>{if(!x.off||x.mex!=null||x.date.getTime()==exam.getTime())return;x.off=false;x.isoff=true;x.items=om=="one"?[{k:"x",t:"مهمة خفيفة ليوم الراحة: راجع صفحة واحدة من أي مادة",p:"",auto:1}]:[{k:ks[i%ks.length],t:"يوم مراجعة هادي: "+SUBJ[ks[i%ks.length]][0]+" (من غير دروس جديدة)",p:"",auto:1}]});
+ const by={};days.forEach(x=>{by[iso(x.date)]=x;x.items.forEach((it,j)=>{it.id=(it.auto?iso(x.date)+"|":"")+it.k+"|"+it.t;it.orig=iso(x.date)})});
+ Object.entries(U.moves).forEach(([id,to])=>{const t=by[to];if(!t)return;for(const x of days){const i=x.items.findIndex(z=>z.id==id);if(i>=0){if(x===t)return;const it=x.items.splice(i,1)[0];it.moved=1;t.items.push(it);return}}});
+ return {days,by,revStart,exam,start}}
+function stats(P){
+ const td=todayD(),tdi=iso(td);let total=0,done=0,late=[],per={};
+ P.days.forEach(x=>x.items.forEach(it=>{total++;const d=!!U.done[it.id];if(d)done++;const s=per[it.k]=per[it.k]||{t:0,d:0};s.t++;if(d)s.d++;if(!d&&x.date<td&&it.core)late.push({it,x})}));
+ const ds=new Set(Object.values(U.done).filter(v=>v!="2000-01-01"));let sk=0,d=td;if(!ds.has(iso(d)))d=add_(d,-1);while(ds.has(iso(d))){sk++;d=add_(d,-1);if(sk>800)break}
+ let best=0,run=0;[...ds].sort().forEach((s,i,a)=>{run=(i&&iso(add_(pd(a[i-1]),1))==s)?run+1:1;if(run>best)best=run});
+ // week index
+ const wi=Math.floor((td-P.start)/864e5/7),wn=Math.ceil(P.days.length/7);
+ return {total,done,late,per,sk,best:Math.max(best,sk),wi,wn,td,tdi}}
+let curView="home",P=null,ST=null;
+function go(v){curView=v;localStorage.setItem("bac_view",v);document.querySelectorAll(".view").forEach(e=>e.classList.toggle("on",e.id=="v-"+v));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("on",b.dataset.v==v));window.scrollTo(0,0)}
+function itemRow(it,x,opts={}){const c=U.done[it.id],late=!c&&x.date<ST.td&&it.core;return `<div class="it ${c?"done":""} ${late?"late":""}"><input type="checkbox" data-id="${esc(it.id)}" ${c?"checked":""}><label><span class="s" style="background:${SUBJ[it.k][1]}">${SUBJ[it.k][0]}</span>${it.t} <span class="pgn">${it.p||""}${it.moved?" · متأجل":""}</span></label><button type="button" class="nt${(U.notes||{})[it.id]?" has":""}" data-n="${esc(it.id)}" aria-label="ملاحظات">✎</button></div>`}
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
+function uncomplete(id){delete U.done[id]}
+function complete(id){U.done[id]=ST.tdi;celebrate("lesson");saveU();renderAll();window.RoomsFeed&&RoomsFeed(ITEMS[id])}
+function bind(root){root.querySelectorAll(".it input[data-id]").forEach(c=>c.onchange=()=>{if(c.checked){c.checked=false;complete(c.dataset.id)}else{uncomplete(c.dataset.id);saveU();renderAll()}})}
+let ITEMS={};
+function renderAll(){if(!U)return;useProfile();if(!ready()){notReady();return}P=build();ITEMS={};P.days.forEach(x=>x.items.forEach(it=>ITEMS[it.id]=it));ST=stats(P);rHome();rSched();rBack();rStats();rAz();$("bdg").textContent=ST.late.length||"";$("bdg").style.display=ST.late.length?"inline":"none"}
+/* home */
+function rHome(){
+ const {td,tdi}=ST;let wk;
+ if(td<P.start)wk=`الخطة تبدأ بعد ${Math.round((P.start-td)/864e5)} يوم`;else if(td>P.exam)wk="الامتحان عدّى. ربنا يوفقك";else wk=`النهاردة ${DN[dow(td)]} ${fmt(td)} · المفروض نكون في الأسبوع ${ST.wi+1} من ${ST.wn} (الأسبوع الأول بدأ 12 سبتمبر)${ST.late.length?` · متأخر ${ST.late.length} مهمة، شوف خطة اللحاق في تاب متراكم`:" · ماشي في ميعادك ✅"}`;
+ const wkDays=P.days.slice(Math.max(0,ST.wi)*7,Math.max(0,ST.wi)*7+7);
+ const line=wkDays.map(x=>{const its=x.items;const dn=its.length&&its.every(i=>U.done[i.id]);return `<div class="${x.off?"off":""} ${dn?"ok":""} ${iso(x.date)==tdi?"td":""}">${DN[dow(x.date)].slice(0,3)}<br>${x.off?"راحة":dn?"✓":its.filter(i=>U.done[i.id]).length+"/"+its.length}</div>`}).join("");
+ const x=P.by[tdi];let todayH=!x?'<div class="note">مفيش مهام النهاردة (خارج فترة الخطة).</div>':x.off?'<div class="note">النهاردة يوم راحتك. استمتع، من غير دروس.</div>':x.items.map(i=>itemRow(i,x)).join("")||'<div class="note">مفيش مهام</div>';
+ const dn=wkDays.reduce((s,x)=>s+x.items.filter(i=>U.done[i.id]).length,0),wt=wkDays.reduce((s,x)=>s+x.items.length,0),pc=wt?Math.round(dn/wt*100):0,opc=ST.total?Math.round(ST.done/ST.total*100):0;
+ $("core").textContent=pc+"%";
+ $("hm").innerHTML=`<div class="card tilt"><div class="row" style="justify-content:space-between"><b>${wk}</b><span class="flame">🔥 ${ST.sk} يوم</span></div>
+ <div class="wkline">${line}</div>
+ <div class="grid" style="margin-top:10px"><div class="st"><b>${dn}</b><span>خلّصت</span></div><div class="st"><b>${ST.late.length}</b><span>متراكمة</span></div><div class="st"><b>${wt-dn}</b><span>فاضلة</span></div></div>
+ <div class="bar"><i style="width:${pc}%"></i></div><div class="note">الأسبوع ده: ${dn} من ${wt} مهمة (${pc}%) · إنجازك الكلي ${opc}% (${ST.done} من ${ST.total})</div></div>
+ <div class="card"><h3>مهام النهاردة</h3><div id="tdl">${todayH}</div></div>`;
+ bind($("hm"));
+ const f=U.focus[tdi]||0;$("tf").textContent="تركيز النهاردة: "+f+" دقيقة";window.RoomsSync&&RoomsSync()}
+/* schedule */
+function rSched(){let html="";const {td,tdi}=ST;
+ if(PK=="2e")html+=`<div class="card"><h3>تانية بكالوريا · ${TRK[U.track]} · ${(ELEC[U.track].find(e=>e[0]==U.elective)||[0,U.elective])[1]}</h3><div class="pgn">${BXN[U.elective]||""}</div></div>`;
+if(PK=="az3")html+=`<div class="card"><h3>البكالوريا الأزهرية · تالتة ثانوي · ${U.track=="sci"?"علمي":"أدبي"}</h3><div class="pgn">القرآن والتفسير والحديث والتوحيد والفقه (على المذهب ${FQN[U.madh]}) واللغة الإنجليزية ${U.track=="sci"?"والكيمياء والفيزياء والأحياء ":"والفرنسي "}من التوزيع الشهري الرسمي للأزهر (مصدر رسمي واحد، قراءة من نسخة ممسوحة). النحو والصرف والبلاغة والمطالعة والأدب ${U.track=="sci"?"والرياضيات والرياضة التطبيقية ":"والإحصاء "}مفيش ليها توزيع رسمي بالشهور، فدروسها من فهارس الكتب مقسّمة بالتساوي بين الترمين، يعني تقديري. ${U.track=="sci"?"الرياضيات من مصدر تاني ضعيف ودقتها منخفضة، وهي قائمة وحدات بس. ":U.track=="lit"?"الإحصاء من مصدر تاني ضعيف ودقته منخفضة، وهو قائمة وحدات بس. ":""}${U.madh=="hanbali"?"كتاب الفقه الحنبلي لتالتة مطبوع 2017/2018 حسب الصفحة ومش ظاهر في ركن الطالب الرسمي. ":""}الفرنسي: تقسيم مارس وأبريل تقريبي. الأدب: فهرس الكتاب مقروء جزئيًا. يناير ومايو مراجعة.</div></div>`;
+if(PK=="az2")html+=`<div class="card"><h3>البكالوريا الأزهرية · تانية ثانوي · ${U.track=="sci"?"علمي":"أدبي"}</h3><div class="pgn">الدروس من التوزيع الشهري الرسمي للمعاهد الأزهرية 2026/27 (مصدر رسمي واحد): سبتمبر-أكتوبر ثم نوفمبر ثم ديسمبر للترم الأول، وفبراير لمايو للترم التاني، وشهر يناير ومايو مراجعة وامتحان. الفقه على المذهب ${FQN[U.madh]}. ${U.madh=="hanbali"?"كتاب الفقه الحنبلي مش في قائمة كتب 2026/27 والمستند بيشير لطبعة 2022/2023. ":""}${U.track=="sci"?"الكيمياء ترم أول بس. ":""}الأحياء والتاريخ مش في التوزيع الرسمي لتانية أزهري فمش في الجدول. كام خلية في المستند قراءتها مش واضحة تمامًا (بلاغة، أدب، إنشاء) ومتعلّمة في نصها. كل مادة بتتوزع بالترتيب جوه شهرها. بعض المواد الاختيارية والفرنسي للغات مش متضمنة.</div></div>`;
+if(PK=="3g")html+=`<div class="card"><h3>تالتة ثانوي عام · ${U.track=="ss"?"علمي علوم":U.track=="sm"?"علمي رياضة":"أدبي"}</h3><div class="pgn">الدروس من فهارس كتب الوزارة للترم الأول (أرقام الصفحات المطبوعة). مفيش جدول رسمي بالأسابيع، فتوزيع الدروس على الأسابيع بالترتيب ومقسّم بالتساوي، يعني تقديري. امتحانات الترم الأول بتبدأ 9 يناير 2027 (مصدر واحد بس: جريدة)، فالدروس بتخلص قبلها. كتب الترم التاني لسه ماتنشرتش. الدين والتربية الوطنية واللغة التانية مواد نجاح ورسوب مش داخلة المجموع ومن غير دروس في الجدول. الفرنسي كلغة أولى مش متضمّن. ${U.track=="lit"?"التاريخ: الكتاب فيه 8 فصول والرسمي مش محدد أنهي فصول للترم الأول، فكلها متحطة.":""}</div></div>`;
+if(PK=="2g")html+=`<div class="card"><h3>تانية ثانوي عام · ${U.track=="sci"?"علمي":"أدبي"}</h3><div class="pgn">دروس الترم الأول من فهارس كتب الوزارة (أرقام الصفحات المطبوعة). مفيش جدول رسمي بالأسابيع: توزيع الدروس على الأسابيع بالترتيب ومقسّم بالتساوي، يعني تقديري. كتب الترم التاني لسه ماتنشرتش، فمفيش دروس ترم تاني دلوقتي. ${U.track=="sci"?"الفيزياء: عناوين الفصول بس. الكيمياء: عناوين الموضوعات من الفهرس (دقة متوسطة).":"علم النفس والاجتماع: كتاب واحد للسنة كلها ومش محدد فيه الترم، فمش متحط في الجدول ("+G2.psn+" درس).  "}المواد الراسب/ناجح (دين، لغة تانية، تربية وطنية) مش داخلة المجموع ومن غير دروس. القصة والرواية بيتحطوا بالترتيب. جداول الامتحانات الشهرية الرسمية متاحة، بس مفيش ربط دقيق بين نطاقها ودروس الرياضيات.</div></div>`;
+ if(PK=="az1")html+=`<div class="card"><h3>البكالوريا الأزهرية · أولى ثانوي</h3><div class="pgn">ترتيب الدروس من التوزيع الرسمي الشهري (سبتمبر-أكتوبر، نوفمبر، ديسمبر). مفيش امتحانات شهرية. امتحانات الترم الأول من 31 ديسمبر لـ11 يناير، والترم التاني من 6 فبراير. ${U.madh?"الفقه على المذهب "+FQN[U.madh]+": من ملف الأزهر الرسمي (مصدر واحد)، والنطاق بالفصول مش بأرقام دروس."+(U.madh=="hanbali"?" صفحة الحنبلي مكتوب عليها طبعة 2017/2018 ولسه ماتأكدناش منها. ":" "):"الفقه لسه محمّلش (اختار مذهبك من تغيير النظام). "}المواد اللي لسه محمّلتش: الفلسفة والمنطق (المقرر الحديث)، اللغة الفرنسية والبرمجة (مش داخلين المجموع). في الحديث: الأحاديث 11 لـ17 مش متوزعة في الجدول الرسمي. جزء الترم التاني من الرياضيات لسه محمّلش. البيانات من مصدر واحد (ملف الأزهر الرسمي) وبتتراجع.</div></div>`;
+if(MEX.length)html+=`<div class="card"><h3>الامتحانات الشهرية</h3>${MEX.map((m,i)=>{const past=td>m.e;const c=CP[i].n;return `<div class="todo"><div style="flex:1"><b>شهر ${m.n}</b> · ${fmt(m.s>m.e?m.e:add_(m.s,1))} إلى ${fmt(m.e)}${past?" (عدّى)":" · فاضل "+Math.max(0,Math.round((add_(m.s,1)-td)/864e5))+" يوم"}<div class="pgn">بيغطي ${m.sc}. المفروض تكون خلّصت لحد دلوقتي: ${KS.map(k=>SUBJ[k][0]+" "+(c[k]||0)).join("، ")} درس. الأسبوع بتاعه (${fmt(m.s)}) فاضي من الجديد ومخصص للمراجعة.</div></div></div>`}).join("")}<div class="note">المواعيد دي من جدول مديرية القاهرة (مقترح) وبتختلف شوية بين المحافظات. أكتوبر 18-22 اتأكد، نوفمبر 29 نوفمبر لـ3 ديسمبر. مفيش مواعيد امتحانات شهرية للترم التاني اتعلنت لسه.</div></div>`;
+ for(let i=0;i<P.days.length;i+=7){const wk=P.days.slice(i,i+7),f=wk[0].date,l=wk[wk.length-1].date,n=i/7+1;
+  const kind=wk.some(x=>x.kind=="rev")?"rev":wk.some(x=>x.kind=="mexam")?"mid":wk.some(x=>x.kind=="gap")?"mid":"";const lab=kind=="rev"?"مراجعة نهائية":wk.some(x=>x.kind=="mexam")?"امتحان شهر + مراجعة":kind=="mid"?"مراجعة منتصف السنة":"أسبوع دراسة";
+  const isNow=td>=f&&td<=add_(l,1);let body="",wd=0,wt=0;
+  wk.forEach(x=>{let its="";x.items.forEach(it=>{wt++;if(U.done[it.id])wd++;its+=itemRow(it,x)});if(x.off)its='<div class="note">يوم راحة</div>';
+   body+=`<div class="day ${iso(x.date)==tdi?"today":""}"><h4 class="${x.off?"fri":""}">${DN[dow(x.date)]} <span>${fmt(x.date)}${iso(x.date)==tdi?" · النهاردة":""}</span></h4>${its}</div>`});
+  html+=`<details class="wk" ${isNow?"open":""}><summary><div><div class="t">الأسبوع ${n}</div><div class="d">${fmt(f)} - ${fmt(l)} · ${wd}/${wt}</div></div><div>${isNow?'<span class="tag now">الأسبوع ده</span> ':""}<span class="tag ${kind}">${lab}</span></div></summary>${body}</details>`}
+ $("weeks").innerHTML=html;bind($("weeks"))}
+
+function catchUp(){const L=ST.late.slice().sort((a,b)=>a.x.date-b.x.date);if(!L.length)return "";
+ const ds=P.days.filter(x=>x.date>=ST.td&&x.date<P.revStart&&!x.off);if(!ds.length)return '<div class="note">مفيش أيام كفاية قبل المراجعة النهائية. غيّر ميعاد الامتحان أو زوّد وقتك.</div>';
+ const per=Math.ceil(L.length/ds.length);const buckets=ds.map(()=>[]);L.forEach((r,i)=>buckets[Math.min(ds.length-1,Math.floor(i/per))].push(r));
+ let h=`<div class="card"><h3>خطة اللحاق</h3><div class="note">${L.length} مهمة فاتت. موزعة على ${ds.filter((d,i)=>buckets[i].length).length} يوم لحد ${fmt(add_(P.revStart,-1))}، بمعدل ${per} مهمة (كحد أقصى) في اليوم فوق جدول الأسبوع العادي. خلّص أول المتأخر الأول.${per>2?" الحمل أكتر من مهمتين في اليوم، لو تقيل زوّد أيام المذاكرة أو أجّل الامتحان في الإعدادات.":""}</div>`;
+ let cur=-1,open="";ds.forEach((x,i)=>{if(!buckets[i].length)return;const w=Math.floor((x.date-ST.td)/864e5/7);if(w!=cur){if(open)h+="</details>";cur=w;h+=`<details ${w==0?"open":""}><summary style="cursor:pointer;margin:8px 0"><b>${w==0?"الأسبوع ده":"بعد "+w+" أسبوع"}</b></summary>`;open=1}
+  h+=`<div class="day"><h4>${DN[dow(x.date)]} <span>${fmt(x.date)}</span></h4>${buckets[i].map(r=>itemRow(r.it,r.x)).join("")}</div>`});
+ return h+"</details></div>"}
+/* backlog */
+let bf="all",lastMoves=null;
+function rBack(){const L=ST.late.filter(r=>bf=="all"||r.it.k==bf);
+ $("bchips").innerHTML=`<button data-f="all" class="${bf=="all"?"on":""}">الكل (${ST.late.length})</button>`+KS.concat(["x"]).map(k=>`<button data-f="${k}" class="${bf==k?"on":""}">${SUBJ[k][0]} (${ST.late.filter(r=>r.it.k==k).length})</button>`).join("");
+ document.querySelectorAll("#bchips button").forEach(b=>b.onclick=()=>{bf=b.dataset.f;rBack()});
+ $("blist").innerHTML=L.length?L.sort((a,b)=>a.x.date-b.x.date).map(r=>{const days=Math.round((ST.td-r.x.date)/864e5);return `<div class="todo"><input type="checkbox" data-id="${esc(r.it.id)}" style="width:19px;height:19px;margin-top:6px;accent-color:#8B3DFF"><div style="flex:1"><span class="s" style="background:${SUBJ[r.it.k][1]}">${SUBJ[r.it.k][0]}</span>${r.it.t}<div class="pgn">كان يوم ${DN[dow(r.x.date)]} ${fmt(r.x.date)} · متأخر ${days} يوم ${r.it.p||""}</div></div><div class="acts"><button class="g" data-pp="${esc(r.it.id)}">أجّل</button></div></div>`}).join(""):'<div class="note">مفيش متراكم. شغل عالي! ✅</div>';
+ document.querySelectorAll("#blist input[data-id]").forEach(c=>c.onchange=()=>{c.checked=false;complete(c.dataset.id)});
+ document.querySelectorAll("[data-pp]").forEach(b=>b.onclick=()=>{lastMoves=JSON.stringify(U.moves);moveTo([b.dataset.pp]);});
+ $("cu").innerHTML=catchUp();bind($("cu"));
+ $("ball").style.display=ST.late.length?"inline-block":"none";$("bun").style.display=lastMoves?"inline-block":"none";
+ $("bsum").textContent=ST.late.length?`${ST.late.length} مهمة فاتت. التأجيل الذكي بيوزعها على أقل الأيام زحمة قبل المراجعة النهائية.`:"كل حاجة في ميعادها."}
+function moveTo(ids){const cand=P.days.filter(x=>x.date>=ST.td&&x.date<P.revStart&&!x.off&&x.kind!="gap");if(!cand.length){alert("مفيش أيام فاضية قبل المراجعة النهائية. زوّد وقتك أو غيّر ميعاد الامتحان");return}
+ const load={};cand.forEach(x=>load[iso(x.date)]=x.items.length);ids.forEach(id=>{cand.sort((a,b)=>load[iso(a.date)]-load[iso(b.date)]||a.date-b.date);const t=iso(cand[0].date);U.moves[id]=t;load[t]++});saveU();renderAll()}
+/* stats */
+function rStats(){const {per,total,done}=ST;
+ const rows=KS.concat(["x"]).filter(k=>per[k]).map(k=>{const s=per[k],p=Math.round(s.d/s.t*100);return `<div class="sub-bar"><span class="nm">${SUBJ[k][0]}</span><span class="b"><i style="width:${p}%;background:${SUBJ[k][1]}"></i></span><span class="v">${s.d}/${s.t}</span></div>`}).join("");
+ const wc=[];for(let i=0;i<P.days.length;i+=7){const wk=P.days.slice(i,i+7);wc.push({n:i/7,c:wk.reduce((a,x)=>a+x.items.filter(it=>U.done[it.id]).length,0),cur:i/7==ST.wi})}
+ const mx=Math.max(1,...wc.map(w=>w.c));
+ // expected by today
+ let exp=0;P.days.forEach(x=>{if(x.date<=ST.td)exp+=x.items.length});const diff=done-exp;
+ const foc=Object.values(U.focus).reduce((a,b)=>a+b,0);const azd=Object.keys(U.azdone).length;
+ $("stl").innerHTML=`<div class="card tilt"><div class="grid"><div class="st"><b>${ST.sk}</b><span>🔥 أيام متتالية</span></div><div class="st"><b>${ST.best}</b><span>أفضل ستريك</span></div><div class="st"><b>${Math.round(done/Math.max(1,total)*100)}%</b><span>إنجاز كلي</span></div></div></div>
+ <div class="card"><h3>حسب المادة</h3>${rows}</div>
+ <div class="card"><h3>الإنجاز لكل أسبوع</h3><div class="chart">${wc.map(w=>`<i class="${w.cur?"cur":""}" style="height:${Math.max(3,w.c/mx*100)}%" title="${w.c}"></i>`).join("")}</div><div class="note">كل عمود أسبوع من أول الخطة (الأخضر = الأسبوع الحالي)</div></div>
+ <div class="card"><h3>إنت ماشي إزاي؟</h3><div>المفروض تكون خلّصت لحد النهاردة: <b>${exp}</b> مهمة. إنت خلّصت <b>${done}</b>.</div><div class="${diff>=0?"":"err"}" style="margin-top:6px;color:${diff>=0?"#6ee7b7":"#9a98b8"}">${diff>=0?`متقدم بـ ${diff} مهمة 👏`:`متأخر بـ ${-diff} مهمة`}</div>
+ <div class="note" style="margin-top:8px">تركيز بومودورو الكلي: ${foc} دقيقة · أيام أكملت فيها الأذكار: ${azd}</div></div>`}
+/* adhkar */
+const AZ={
+ morning:{t:"أذكار الصباح",items:[
+  {k:"m1",x:"اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ",n:1,h:"آية الكرسي"},
+  {k:"m2",x:"قراءة سورة الإخلاص والفلق والناس",n:3,h:"المعوذات"},
+  {k:"m3",x:"سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",n:100,h:"التسبيح"},
+  {k:"m4",x:"لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",n:10,h:"التهليل"},
+  {k:"m5",x:"أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ",n:100,h:"الاستغفار"},
+  {k:"m6",x:"اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَىٰ نَبِيِّنَا مُحَمَّدٍ",n:10,h:"الصلاة على النبي ﷺ"}]},
+ evening:{t:"أذكار المساء",items:[
+  {k:"e1",x:"اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ... (آية الكرسي كاملة)",n:1,h:"آية الكرسي"},
+  {k:"e2",x:"قراءة سورة الإخلاص والفلق والناس",n:3,h:"المعوذات"},
+  {k:"e3",x:"سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",n:100,h:"التسبيح"},
+  {k:"e4",x:"لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",n:10,h:"التهليل"},
+  {k:"e5",x:"أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ",n:100,h:"الاستغفار"},
+  {k:"e6",x:"اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَىٰ نَبِيِّنَا مُحَمَّدٍ",n:10,h:"الصلاة على النبي ﷺ"}]},
+ after:{t:"تسبيح بعد الصلاة",items:[
+  {k:"a1",x:"سُبْحَانَ اللَّهِ",n:33,h:"تسبيح"},{k:"a2",x:"الْحَمْدُ لِلَّهِ",n:33,h:"تحميد"},{k:"a3",x:"اللَّهُ أَكْبَرُ",n:33,h:"تكبير"}]}};
+let azTab="morning";
+function rAz(){const day=U.adhkar[ST.tdi]=U.adhkar[ST.tdi]||{};
+ $("azt").innerHTML=Object.entries(AZ).map(([k,v])=>`<button data-t="${k}" class="${k==azTab?"on":""}">${v.t}</button>`).join("");
+ document.querySelectorAll("#azt button").forEach(b=>b.onclick=()=>{azTab=b.dataset.t;rAz()});
+ $("azl").innerHTML=AZ[azTab].items.map(i=>{const c=day[i.k]||0,dn=c>=i.n;return `<div class="zk ${dn?"done":""}"><div class="pgn">${i.h} · المطلوب ${i.n}</div><div class="tx">${i.x}</div><button class="tp" data-z="${i.k}" data-n="${i.n}">${dn?"تم ✓ (اضغط للمتابعة)":"سبّح · "+c+" / "+i.n}</button></div>`}).join("");
+ document.querySelectorAll("[data-z]").forEach(b=>b.onclick=()=>{const d=U.adhkar[ST.tdi];d[b.dataset.z]=(d[b.dataset.z]||0)+1;sfx(d[b.dataset.z]==+b.dataset.n?"dhikr":"tick");if(d[b.dataset.z]==+b.dataset.n)confetti(60);try{navigator.vibrate&&navigator.vibrate(d[b.dataset.z]==+b.dataset.n?[20,40,20]:8)}catch(e){}
+  const all=Object.values(AZ).slice(0,2).every(g=>g.items.every(i=>(d[i.k]||0)>=i.n));if(all)U.azdone[ST.tdi]=1;saveU();rAz();rStats()});
+ let az=0,d=ST.td;if(!U.azdone[iso(d)])d=add_(d,-1);while(U.azdone[iso(d)]){az++;d=add_(d,-1)}
+ $("azs").textContent=`أيام متتالية أكملت فيها أذكار الصباح والمساء: ${az}`;}
+
+/* profile: year / system / track / elective */
+const SYS={am:"ثانوي عام",bac:"بكالوريا",az:"أزهر"};
+const YR={1:"أولى ثانوي",2:"تانية ثانوي",3:"تالتة ثانوي"};
+const TRK={med:"الطب وعلوم الحياة",eng:"الهندسة وعلوم الحاسب",biz:"الأعمال",art:"الآداب والفنون"};
+const ELEC={biz:[["acc","المحاسبة"],["ba","إدارة الأعمال"]],art:[["ps","علم النفس"],["fr","الفرنسية (لغة ثانية)"],["de","الألمانية (لغة ثانية)"],["es","الإسبانية (لغة ثانية)"],["it","الإيطالية (لغة ثانية)"],["zh","الصينية (لغة ثانية)"]],med:[["py","الفيزياء"],["mm","الرياضيات"]],eng:[["pg","البرمجة والذكاء الاصطناعي"],["chem","الكيمياء"]]};
+const SYSOPT={1:["am","bac","az"],2:["am","az","bac"],3:["am","az"]};
+function bxk_ready(){return U&&U.year==2&&U.sys=="bac"&&((U.track=="eng"&&U.elective=="chem")||(U.track=="biz"&&(U.elective=="acc"||U.elective=="ba"))||(U.track=="art"&&["ps","fr","de","es","it","zh"].includes(U.elective)))}
+function ready(){useProfile();return U&&(!!bxk_ready()||U.year==3&&U.sys=="az"&&(U.track=="sci"||U.track=="lit")&&!!U.madh||U.year==2&&U.sys=="az"&&(U.track=="sci"||U.track=="lit")&&!!U.madh||U.year==3&&U.sys=="am"&&(U.track=="ss"||U.track=="sm"||U.track=="lit")||U.year==2&&U.sys=="am"&&(U.track=="sci"||U.track=="lit")||U.year==1&&(U.sys=="am"||U.sys=="bac"||U.sys=="az")||U.year==2&&U.sys=="bac"&&U.track=="med"&&(U.elective=="py"||U.elective=="mm")||U.year==2&&U.sys=="bac"&&U.track=="eng"&&U.elective=="pg")}
+function ready_old(){return U&&U.year==2&&U.sys=="bac"&&U.track=="eng"&&U.elective=="pg"}
+let pf={};
+function showProfile_old(){pf={year:U.year||0,sys:U.sys||"",track:U.track||"",elective:U.elective||""};$("authbox").style.display="none";$("onb").style.display="none";$("prof").style.display="block";$("auth").classList.add("on");drawProf()}
+function drawProf(){let h="<h2>أنت سنة كام؟</h2><div class='chips' style='flex-wrap:wrap'>"+[1,2,3].map(y=>`<button data-y="${y}" class="${pf.year==y?"on":""}">${YR[y]}</button>`).join("")+"</div>";
+ if(pf.year){h+="<b>نظام الدراسة؟</b><div class='chips' style='flex-wrap:wrap'>"+SYSOPT[pf.year].map(k=>`<button data-s="${k}" class="${pf.sys==k?"on":""}">${SYS[k]}</button>`).join("")+"</div>";
+  if(pf.year==3)h+="<p class='note'>مفيش بكالوريا في تالتة ثانوي السنة دي.</p>"}
+ if(pf.sys=="bac"&&pf.year==1)h+="<p class='note'>أولى ثانوي مفيهاش مسارات: المنهج واحد للعام والبكالوريا. المسار بتختاره في تانية.</p>";
+ if(pf.sys=="bac"&&pf.year==2){h+="<b>المسار؟</b><div class='chips' style='flex-wrap:wrap'>"+Object.entries(TRK).map(([k,t])=>`<button data-t="${k}" class="${pf.track==k?"on":""}">${t}</button>`).join("")+"</div>";
+  if(pf.year==1&&pf.track&&pf.track!="none"||pf.year==2&&pf.track){h+="<b>المادة الاختيارية؟</b>";if(ELEC[pf.track])h+="<div class='chips' style='flex-wrap:wrap'>"+ELEC[pf.track].map(([k,t])=>`<button data-e="${k}" class="${pf.elective==k?"on":""}">${t}</button>`).join("")+"</div>";else h+=`<input type="text" id="pel" placeholder="اكتب المادة الاختيارية" value="${esc(pf.elective&&pf.elective!="pg"?pf.elective:"")}">`}}
+ const ok=pf.year&&pf.sys&&(pf.sys!="bac"||pf.track&&(pf.track=="none"||pf.year==1||pf.elective||($("pel")&&$("pel").value)));
+ h+=`<button id="pgo" style="width:100%;margin-top:10px">${ok?"كمّل":"كمّل"}</button>`;$("prof").innerHTML=h;
+ document.querySelectorAll("#prof [data-y]").forEach(b=>b.onclick=()=>{pf.year=+b.dataset.y;if(!SYSOPT[pf.year].includes(pf.sys))pf.sys="";pf.track=pf.elective="";drawProf()});
+ document.querySelectorAll("#prof [data-s]").forEach(b=>b.onclick=()=>{pf.sys=b.dataset.s;pf.track=pf.elective="";drawProf()});
+ document.querySelectorAll("#prof [data-t]").forEach(b=>b.onclick=()=>{pf.track=b.dataset.t;pf.elective="";drawProf()});
+ document.querySelectorAll("#prof [data-e]").forEach(b=>b.onclick=()=>{pf.elective=b.dataset.e;drawProf()});
+ $("pgo").onclick=()=>{if($("pel"))pf.elective=$("pel").value.trim();if(!(pf.year&&pf.sys)){return}if(pf.sys=="bac"&&pf.year==2&&(!pf.track||!pf.elective))return;
+  U.year=pf.year;U.sys=pf.sys;U.track=pf.track;U.elective=pf.elective;saveU();$("prof").style.display="none";if(U.dayoff==null)showOnboard();else enter()}}
+function notReady(){ST={tdi:iso(todayD()),td:todayD(),late:[],wi:0,wn:0};P=null;const lbl=`${YR[U.year]} · ${SYS[U.sys]}${U.sys=="bac"&&U.track&&U.track!="none"?" · "+TRK[U.track]+(U.elective?" · "+(ELEC[U.track]&&ELEC[U.track].find(x=>x[0]==U.elective)?ELEC[U.track].find(x=>x[0]==U.elective)[1]:U.elective):""):""}`;
+ const m=`<div class="card"><h3>المنهج لسه محمّلش</h3><div class="note">اخترت: ${esc(lbl)}. جدول المنهج ده لسه بيتجمّع وبيتراجع، ومش هعرض لك خطة تخمين. الجاهز دلوقتي: تانية ثانوي بكالوريا مسار الهندسة وعلوم الحاسب (برمجة). تقدر تغيّر اختيارك من الإعدادات.</div></div>`;
+ ["hm","weeks","cu","blist","stl","cl"].forEach(i=>$(i).innerHTML=m);$("bchips").innerHTML="";$("bsum").textContent="";$("ball").style.display="none";$("bun").style.display="none";$("core").textContent="—";$("bdg").style.display="none";rAz()}
+
+/* progress ("how far did you get") */
+let pmSel="sync",pmWk=0,pmSub={};
+function drawPm(){$("pmode").innerHTML=[["sync","ماشي مع الجدول (اللي قبل النهاردة خلص)"],["week","وصلت لأسبوع معين"],["sub","وصلت لدرس معين في كل مادة"],["none","لسه ببدأ (متراكم كامل)"]].map(([v,t])=>`<button data-pm="${v}" class="${pmSel==v?"on":""}">${t}</button>`).join("");
+ let h="";if(pmSel=="week")h='<input type="number" id="pmw" min="1" max="40" placeholder="خلّصت لحد أسبوع رقم (1 = أسبوع 12 سبتمبر)" value="'+(pmWk||"")+'">';
+ if(pmSel=="sub"){h=KS.map(k=>`<div class="note">${SUBJ[k][0]}: آخر درس خلصته</div><select data-sk="${k}" style="width:100%;margin:4px 0;border:1px solid var(--bd);border-radius:12px;padding:10px;background:#0a0b18;color:var(--tx);font-family:inherit"><option value="-1">ولا درس</option>${T1.concat(T2).filter(x=>x.k==k).map((x,i)=>`<option value="${i}" ${pmSub[k]==i?"selected":""}>${esc(x.t.slice(0,60))}</option>`).join("")}</select>`).join("")}
+ $("pextra").innerHTML=h;document.querySelectorAll("#pmode [data-pm]").forEach(b=>b.onclick=()=>{pmSel=b.dataset.pm;drawPm()})}
+const PRE="2000-01-01";
+function applyProgress(){useProfile();if(!ready())return;P=build();const done=U.done;
+ if(pmSel=="sync"){P.days.forEach(x=>{if(x.date<todayD())x.items.forEach(it=>{if(it.core&&!it.moved)done[it.id]=PRE})})}
+ else if(pmSel=="week"){const n=+(($("pmw")||{}).value||pmWk||0);if(n>0){const cut=add_(PLAN0,7*n);P.days.forEach(x=>{if(x.date<cut)x.items.forEach(it=>{if(it.core)done[it.id]=PRE})})}}
+ else if(pmSel=="sub"){document.querySelectorAll("#pextra [data-sk]").forEach(s=>{const k=s.dataset.sk,idx=+s.value;T1.concat(T2).filter(x=>x.k==k).forEach((x,i)=>{if(i<=idx)done[k+"|"+x.t]=PRE})})}
+ saveU()}
+/* settings */
+$("swkg").onclick=()=>{if(!ready())return;const n=+$("swk").value;if(!(n>0))return;P=build();const cut=add_(PLAN0,7*n);P.days.forEach(x=>{if(x.date<cut)x.items.forEach(it=>{if(it.core&&!U.done[it.id])U.done[it.id]=PRE})});saveU();renderAll();$("swkn").textContent="تمام. اتعلّم خلصان لحد نهاية الأسبوع "+n+"."};
+$("sexp").onclick=()=>{const o={v:1,users:J("bac_users",{}),data:{}};Object.keys(localStorage).filter(k=>k.startsWith("bac_data_")).forEach(k=>o.data[k]=J(k,null));const b=new Blob([JSON.stringify(o)],{type:"application/json"});const l=document.createElement("a");l.href=URL.createObjectURL(b);l.download="jadwalak-backup.json";document.body.appendChild(l);l.click();l.remove();$("sdn").textContent="اتنزّل ملف jadwalak-backup.json."};
+$("simp").onclick=()=>$("sfile").click();
+$("sfile").onchange=async()=>{try{const o=JSON.parse(await $("sfile").files[0].text());if(!o||o.v!==1||!o.users||!o.data)throw 0;const us=users();Object.assign(us,o.users);W("bac_users",us);Object.entries(o.data).forEach(([k,v])=>{if(k.startsWith("bac_data_"))W(k,v)});$("sdn").textContent="اتستورد. سجّل دخول بنفس اسمك وكلمة سرك.";}catch(e){$("sdn").textContent="الملف ده مش نسخة من جدولك."}};
+$("sprof").onclick=()=>{$("set").classList.remove("on");showProfile()};
+function openSet(){$("set").classList.add("on");drawOm("somode");$("sex").value=U.exam;$("sdays").innerHTML=DN.map((d,i)=>`<button data-d="${i}" class="${i==U.dayoff?"on":""}">${d}</button>`).join("");document.querySelectorAll("#sdays button").forEach(b=>b.onclick=()=>{U.dayoff=+b.dataset.d;saveU();openSet();renderAll()})}
+/* pomodoro */
+let tmv=null,left=1500;const fm=()=>{$("tm").textContent=String(Math.floor(left/60)).padStart(2,"0")+":"+String(left%60).padStart(2,"0")};
+$("tb").onclick=()=>{if(tmv){clearInterval(tmv);tmv=null;$("tb").textContent="كمّل";return}$("tb").textContent="إيقاف مؤقت";tmv=setInterval(()=>{left--;fm();if(left<=0){clearInterval(tmv);tmv=null;U.focus[iso(todayD())]=(U.focus[iso(todayD())]||0)+25;saveU();left=1500;fm();$("tb").textContent="ابدأ 25 دقيقة";try{navigator.vibrate&&navigator.vibrate(400)}catch(e){}renderAll()}},1000)};
+$("tr").onclick=()=>{clearInterval(tmv);tmv=null;left=1500;fm();$("tb").textContent="ابدأ 25 دقيقة"};
+/* wiring */
+document.querySelectorAll("#authseg button").forEach(b=>b.onclick=()=>{authMode=b.dataset.m;authUI()});
+$("authgo").onclick=authGo;$("pw").onkeydown=e=>{if(e.key=="Enter")authGo()};$("onbgo").onclick=onbGo;
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>go(b.dataset.v));
+$("lo").onclick=logout;$("setb").onclick=openSet;$("sclose").onclick=()=>{$("set").classList.remove("on")};
+$("sexg").onclick=()=>{if($("sex").value&&!dtValid($("sex").value)){$("sex").classList.add("bad");return}U.exam=$("sex").value||U.exam;saveU();renderAll();$("set").classList.remove("on")};
+$("ball").onclick=()=>{lastMoves=JSON.stringify(U.moves);moveTo(ST.late.map(r=>r.it.id))};
+$("bun").onclick=()=>{U.moves=JSON.parse(lastMoves||"{}");lastMoves=null;saveU();renderAll()};
+/* 3D */
+(function(){const sc=$("scene"),st=$("stage");let ry=0,rx=-18,drag=false,lx=0,ly=0,auto=true;const cr=$('core');const ap=()=>{sc.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg)`;cr.style.transform=`rotateY(${-ry}deg) rotateX(${-rx}deg)`};
+st.addEventListener("pointerdown",e=>{drag=true;auto=false;lx=e.clientX;ly=e.clientY;st.setPointerCapture(e.pointerId)});
+st.addEventListener("pointermove",e=>{if(!drag)return;ry+=(e.clientX-lx)*.6;rx=Math.max(-70,Math.min(70,rx-(e.clientY-ly)*.5));lx=e.clientX;ly=e.clientY;ap()});
+const up=()=>{drag=false;setTimeout(()=>auto=true,2500)};st.addEventListener("pointerup",up);st.addEventListener("pointercancel",up);
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches)setInterval(()=>{if(auto){ry+=.4;ap()}},30);
+document.addEventListener("pointermove",e=>{const c=e.target.closest&&e.target.closest(".tilt");if(!c||e.pointerType=="touch"&&e.buttons==0)return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(800px) rotateY(${x*8}deg) rotateX(${-y*8}deg)`});
+document.addEventListener("pointerout",e=>{const c=e.target.closest&&e.target.closest(".tilt");if(c)c.style.transform=""})})();
+
+if("serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+/* boot */
+fm();authUI();
+(function(){const id=localStorage.getItem("bac_session");if(id){U=J("bac_data_"+id,null)}
+ if(U&&!U.year){showProfile()}else if(U&&U.dayoff!=null){enter()}else if(U){$("auth").classList.add("on");showOnboard()}else{$("auth").classList.add("on")}})();
+
+$("un").addEventListener("input",()=>{const v=$("un").value,bad=/\s/.test(v)||(v&&!/^[a-z0-9_.\-\u0600-\u06FF]+$/i.test(v));$("unh").classList.toggle("bad",!!bad)});
+
+/* per-lesson notes: optional, opened only by tapping the pencil */
+(function(){let cur=null,tm=0;const sh=document.createElement("div");sh.id="nsheet";sh.innerHTML='<div class="nbk"></div><div class="nbx"><div class="nh"><b id="nt"></b><button type="button" id="nx">تم</button></div><textarea id="ntx" placeholder="اكتب ملاحظاتك على الدرس ده..." maxlength="3000"></textarea><div class="note" id="nsv"></div></div>';document.body.appendChild(sh);
+const close=()=>{sh.classList.remove("on");cur=null;renderAll&&renderAll()};
+sh.querySelector(".nbk").onclick=close;$("nx").onclick=close;
+$("ntx").addEventListener("input",()=>{if(!cur)return;clearTimeout(tm);tm=setTimeout(()=>{U.notes=U.notes||{};const v=$("ntx").value;if(v.trim())U.notes[cur]=v;else delete U.notes[cur];saveU();$("nsv").textContent="اتحفظت"},400)});
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest(".nt");if(!b)return;e.preventDefault();cur=b.dataset.n;const it=ITEMS[cur];$("nt").textContent=it?it.t:"ملاحظات";$("ntx").value=(U.notes||{})[cur]||"";$("nsv").textContent="";sh.classList.add("on")})})();
+
+/* interior glass + 3D interactions: transform/opacity only, rAF-throttled */
+(function(){
+var bg=document.createElement("div");bg.id="bgfx";bg.innerHTML='<i class="a"></i><i class="b"></i><i class="c"></i>';document.body.insertBefore(bg,document.body.firstChild);
+var A=bg.querySelector(".a"),B=bg.querySelector(".b"),C=bg.querySelector(".c"),ty=0,raf=0,sy=0,ox=0,oy=0;
+function paint(){raf=0;var y=window.scrollY;A.style.transform="translate3d("+(ox*30)+"px,"+(-y*.12+oy*30)+"px,0)";B.style.transform="translate3d("+(-ox*40)+"px,"+(-y*.2)+"px,0)";C.style.transform="translate3d("+(ox*20)+"px,"+(-y*.07)+"px,0)"}
+function sched(){if(!raf)raf=requestAnimationFrame(paint)}
+addEventListener("scroll",sched,{passive:true});paint();
+/* press / hover tilt with specular light */
+var cur=null;
+function tilt(c,e,k){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+ c.style.setProperty("--ry",((x-.5)*k)+"deg");c.style.setProperty("--rx",((.5-y)*k)+"deg");c.style.setProperty("--mx",(x*100)+"%");c.style.setProperty("--my",(y*100)+"%");c.style.setProperty("--ho",1)}
+function rest(c){c.classList.remove("pr");c.style.setProperty("--rx","0deg");c.style.setProperty("--ry","0deg");c.style.setProperty("--ho",0)}
+document.addEventListener("pointerdown",function(e){var c=e.target.closest&&e.target.closest(".card");if(!c)return;cur=c;c.classList.add("pr");tilt(c,e,e.pointerType=="touch"?10:12)},{passive:true});
+document.addEventListener("pointermove",function(e){if(e.pointerType=="mouse"){var c=e.target.closest&&e.target.closest(".card");if(cur&&cur!=c)rest(cur);cur=c;if(c)tilt(c,e,10);return}if(cur&&e.buttons)tilt(cur,e,10)},{passive:true});
+["pointerup","pointercancel","pointerleave"].forEach(function(t){document.addEventListener(t,function(){if(cur){rest(cur);cur=null}},{passive:true})});
+/* gyro parallax of the background (phones, only if allowed without prompting) */
+addEventListener("deviceorientation",function(e){if(e.gamma==null)return;ox=Math.max(-1,Math.min(1,e.gamma/30));oy=Math.max(-1,Math.min(1,(e.beta-45)/30));sched()},{passive:true});
+/* entrance animation only when a screen opens, not on every re-render */
+var ft=0;function fresh(){document.body.classList.remove("fresh");void document.body.offsetWidth;document.body.classList.add("fresh");clearTimeout(ft);ft=setTimeout(function(){document.body.classList.remove("fresh")},1100)}
+var _go=go;go=function(v){_go(v);fresh()};
+fresh();
+})();
+
+</script><script>
+/* جدولك: غرف المذاكرة + لعبة مين الدخيل (Firebase Spark, تحميل كسول) */
+(function(){
+var FBV="https://www.gstatic.com/firebasejs/11.0.2/";
+var CFG={apiKey:"AIzaSyBMfYl8gNpkfiqJPuXOeAvrc4w6T5jAslU",authDomain:"jadwalak-rooms.firebaseapp.com",projectId:"jadwalak-rooms",storageBucket:"jadwalak-rooms.firebasestorage.app"};
+var F=null,db=null,uid=null,code=null,room=null,members={},feed=[],game=null,secret=null,clues=[],votes={},guessDoc=null,reveal=null;
+var subs=[],gsubs=[],mode="home",tab="week",gsig="",busy=false,firstFeed=true,tickT=0,hostPriv=null,rec=null;
+var CH="ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+var TURN=45000,VOTE=60000,GUESS=45000;
+function view(){return document.getElementById("v-rooms")}
+function myCode(){try{return localStorage.getItem("jd_room_"+U.id)||""}catch(e){return ""}}
+function setCode(c){try{if(c)localStorage.setItem("jd_room_"+U.id,c);else localStorage.removeItem("jd_room_"+U.id)}catch(e){}}
+function say(m){var t=document.createElement("div");t.className="rtoast";t.innerHTML=m;document.body.appendChild(t);setTimeout(function(){t.classList.add("out")},3200);setTimeout(function(){t.remove()},3700)}
+function load(){
+ if(F)return Promise.resolve();
+ return Promise.all([import(FBV+"firebase-app.js"),import(FBV+"firebase-auth.js"),import(FBV+"firebase-firestore.js")]).then(function(m){
+  var app=m[0].initializeApp(CFG),au=m[1].getAuth(app);
+  F=m[2];db=F.initializeFirestore(app,{experimentalAutoDetectLongPolling:true});
+  return (au.authStateReady?au.authStateReady():Promise.resolve()).then(function(){return au.currentUser||m[1].signInAnonymously(au)}).then(function(){uid=au.currentUser.uid});
+ });
+}
+function D(){return F.doc.apply(null,[db].concat([].slice.call(arguments)))}
+function C(){return F.collection.apply(null,[db].concat([].slice.call(arguments)))}
+function weekStats(){
+ if(!U||!P||!ST)return {done:0,total:0,today:0};
+ var wi=Math.max(0,ST.wi),wk=P.days.slice(wi*7,wi*7+7),d=0,t=0;
+ wk.forEach(function(x){x.items.forEach(function(i){t++;if(U.done[i.id])d++})});
+ var td=P.by&&P.by[ST.tdi],tn=td?td.items.filter(function(i){return U.done[i.id]}).length:0;
+ return {done:d,total:t,today:tn};
+}
+function memberData(){var s=weekStats();return {name:String(U.name).slice(0,30),done:s.done,total:s.total,today:s.today,track:String(PK),ts:Date.now()}}
+/* ---- sync hooks called by the app ---- */
+var lastSent="",syncT=0;
+window.RoomsSync=function(){
+ if(!myCode()||!U)return;clearTimeout(syncT);syncT=setTimeout(function(){
+  load().then(function(){var c=myCode();if(!c)return;var m=memberData(),sg=m.done+"|"+m.total+"|"+m.today;if(sg==lastSent)return;lastSent=sg;
+   return F.updateDoc(D("rooms",c,"members",uid),m).catch(function(e){lastSent=""})}).catch(function(){});
+ },1500);
+};
+window.RoomsFeed=function(it){
+ if(!myCode()||!it||!U)return;
+ load().then(function(){var c=myCode();if(!c)return;
+  return F.addDoc(C("rooms",c,"feed"),{uid:uid,name:String(U.name).slice(0,30),text:String((SUBJ[it.k]?SUBJ[it.k][0]+": ":"")+it.t).slice(0,140),ts:Date.now()})}).catch(function(e){console.error("feed",e.code)});
+};
+/* ---- navigation ---- */
+function open(c){code=c;setCode(c);lastSent="";mode="room";firstFeed=true;listen();render();RoomsSync()}
+function stop(){subs.forEach(function(u){u()});subs=[];gstop();clearInterval(tickT);room=null;members={};feed=[];game=null}
+function gstop(){gsubs.forEach(function(u){u()});gsubs=[];secret=null;clues=[];votes={};guessDoc=null;reveal=null;gsig=""}
+function listen(){
+ stop();
+ subs.push(F.onSnapshot(D("rooms",code),function(s){room=s.exists()?s.data():null;if(!room){say("الغرفة دي اتقفلت");setCode("");mode="home";stop()}render()},function(){}));
+ subs.push(F.onSnapshot(C("rooms",code,"members"),function(s){members={};s.forEach(function(d){members[d.id]=d.data()});if(!members[uid]&&Object.keys(members).length&&mode=="room"){}render();gameUI()},function(e){if(e&&e.code=="permission-denied"){say("مش عضو في الغرفة دي");setCode("");mode="home";stop();render()}}));
+ subs.push(F.onSnapshot(F.query(C("rooms",code,"feed"),F.orderBy("ts","desc"),F.limit(12)),function(s){
+  feed=[];s.forEach(function(d){feed.push(d.data())});
+  if(!firstFeed){s.docChanges().forEach(function(ch){if(ch.type=="added"){var f=ch.doc.data();if(f.uid!=uid&&Date.now()-f.ts<60000){say("<b>"+esc(f.name)+"</b> خلّص ✓<br><span>"+esc(f.text)+"</span>");if(window.sfx)sfx("tick")}}})}
+  firstFeed=false;renderFeed()},function(){}));
+ subs.push(F.onSnapshot(F.query(C("rooms",code,"games"),F.orderBy("createdAt","desc"),F.limit(1)),function(s){
+  var g=null,id=null;s.forEach(function(d){g=d.data();id=d.id});
+  if(g)g.id=id;var changed=(g&&game&&g.id!=game.id)||(!!g!=!!game);game=g;
+  if(changed||(g&&!gsubs.length))glisten();
+  gameUI();hostTickStart()},function(){}));
+}
+function glisten(){
+ gstop();if(!game)return;var gid=game.id,b=["rooms",code,"games",gid];
+ gsubs.push(F.onSnapshot(D.apply(null,b.concat(["secrets",uid])),function(s){secret=s.exists()?s.data():null;gameUI()},function(){}));
+ gsubs.push(F.onSnapshot(F.query(C.apply(null,b.concat(["clues"])),F.orderBy("ts")),function(s){clues=[];s.forEach(function(d){var x=d.data();x.id=d.id;clues.push(x)});gameUI();hostStep()},function(){}));
+ gsubs.push(F.onSnapshot(C.apply(null,b.concat(["votes"])),function(s){votes={};s.forEach(function(d){votes[d.id]=d.data()});gameUI();hostStep()},function(){}));
+ gsubs.push(F.onSnapshot(C.apply(null,b.concat(["guess"])),function(s){guessDoc=null;s.forEach(function(d){guessDoc=d.data()});gameUI();hostStep()},function(){}));
+ gsubs.push(F.onSnapshot(C.apply(null,b.concat(["reveal"])),function(s){reveal=null;s.forEach(function(d){reveal=d.data()});gameUI()},function(){}));
+}
+/* ---- shell ---- */
+function ensureView(){
+ if(view())return;
+ var v=document.createElement("div");v.className="view";v.id="v-rooms";var az=document.getElementById("v-az");az.parentNode.insertBefore(v,az.nextSibling);
+ var card=document.createElement("div");card.className="card tilt rmcard";card.id="rmhome";
+ card.innerHTML='<div class="row" style="justify-content:space-between"><div><b>ذاكر مع صحابك 👥</b><div class="note">اعمل غرفة بكود وذاكروا سوا، وتنافسوا على إنجاز الأسبوع</div></div><button id="rmopen" type="button">الغرف</button></div>';
+ var hm=document.getElementById("hm");hm.parentNode.insertBefore(card,hm.nextSibling);
+ card.querySelector("#rmopen").onclick=function(){go("rooms");openRooms()};
+}
+function openRooms(){ensureView();view().innerHTML='<div class="card"><div class="note">بنحمّل الغرف…</div></div>';
+ load().then(function(){var c=myCode();if(c&&mode!="room"){code=c;mode="room";listen()}else if(!c)mode="home";render()}).catch(function(e){view().innerHTML='<div class="card"><b>مش قادر أتصل بالغرف دلوقتي</b><div class="note">اتأكد من النت وجرب تاني.</div><button id="rmretry" type="button" style="margin-top:8px">جرب تاني</button></div>';document.getElementById("rmretry").onclick=openRooms})}
+function esc2(s){return esc(s==null?"":s)}
+function render(){
+ var v=view();if(!v||!document.getElementById("v-rooms").classList.contains("on"))return;
+ if(mode=="home"){
+  v.innerHTML='<div class="card rmh"><h3>غرف المذاكرة</h3><p class="note">اعمل غرفة وادي الكود لصاحبك، أو ادخل غرفة بالكود. بتشاركوا اسمكم وعدد المهام اللي خلصتوها وعناوين الدروس اللي بتخلصوها بس، ومحدش برّه الغرفة يشوف حاجة.</p><div class="rmbtns"><button id="rmc" type="button">إنشاء غرفة</button><button id="rmj" type="button" class="g">الانضمام لغرفة</button></div></div>';
+  v.querySelector("#rmc").onclick=function(){mode="create";render()};v.querySelector("#rmj").onclick=function(){mode="join";render()};return;
+ }
+ if(mode=="create"){
+  var ops=KS.map(function(k){return '<option value="'+k+'">'+esc2(SUBJ[k]?SUBJ[k][0]:k)+'</option>'}).join("");
+  v.innerHTML='<div class="card"><h3>إنشاء غرفة</h3><label class="note">اسم الغرفة</label><input type="text" id="rn" maxlength="40" placeholder="مثلاً: مذاكرة الفيزياء"><label class="note">المادة</label><select id="rs">'+ops+'</select><label class="note">عدد الأشخاص</label><div class="row"><input type="number" id="rm" min="2" max="30" value="4" style="width:90px"><label class="row note"><input type="checkbox" id="ru"> غير محدود</label></div><div class="note">الغرفة بالكود بس، ومش بتظهر لحد في بحث.</div><div class="err" id="re"></div><div class="rmbtns"><button id="rp" type="button">نشر الغرفة</button><button id="rb" type="button" class="g">رجوع</button></div></div>';
+  v.querySelector("#rb").onclick=function(){mode="home";render()};
+  v.querySelector("#rp").onclick=function(){
+   var n=v.querySelector("#rn").value.trim(),mx=v.querySelector("#ru").checked?0:Math.max(2,Math.min(30,+v.querySelector("#rm").value||4));
+   if(!n){v.querySelector("#re").textContent="اكتب اسم للغرفة";return}
+   createRoom(n,v.querySelector("#rs").value,mx)};return;
+ }
+ if(mode=="join"){
+  v.innerHTML='<div class="card"><h3>الانضمام لغرفة</h3><label class="note">كود الغرفة (6 حروف وأرقام)</label><input type="text" id="jc" maxlength="6" autocapitalize="characters" style="text-transform:uppercase;letter-spacing:6px;text-align:center;font-size:22px" placeholder="______"><div class="err" id="re"></div><div class="rmbtns"><button id="jg" type="button">دخول</button><button id="rb" type="button" class="g">رجوع</button></div></div>';
+  v.querySelector("#rb").onclick=function(){mode="home";render()};
+  v.querySelector("#jg").onclick=function(){joinRoom(v.querySelector("#jc").value.trim().toUpperCase())};return;
+ }
+ if(mode=="room"){roomUI();return}
+}
+function genCode(){var a=new Uint8Array(6);crypto.getRandomValues(a);return Array.prototype.map.call(a,function(x){return CH[x%CH.length]}).join("")}
+function err(m){var e=view().querySelector("#re");if(e)e.textContent=m}
+function createRoom(n,subj,mx){
+ if(busy)return;busy=true;var tries=0;
+ (function go1(){
+  var c=genCode(),b=F.writeBatch(db);
+  b.set(D("rooms",c),{name:n,subject:subj,max:mx,owner:uid,n:1,createdAt:Date.now()});
+  b.set(D("rooms",c,"members",uid),memberData());
+  b.commit().then(function(){busy=false;open(c);say("الغرفة اتنشرت. الكود: <b>"+c+"</b>")}).catch(function(e){if(tries++<2){go1()}else{busy=false;err("معرفتش أنشر الغرفة. جرب تاني.")}});
+ })();
+}
+function joinRoom(c){
+ if(!/^[A-Z2-9]{6}$/.test(c)){err("الكود 6 حروف وأرقام");return}
+ if(busy)return;busy=true;
+ F.getDoc(D("rooms",c)).then(function(s){
+  if(!s.exists()){busy=false;err("الكود ده مش موجود");return}
+  return F.getDoc(D("rooms",c,"members",uid)).then(function(m){busy=false;open(c)},function(){
+   var r=s.data();if(r.max&&r.n>=r.max){busy=false;err("الغرفة كاملة");return}
+   var b=F.writeBatch(db);b.update(D("rooms",c),{n:r.n+1});b.set(D("rooms",c,"members",uid),memberData());
+   return b.commit().then(function(){busy=false;open(c)}).catch(function(){busy=false;err("معرفتش أدخل. جرب تاني.")});
+  });
+ }).catch(function(){busy=false;err("معرفتش أدخل. اتأكد من الكود والنت.")});
+}
+function leaveRoom(){
+ var c=code;if(!c||!room)return;var b=F.writeBatch(db);b.update(D("rooms",c),{n:Math.max(0,(room.n||1)-1)});b.delete(D("rooms",c,"members",uid));
+ b.commit().then(function(){stop();setCode("");code=null;mode="home";render()}).catch(function(){say("معرفتش أخرج. جرب تاني.")});
+}
+/* ---- room screen ---- */
+function roomUI(){
+ var v=view();if(!room){v.innerHTML='<div class="card"><div class="note">بنحمّل الغرفة…</div></div>';return}
+ var sub=SUBJ[room.subject]?SUBJ[room.subject][0]:"";
+ var n=Object.keys(members).length;
+ v.innerHTML='<div class="card rmhead"><div class="row" style="justify-content:space-between"><div><b>'+esc2(room.name)+'</b><div class="note">'+esc2(sub)+' · '+n+'/'+(room.max||"∞")+' أعضاء</div></div><button type="button" class="g" id="rl">خروج من الغرفة</button></div>'+
+  '<div class="rcode" id="rcode" title="انسخ"><span>كود الغرفة</span><b>'+esc2(code)+'</b></div><div class="rmbtns"><button type="button" id="rsh">ابعت الكود لصاحبك</button></div></div>'+
+  '<div id="rvs"></div><div id="rmem"></div><div id="rgame"></div><div class="card"><h3>آخر اللي خلّصوه</h3><div id="rfeed"></div></div>';
+ v.querySelector("#rl").onclick=function(){if(confirm("تخرج من الغرفة؟"))leaveRoom()};
+ v.querySelector("#rsh").onclick=function(){var t="تعالى نذاكر سوا على جدولك! ادخل الغرف واكتب الكود: "+code+"\n"+location.origin+location.pathname;if(navigator.share){navigator.share({text:t}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(t);say("اتنسخ")}};
+ v.querySelector("#rcode").onclick=function(){if(navigator.clipboard){navigator.clipboard.writeText(code);say("الكود اتنسخ")}};
+ renderMembers();renderFeed();gsig="";gameUI();
+}
+function val(m){return tab=="week"?(m.done||0):(m.today||0)}
+function renderMembers(){
+ var v=view();if(!v||mode!="room")return;var box=v.querySelector("#rvs"),mm=v.querySelector("#rmem");if(!box)return;
+ var arr=Object.keys(members).map(function(k){var m=members[k];m.id=k;return m}).sort(function(a,b){return val(b)-val(a)});
+ var me=members[uid]||{done:0,today:0,name:U.name},mine=val(me);
+ var others=arr.filter(function(m){return m.id!=uid});
+ var best=others[0];
+ var h='<div class="card rvs3d"><div class="row" style="justify-content:space-between"><b>المنافسة</b><div class="seg" id="rtab"><button type="button" data-t="week" class="'+(tab=="week"?"on":"")+'">الأسبوع</button><button type="button" data-t="today" class="'+(tab=="today"?"on":"")+'">النهاردة</button></div></div>';
+ if(!best){h+='<div class="note" style="margin-top:10px">لسه محدش دخل معاك. ابعت الكود لصاحبك.</div>'}
+ else{
+  var o=val(best),tot=mine+o,p=tot?Math.round(mine/tot*100):50,tilt=Math.max(-5,Math.min(5,(p-50)/50*5));
+  var msg=mine>o?"أنت قدّام بـ "+(mine-o)+(mine-o==1?" مهمة":" مهام"):mine<o?esc2(best.name)+" خلّص أكتر منك بـ "+(o-mine)+(o-mine==1?" مهمة":" مهام"):"متعادلين";
+  h+='<div class="vsw"><div class="vs" style="transform:perspective(600px) rotateX(16deg) rotateZ('+(-tilt)+'deg)"><i class="w" style="width:'+p+'%"><em>'+mine+'</em></i><i class="r" style="width:'+(100-p)+'%"><em>'+o+'</em></i></div></div><div class="vsn"><span>أنت</span><span>'+esc2(best.name)+'</span></div><div class="vsm">'+msg+'</div>';
+ }
+ h+='</div>';box.innerHTML=h;
+ var t=box.querySelector("#rtab");if(t)t.querySelectorAll("button").forEach(function(b){b.onclick=function(){tab=b.dataset.t;renderMembers()}});
+ mm.innerHTML='<div class="card"><h3>الأعضاء</h3>'+arr.map(function(m,i){var pc=m.total?Math.round((m.done||0)/m.total*100):0;return '<div class="mrow"><span class="rk">'+(i+1)+'</span><div class="mi"><b>'+esc2(m.name)+(m.id==uid?" (أنت)":"")+'</b><div class="bar"><i style="width:'+pc+'%"></i></div></div><span class="mv">'+(m.done||0)+'<small>/'+(m.total||0)+'</small></span></div>'}).join("")+'</div>';
+}
+function renderFeed(){
+ renderMembers();var v=view();if(!v)return;var f=v.querySelector("#rfeed");if(!f)return;
+ f.innerHTML=feed.length?feed.map(function(x){var d=new Date(x.ts);return '<div class="fitem'+(x.uid==uid?" me":"")+'"><b>'+esc2(x.name)+'</b> ✓<div class="note">'+esc2(x.text)+' · '+d.toLocaleTimeString("ar-EG",{hour:"2-digit",minute:"2-digit"})+'</div></div>'}).join(""):'<div class="note">لسه محدش خلّص حاجة. أول واحد يخلّص هيظهر هنا.</div>';
+}
+/* ---- Who is the spy ---- */
+function names(){var o={};Object.keys(members).forEach(function(k){o[k]=members[k].name});return o}
+function isHost(){return game&&game.host==uid}
+function lessonsFor(k){var seen={},o=[];T1.concat(T2).forEach(function(x){if(x.k==k&&x.t&&!seen[x.t]){seen[x.t]=1;o.push(x.t)}});return o}
+function pick(a){return a[Math.floor(Math.random()*a.length)]}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+function gsig2(){return [game&&game.id,game&&game.status,game&&game.round,game&&game.turn,clues.length,Object.keys(votes).length,!!guessDoc,!!reveal,!!secret,Object.keys(members).length].join("|")}
+function gameUI(){
+ var v=view();if(!v||mode!="room")return;var g=v.querySelector("#rgame");if(!g)return;
+ var s=gsig2();if(s==gsig&&g.innerHTML)return;gsig=s;
+ var n=Object.keys(members).length;
+ if(!game||game.status=="done"&&!reveal&&false){g.innerHTML=startCard(n);bindStart(g);return}
+ var st=game.status,nm=game.names||{},h='<div class="card gm"><div class="row" style="justify-content:space-between"><h3>مين الدخيل؟ 🕵️</h3><span class="tag now">'+({clues:"الأدلة",vote:"التصويت",guess:"تخمين الدخيل",done:"النتيجة"}[st]||"")+'</span></div>';
+ if(st!="done"){
+  if(secret){h+=secret.role=="spy"?'<div class="role spy"><b>أنت الدخيل 🕵️</b><div class="note">مش عارف الدرس. المادة: '+esc2(game.subjName)+'. اسمع الأدلة وحاول تخمّن.</div></div>':'<div class="role"><div class="note">الدرس</div><b>'+esc2(secret.lesson)+'</b><div class="note">اديلهم دليل من غير ما تقول اسم الدرس.</div></div>'}
+  else h+='<div class="note">بنجهّز دورك…</div>';
+ }
+ h+='<div class="clist">'+clues.map(function(c){return '<div class="clue"><b>'+esc2(c.name)+'</b> <small>الجولة '+c.round+'</small><div>'+esc2(c.text||"")+'</div>'+(c.voice?'<audio controls preload="none" src="'+c.voice+'"></audio>':'')+'</div>'}).join("")+'</div>';
+ if(st=="clues"){
+  var cur=game.order[game.turn],isMe=cur==uid;
+  h+='<div class="turn">'+(isMe?'<b>دورك:</b> اكتب دليل أو سجّل صوت (8 ثواني)':'الدور على <b>'+esc2(nm[cur]||"")+'</b>')+' · الجولة '+game.round+' من 2 <span id="gtm"></span></div>';
+  if(isMe)h+='<div class="compose"><input type="text" id="gct" maxlength="100" placeholder="اكتب دليلك هنا"><div class="rmbtns"><button type="button" id="gsend">ابعت</button><button type="button" class="g" id="gvoice">🎙️ سجّل</button></div><div id="gvs" class="note"></div></div>';
+ }
+ if(st=="vote"){
+  var mv=votes[uid];
+  h+='<div class="turn">مين الدخيل في رأيك؟ <span id="gtm"></span></div><div class="vlist">'+game.order.filter(function(u){return u!=uid}).map(function(u){return '<button type="button" class="'+(mv&&mv.for==u?"":"g")+'" data-v="'+u+'">'+esc2(nm[u]||"")+'</button>'}).join("")+'</div><div class="note">صوّت '+Object.keys(votes).length+' من '+game.order.length+'</div>';
+ }
+ if(st=="guess"){
+  var spyMe=secret&&secret.role=="spy";
+  h+='<div class="turn">'+(game.caught?"اتكشف الدخيل! ":"محدش كشفه! ")+(spyMe?'اختار الدرس <span id="gtm"></span>':'الدخيل بيختار الدرس…')+'</div>';
+  if(spyMe&&!guessDoc)h+='<div class="vlist">'+game.options.map(function(o,i){return '<button type="button" data-o="'+i+'">'+esc2(o)+'</button>'}).join("")+'</div>';
+ }
+ if(st=="done"&&reveal){
+  h+='<div class="result '+(reveal.winner=="spy"?"spyw":"grpw")+'"><b>'+(reveal.winner=="spy"?"الدخيل كسب 🕵️":"المجموعة كسبت 🎉")+'</b><div>الدخيل كان: <b>'+esc2(reveal.spyName)+'</b></div><div>الدرس: <b>'+esc2(reveal.lesson)+'</b></div>'+(reveal.guess?'<div class="note">تخمين الدخيل: '+esc2(reveal.guess)+'</div>':'')+'</div>';
+  h+=startCard(n,true);
+ }
+ h+='</div>';g.innerHTML=h;bindGame(g);
+ if(st=="done")bindStart(g);
+}
+function startCard(n,again){
+ var ok=n>=3;
+ return '<div class="card gm"><h3>'+(again?"لعبة جديدة":"ألعاب 🎮")+'</h3><div class="gcard"><b>مين الدخيل؟ 🕵️</b><div class="note">الكل بيشوف الدرس إلا الدخيل. كل واحد يقول دليل من غير ما يسمّي الدرس، والدخيل يحاول يخمّن. لازم 3 لاعبين أو أكتر.</div>'+(ok?'<button type="button" id="gstart">ابدأ اللعبة ('+n+' لاعبين)</button>':'<div class="note">محتاجين لاعب تالت على الأقل (دلوقتي '+n+').</div>')+'</div></div>';
+}
+function bindStart(g){var b=g.querySelector("#gstart");if(b)b.onclick=startGame}
+function bindGame(g){
+ var sd=g.querySelector("#gsend");if(sd)sd.onclick=function(){sendClue()};
+ var vb=g.querySelector("#gvoice");if(vb)vb.onclick=toggleRec;
+ g.querySelectorAll("[data-v]").forEach(function(b){b.onclick=function(){F.setDoc(D("rooms",code,"games",game.id,"votes",uid),{for:b.dataset.v}).catch(function(e){console.error("vote",e.code);say("معرفتش أسجّل التصويت")})}});
+ g.querySelectorAll("[data-o]").forEach(function(b){b.onclick=function(){F.setDoc(D("rooms",code,"games",game.id,"guess",uid),{pick:game.options[+b.dataset.o]}).catch(function(){say("معرفتش أبعت التخمين")})}});
+}
+var pendingVoice=null;
+function sendClue(){
+ var t=(view().querySelector("#gct").value||"").trim();if(!t&&!pendingVoice){say("اكتب دليل أو سجّل صوت");return}
+ var d={uid:uid,name:String(U.name).slice(0,30),text:t.slice(0,100),round:game.round,turn:game.turn,ts:Date.now()};
+ if(pendingVoice)d.voice=pendingVoice;pendingVoice=null;
+ F.addDoc(C("rooms",code,"games",game.id,"clues"),d).catch(function(){say("معرفتش أبعت الدليل")});
+}
+function toggleRec(){
+ var vs=view().querySelector("#gvs"),b=view().querySelector("#gvoice");
+ if(rec){rec.stop();return}
+ if(!navigator.mediaDevices||!window.MediaRecorder){vs.textContent="المتصفح ده مش بيدعم التسجيل. اكتب الدليل.";return}
+ navigator.mediaDevices.getUserMedia({audio:true}).then(function(st){
+  var ch=[],mr;try{mr=new MediaRecorder(st,{audioBitsPerSecond:24000})}catch(e){mr=new MediaRecorder(st)}
+  rec=mr;b.textContent="⏹ وقّف";vs.textContent="بيسجّل… (أقصى 8 ثواني)";
+  mr.ondataavailable=function(e){if(e.data&&e.data.size)ch.push(e.data)};
+  var to=setTimeout(function(){if(rec)rec.stop()},8000);
+  mr.onstop=function(){clearTimeout(to);st.getTracks().forEach(function(t){t.stop()});rec=null;var bl=new Blob(ch,{type:mr.mimeType||"audio/webm"}),fr=new FileReader();
+   fr.onload=function(){if(fr.result.length>85000){vs.textContent="التسجيل طويل. جرب أقصر.";return}pendingVoice=fr.result;var vb=view().querySelector("#gvoice");if(vb)vb.textContent="🎙️ سجّل تاني";var q=view().querySelector("#gvs");if(q)q.innerHTML='جاهز، دوس ابعت.<br><audio controls src="'+pendingVoice+'"></audio>'};fr.readAsDataURL(bl)};
+  mr.start();
+ }).catch(function(){vs.textContent="محتاج إذن المايك. أو اكتب الدليل."});
+}
+function startGame(){
+ var ids=Object.keys(members);if(ids.length<3)return;
+ var ls=lessonsFor(room.subject);if(!ls.length){say("مفيش دروس للمادة دي في جدولك");return}
+ var lesson=pick(ls),spy=pick(ids),order=shuffle(ids),nm=names();
+ var old=game&&game.id,prev=clues.slice();
+ var gref=F.doc(C("rooms",code,"games")),gid=gref.id,b=F.writeBatch(db);
+ b.set(gref,{host:uid,status:"clues",subject:room.subject,subjName:SUBJ[room.subject]?SUBJ[room.subject][0]:"",order:order,names:nm,round:1,turn:0,turnEnds:Date.now()+TURN,createdAt:Date.now()});
+ b.commit().then(function(){
+  hostPriv={gid:gid,lesson:lesson,spy:spy,opts:ls};try{sessionStorage.setItem("spy_"+gid,JSON.stringify(hostPriv))}catch(e){}
+  var b2=F.writeBatch(db);ids.forEach(function(u){b2.set(D("rooms",code,"games",gid,"secrets",u),{role:u==spy?"spy":"player",lesson:u==spy?null:lesson})});
+  return b2.commit()}).then(function(){
+  if(old&&prev.length){var b3=F.writeBatch(db);prev.forEach(function(c){b3.delete(D("rooms",code,"games",old,"clues",c.id))});b3.commit().catch(function(){})}
+ }).catch(function(){say("معرفتش أبدأ اللعبة")});
+}
+/* host automation: advance turns, tally votes, reveal */
+function priv(){if(hostPriv&&game&&hostPriv.gid==game.id)return hostPriv;try{var s=sessionStorage.getItem("spy_"+game.id);if(s){hostPriv=JSON.parse(s);return hostPriv}}catch(e){}return null}
+function gref(){return D("rooms",code,"games",game.id)}
+function hostStep(){
+ if(!game||!isHost()||game.status=="done")return;var st=game.status;
+ if(st=="clues"){
+  var done=clues.some(function(c){return c.round==game.round&&c.turn==game.turn});
+  if(done||Date.now()>game.turnEnds+2000)nextTurn();
+ }else if(st=="vote"){
+  if(Object.keys(votes).length>=game.order.length||Date.now()>game.voteEnds)tally();
+ }else if(st=="guess"){
+  if(guessDoc||Date.now()>game.guessEnds)finish();
+ }
+}
+var lastAdv="";
+function nextTurn(){
+ var key=game.id+"|"+game.round+"|"+game.turn;if(lastAdv==key)return;lastAdv=key;
+ var t=game.turn+1,r=game.round;
+ if(t>=game.order.length){t=0;r++}
+ if(r>2)F.updateDoc(gref(),{status:"vote",voteEnds:Date.now()+VOTE}).catch(function(){});
+ else F.updateDoc(gref(),{turn:t,round:r,turnEnds:Date.now()+TURN}).catch(function(){});
+}
+var tallied="";
+function tally(){
+ if(tallied==game.id)return;var p=priv();if(!p){return}tallied=game.id;
+ var cnt={};Object.keys(votes).forEach(function(u){var f=votes[u].for;cnt[f]=(cnt[f]||0)+1});
+ var top=null,tv=0,tie=false;Object.keys(cnt).forEach(function(k){if(cnt[k]>tv){tv=cnt[k];top=k;tie=false}else if(cnt[k]==tv)tie=true});
+ var caught=!tie&&top==p.spy;
+ var opts=[p.lesson],pool=shuffle(p.opts.filter(function(x){return x!=p.lesson&&x.slice(0,6)!=p.lesson.slice(0,6)}));
+ pool.slice(0,4).forEach(function(x){opts.push(x)});if(opts.length<3){shuffle(p.opts).forEach(function(x){if(opts.indexOf(x)<0&&opts.length<5)opts.push(x)})}
+ F.updateDoc(gref(),{status:"guess",caught:caught,options:shuffle(opts),guessEnds:Date.now()+GUESS}).catch(function(e){tallied="";console.error("tally",e.code)});
+}
+var fin="";
+function finish(){
+ if(fin==game.id)return;var p=priv();if(!p)return;fin=game.id;
+ var g=guessDoc?guessDoc.pick:"",ok=g&&g==p.lesson,spyWin=!game.caught||ok;
+ var nm=(game.names||{})[p.spy]||"";
+ var b=F.writeBatch(db);b.set(D("rooms",code,"games",game.id,"reveal","r"),{lesson:p.lesson,spy:p.spy,spyName:nm,caught:!!game.caught,guess:g,winner:spyWin?"spy":"group"});b.update(gref(),{status:"done"});
+ b.commit().catch(function(){fin=""});
+}
+function hostTickStart(){
+ clearInterval(tickT);tickT=setInterval(function(){
+  var el=view()&&view().querySelector("#gtm");
+  if(game&&el){var end=game.status=="clues"?game.turnEnds:game.status=="vote"?game.voteEnds:game.status=="guess"?game.guessEnds:0;var s=Math.max(0,Math.round((end-Date.now())/1000));el.textContent="· "+s+" ث"}
+  if(game&&isHost())hostStep();
+ },1000);
+}
+/* wiring */
+window.__rd=function(){return JSON.stringify({st:game&&game.status,n:Object.keys(members).length,votes:Object.keys(votes).length,ord:game&&game.order.length,priv:!!(game&&priv()),host:isHost()})};
+function boot(){if(!document.getElementById("hm")||!document.getElementById("v-az")){setTimeout(boot,300);return}ensureView();
+ var o=window.go;window.go=function(v){o(v);if(v=="rooms")openRooms()};}
+document.addEventListener("DOMContentLoaded",boot);if(document.readyState!="loading")boot();
+})();
+
+</script></body></html>
