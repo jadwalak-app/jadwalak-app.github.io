@@ -985,12 +985,14 @@ function render(){
  }
  if(mode=="create"){
   var ops=KS.map(function(k){return '<option value="'+k+'">'+esc2(SUBJ[k]?SUBJ[k][0]:k)+'</option>'}).join("");
-  v.innerHTML='<div class="card"><h3>إنشاء غرفة</h3><label class="note">اسم الغرفة</label><input type="text" id="rn" maxlength="40" placeholder="مثلاً: مذاكرة الفيزياء"><label class="note">المادة</label><select id="rs">'+ops+'</select><label class="note">عدد الأشخاص</label><div class="row"><input type="number" id="rm" min="2" max="30" value="4" style="width:90px"><label class="row note"><input type="checkbox" id="ru"> غير محدود</label></div><div class="note">الغرفة بالكود بس، ومش بتظهر لحد في بحث.</div><div class="err" id="re"></div><div class="rmbtns"><button id="rp" type="button">نشر الغرفة</button><button id="rb" type="button" class="g">رجوع</button></div></div>';
+  v.innerHTML='<div class="card"><h3>إنشاء غرفة</h3><label class="note">اسم الغرفة</label><input type="text" id="rn" maxlength="40" placeholder="مثلاً: مذاكرة الفيزياء"><label class="note">المادة</label><select id="rs">'+ops+'</select><label class="note">اسم الدرس (هو الكلمة السرية في لعبة مين الدخيل)</label><input type="text" id="rl" maxlength="60" list="rld" autocomplete="off" placeholder="مثلاً: قانون أوم"><datalist id="rld"></datalist><div class="note">كل اللاعبين هيشوفوه إلا الدخيل.</div><label class="note">عدد الأشخاص</label><div class="row"><input type="number" id="rm" min="2" max="30" value="4" style="width:90px"><label class="row note"><input type="checkbox" id="ru"> غير محدود</label></div><div class="note">الغرفة بالكود بس، ومش بتظهر لحد في بحث.</div><div class="err" id="re"></div><div class="rmbtns"><button id="rp" type="button">نشر الغرفة</button><button id="rb" type="button" class="g">رجوع</button></div></div>';
   v.querySelector("#rb").onclick=function(){mode="home";render()};
+  var fillL=function(){var dl=v.querySelector("#rld");dl.innerHTML=lessonsFor(v.querySelector("#rs").value).map(function(x){return '<option value="'+esc2(x)+'">'}).join("")};fillL();v.querySelector("#rs").onchange=fillL;
   v.querySelector("#rp").onclick=function(){
    var n=v.querySelector("#rn").value.trim(),mx=v.querySelector("#ru").checked?0:Math.max(2,Math.min(30,+v.querySelector("#rm").value||4));
-   if(!n){v.querySelector("#re").textContent="اكتب اسم للغرفة";return}
-   createRoom(n,v.querySelector("#rs").value,mx)};return;
+   var ln=v.querySelector("#rl").value.trim();if(!n){v.querySelector("#re").textContent="اكتب اسم للغرفة";return}
+   if(!ln){v.querySelector("#re").textContent="اكتب اسم الدرس";return}
+   createRoom(n,v.querySelector("#rs").value,mx,ln)};return;
  }
  if(mode=="join"){
   v.innerHTML='<div class="card"><h3>الانضمام لغرفة</h3><label class="note">كود الغرفة (6 حروف وأرقام)</label><input type="text" id="jc" maxlength="6" autocapitalize="characters" style="text-transform:uppercase;letter-spacing:6px;text-align:center;font-size:22px" placeholder="______"><div class="err" id="re"></div><div class="rmbtns"><button id="jg" type="button">دخول</button><button id="rb" type="button" class="g">رجوع</button></div></div>';
@@ -1001,13 +1003,13 @@ function render(){
 }
 function genCode(){var a=new Uint8Array(6);crypto.getRandomValues(a);return Array.prototype.map.call(a,function(x){return CH[x%CH.length]}).join("")}
 function err(m){var e=view().querySelector("#re");if(e)e.textContent=m}
-function createRoom(n,subj,mx){
+function createRoom(n,subj,mx,lsn){
  if(busy)return;busy=true;var tries=0;
  (function go1(){
   var c=genCode(),b=F.writeBatch(db);
   b.set(D("rooms",c),{name:n,subject:subj,max:mx,owner:uid,n:1,createdAt:Date.now()});
   b.set(D("rooms",c,"members",uid),memberData());
-  b.commit().then(function(){busy=false;open(c);say("الغرفة اتنشرت. الكود: <b>"+c+"</b>")}).catch(function(e){if(tries++<2){go1()}else{busy=false;err("معرفتش أنشر الغرفة. جرب تاني.")}});
+  b.commit().then(function(){try{localStorage.setItem("jd_lsn_"+c,lsn||"")}catch(e){}busy=false;open(c);say("الغرفة اتنشرت. الكود: <b>"+c+"</b>")}).catch(function(e){if(tries++<2){go1()}else{busy=false;err("معرفتش أنشر الغرفة. جرب تاني.")}});
  })();
 }
 function joinRoom(c){
@@ -1075,7 +1077,7 @@ function gameUI(){
  if(!game||game.status=="done"&&!reveal&&false){g.innerHTML=startCard(n);bindStart(g);return}
  var st=game.status,nm=game.names||{},h='<div class="card gm"><div class="row" style="justify-content:space-between"><h3>مين الدخيل؟ 🕵️</h3><span class="tag now">'+({clues:"الأدلة",vote:"التصويت",guess:"تخمين الدخيل",done:"النتيجة"}[st]||"")+'</span></div>';
  if(st!="done"){
-  if(secret){h+=secret.role=="spy"?'<div class="role spy"><b>أنت الدخيل 🕵️</b><div class="note">مش عارف الدرس. المادة: '+esc2(game.subjName)+'. اسمع الأدلة وحاول تخمّن.</div></div>':'<div class="role"><div class="note">الدرس</div><b>'+esc2(secret.lesson)+'</b><div class="note">اديلهم دليل من غير ما تقول اسم الدرس.</div></div>'}
+  if(secret){h+=secret.role=="spy"?'<div class="role spy"><b>أنت الدخيل 🕵️</b><div class="note">مش عارف الدرس. المادة: '+esc2(game.subjName)+'. الباقي بيتكلموا عن درس سري، اسمع الأدلة وحاول تخمّن وماتفضحش نفسك.</div></div>':'<div class="role"><div class="note">الدرس السري (الدخيل مش شايفه)</div><b>'+esc2(secret.lesson)+'</b><div class="note">اتكلم عن الدرس ده من غير ما تقول اسمه صريح، وماتخليش الدخيل يعرف ده أنهي درس.</div></div>'}
   else h+='<div class="note">بنجهّز دورك…</div>';
  }
  h+='<div class="clist">'+clues.map(function(c){return '<div class="clue"><b>'+esc2(c.name)+'</b> <small>الجولة '+c.round+'</small><div>'+esc2(c.text||"")+'</div>'+(c.voice?'<audio controls preload="none" src="'+c.voice+'"></audio>':'')+'</div>'}).join("")+'</div>';
@@ -1102,9 +1104,10 @@ function gameUI(){
 }
 function startCard(n,again){
  var ok=n>=3;
- return '<div class="card gm"><h3>'+(again?"لعبة جديدة":"ألعاب 🎮")+'</h3><div class="gcard"><b>مين الدخيل؟ 🕵️</b><div class="note">الكل بيشوف الدرس إلا الدخيل. كل واحد يقول دليل من غير ما يسمّي الدرس، والدخيل يحاول يخمّن. لازم 3 لاعبين أو أكتر.</div>'+(ok?'<button type="button" id="gstart">ابدأ اللعبة ('+n+' لاعبين)</button>':'<div class="note">محتاجين لاعب تالت على الأقل (دلوقتي '+n+').</div>')+'</div></div>';
+ return '<div class="card gm"><h3>'+(again?"لعبة جديدة":"ألعاب 🎮")+'</h3><div class="gcard"><b>مين الدخيل؟ 🕵️</b><div class="note">اسم الدرس بيظهر للكل إلا الدخيل. اتكلموا عن الدرس من غير ما تقولوا اسمه صريح، من غير ما الدخيل يعرفه، والدخيل يحاول يخمّن. لازم 3 لاعبين أو أكتر.</div>'+(ok?'<label class="note">اسم الدرس (السر)</label><input type="text" id="gles" maxlength="60" list="gld" autocomplete="off" placeholder="اكتب اسم الدرس" value="'+esc2(savedLesson())+'"><datalist id="gld">'+lessonsFor(room.subject).map(function(x){return '<option value="'+esc2(x)+'">'}).join("")+'</datalist><button type="button" id="gstart" style="margin-top:10px">ابدأ اللعبة ('+n+' لاعبين)</button>':'<button type="button" disabled style="margin-top:10px;opacity:.45">ابدأ اللعبة</button><div class="note" style="color:#ffd896;margin-top:8px">محتاجين ٣ لاعبين على الأقل عشان تبدأ اللعبة (دلوقتي '+n+').</div>')+'</div></div>';
 }
-function bindStart(g){var b=g.querySelector("#gstart");if(b)b.onclick=startGame}
+function savedLesson(){try{return localStorage.getItem("jd_lsn_"+code)||""}catch(e){return ""}}
+function bindStart(g){var b=g.querySelector("#gstart");var l=g.querySelector("#gles");if(l)l.oninput=function(){try{localStorage.setItem("jd_lsn_"+code,l.value)}catch(e){}};if(b)b.onclick=startGame}
 function bindGame(g){
  var sd=g.querySelector("#gsend");if(sd)sd.onclick=function(){sendClue()};
  var vb=g.querySelector("#gvoice");if(vb)vb.onclick=toggleRec;
@@ -1133,16 +1136,16 @@ function toggleRec(){
  }).catch(function(){vs.textContent="محتاج إذن المايك. أو اكتب الدليل."});
 }
 function startGame(){
- var ids=Object.keys(members);if(ids.length<3)return;
- var ls=lessonsFor(room.subject);if(!ls.length){say("مفيش دروس للمادة دي في جدولك");return}
- var lesson=pick(ls),spy=pick(ids),order=shuffle(ids),nm=names();
+ var ids=Object.keys(members);if(ids.length<3){say("محتاجين ٣ لاعبين على الأقل");return}
+ var ls=lessonsFor(room.subject);var li=view().querySelector("#gles");var lesson=(li?li.value:"").trim();if(!lesson){say("اكتب اسم الدرس الأول");return}
+ var spy=pick(ids.filter(function(u){return u!=uid})),order=shuffle(ids),nm=names();
  var old=game&&game.id,prev=clues.slice();
  var gref=F.doc(C("rooms",code,"games")),gid=gref.id,b=F.writeBatch(db);
  b.set(gref,{host:uid,status:"clues",subject:room.subject,subjName:SUBJ[room.subject]?SUBJ[room.subject][0]:"",order:order,names:nm,round:1,turn:0,turnEnds:Date.now()+TURN,createdAt:Date.now()});
  b.commit().then(function(){
   hostPriv={gid:gid,lesson:lesson,spy:spy,opts:ls};try{sessionStorage.setItem("spy_"+gid,JSON.stringify(hostPriv))}catch(e){}
   var b2=F.writeBatch(db);ids.forEach(function(u){b2.set(D("rooms",code,"games",gid,"secrets",u),{role:u==spy?"spy":"player",lesson:u==spy?null:lesson})});
-  return b2.commit()}).then(function(){
+  return b2.commit()}).then(function(){try{localStorage.removeItem("jd_lsn_"+code)}catch(e){}
   if(old&&prev.length){var b3=F.writeBatch(db);prev.forEach(function(c){b3.delete(D("rooms",code,"games",old,"clues",c.id))});b3.commit().catch(function(){})}
  }).catch(function(){say("معرفتش أبدأ اللعبة")});
 }
